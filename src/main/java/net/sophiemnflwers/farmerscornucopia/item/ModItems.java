@@ -12,7 +12,7 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, FarmersCornucopia.MOD_ID);
 
-    public static final RegistryObject<Item> GARLICHEAD = ITEMS.register("garlichead",
+    public static final RegistryObject<Item> GARLIC_HEAD = ITEMS.register("garlic_head",
             () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD)));
 
 
