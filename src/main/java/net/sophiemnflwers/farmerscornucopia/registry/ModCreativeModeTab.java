@@ -1,4 +1,4 @@
-package net.sophiemnflwers.farmerscornucopia.item;
+package net.sophiemnflwers.farmerscornucopia.registry;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;

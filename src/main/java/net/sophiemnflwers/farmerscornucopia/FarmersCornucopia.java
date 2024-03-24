@@ -9,8 +9,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.sophiemnflwers.farmerscornucopia.block.ModBlocks;
-import net.sophiemnflwers.farmerscornucopia.item.ModItems;
+import net.sophiemnflwers.farmerscornucopia.registry.ModBlocks;
+import net.sophiemnflwers.farmerscornucopia.registry.ModItems;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file

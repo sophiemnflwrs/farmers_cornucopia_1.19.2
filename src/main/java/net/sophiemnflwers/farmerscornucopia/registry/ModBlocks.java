@@ -1,4 +1,4 @@
-package net.sophiemnflwers.farmerscornucopia.block;
+package net.sophiemnflwers.farmerscornucopia.registry;
 
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -13,14 +13,19 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwers.farmerscornucopia.FarmersCornucopia;
-import net.sophiemnflwers.farmerscornucopia.item.ModCreativeModeTab;
-import net.sophiemnflwers.farmerscornucopia.item.ModItems;
+import net.sophiemnflwers.farmerscornucopia.registry.ModCreativeModeTab;
+import net.sophiemnflwers.farmerscornucopia.registry.ModItems;
 
 import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, FarmersCornucopia.MOD_ID);
+
+    // wild crops
+    public static final RegistryObject<Block> WILD_GARLIC = registerBlock("wild_garlic",
+            () -> new Block(BlockBehaviour.Properties.of(Material.PLANT)),
+            ModCreativeModeTab.FARMERS_CORNUCOPIA_TAB);
 
     // salt
     public static final RegistryObject<Block> SALT_BLOCK = registerBlock("salt_block",
@@ -36,11 +41,6 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(3f).requiresCorrectToolForDrops(),
                     UniformInt.of(3,6)),
-                    ModCreativeModeTab.FARMERS_CORNUCOPIA_TAB);
-
-    // wild crops
-    public static final RegistryObject<Block> WILD_GARLIC = registerBlock("wild_garlic",
-            () -> new Block(BlockBehaviour.Properties.of(Material.PLANT)),
                     ModCreativeModeTab.FARMERS_CORNUCOPIA_TAB);
 
 
