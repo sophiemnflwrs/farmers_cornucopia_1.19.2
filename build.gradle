@@ -51,6 +51,9 @@ minecraft {
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             property 'forge.enabledGameTestNamespaces', 'farmerscornucopia'
 
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+
             mods {
                 farmerscornucopia {
                     source sourceSets.main
@@ -66,6 +69,9 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             property 'forge.enabledGameTestNamespaces', 'farmerscornucopia'
+
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             mods {
                 farmerscornucopia {
@@ -123,7 +129,12 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
+
+    maven {
+        url = "https://www.cursemaven.com"
+    }
 }
+
 
 dependencies {
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
@@ -168,16 +179,7 @@ jar.finalizedBy('reobfJar')
 // publish.dependsOn('reobfJar')
 
 publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            artifact jar
-        }
-    }
-    repositories {
-        maven {
-            url "file://${project.projectDir}/mcmodsrepo"
-        }
-    }
+
 }
 
 tasks.withType(JavaCompile).configureEach {
