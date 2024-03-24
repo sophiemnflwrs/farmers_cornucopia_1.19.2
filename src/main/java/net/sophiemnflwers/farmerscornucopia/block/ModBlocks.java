@@ -13,6 +13,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwers.farmerscornucopia.FarmersCornucopia;
+import net.sophiemnflwers.farmerscornucopia.item.ModCreativeModeTab;
 import net.sophiemnflwers.farmerscornucopia.item.ModItems;
 
 import java.util.function.Supplier;
@@ -24,23 +25,23 @@ public class ModBlocks {
     // salt
     public static final RegistryObject<Block> SALT_BLOCK = registerBlock("salt_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(4f).requiresCorrectToolForDrops()),
-                    CreativeModeTab.TAB_BUILDING_BLOCKS);
+                    .strength(2f).requiresCorrectToolForDrops()),
+                    ModCreativeModeTab.FARMERS_CORNUCOPIA_TAB);
     public static final RegistryObject<Block> SALT_ORE = registerBlock("salt_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(4f).requiresCorrectToolForDrops(),
+                    .strength(2f).requiresCorrectToolForDrops(),
                     UniformInt.of(3,6)),
-                    CreativeModeTab.TAB_BUILDING_BLOCKS);
+                    ModCreativeModeTab.FARMERS_CORNUCOPIA_TAB);
     public static final RegistryObject<Block> DEEPSLATE_SALT_ORE = registerBlock("deepslate_salt_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(4f).requiresCorrectToolForDrops(),
+                    .strength(3f).requiresCorrectToolForDrops(),
                     UniformInt.of(3,6)),
-                    CreativeModeTab.TAB_BUILDING_BLOCKS);
+                    ModCreativeModeTab.FARMERS_CORNUCOPIA_TAB);
 
     // wild crops
     public static final RegistryObject<Block> WILD_GARLIC = registerBlock("wild_garlic",
             () -> new Block(BlockBehaviour.Properties.of(Material.PLANT)),
-                    CreativeModeTab.TAB_DECORATIONS);
+                    ModCreativeModeTab.FARMERS_CORNUCOPIA_TAB);
 
 
 
