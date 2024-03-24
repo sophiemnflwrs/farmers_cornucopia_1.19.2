@@ -41,13 +41,7 @@ authors="sophiemnflwers" #optional
 #displayTest="MATCH_VERSION" # MATCH_VERSION is the default if nothing is specified (#optional)
 
 # The description text for the mod (multi line!) (#mandatory)
-description='''
-This is a long form description of the mod. You can write whatever you want here
-
-Have some lorem ipsum.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis lacinia magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed sagittis luctus odio eu tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque volutpat ligula eget lacus auctor sagittis. In hac habitasse platea dictumst. Nunc gravida elit vitae sem vehicula efficitur. Donec mattis ipsum et arcu lobortis, eleifend sagittis sem rutrum. Cras pharetra quam eget posuere fermentum. Sed id tincidunt justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-'''
+description="A Farmer's Delight add-on mod that greatly expands the variety of crops and recipes available while also being friendly with other Farmer's Delight add-ons."
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.farmerscornucopia]] #optional
     # the modid of the dependency
@@ -65,6 +59,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis lacinia magn
     modId="minecraft"
     mandatory=true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
-    versionRange="[1.19.2,1.20)"
+    versionRange="[1.19.2,)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.culturaldelights]]
+    modId = "farmersdelight"
+    mandatory = true
+    versionRange = "[1.2.4,)"
+    ordering = "AFTER"
+    side = "BOTH"
