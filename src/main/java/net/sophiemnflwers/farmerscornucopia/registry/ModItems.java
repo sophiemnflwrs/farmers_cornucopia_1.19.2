@@ -1,6 +1,7 @@
 package net.sophiemnflwers.farmerscornucopia.registry;
 
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Item.Properties;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,8 +21,22 @@ public class ModItems {
 
     public static Properties foodItem(FoodProperties food) {
         return new Properties().food(food).tab(FarmersCornucopia.CREATIVE_TAB);
-
     }
+
+    // blocks
+    public static final RegistryObject<Item> SALT_BLOCK = ITEMS.register("salt_block",
+            () -> new BlockItem(ModBlocks.SALT_BLOCK.get(), basicItem()));
+
+    public static final RegistryObject<Item> SALT_ORE = ITEMS.register("salt_ore",
+            () -> new BlockItem(ModBlocks.SALT_ORE.get(), basicItem()));
+
+    public static final RegistryObject<Item> DEEPSLATE_SALT_ORE = ITEMS.register("deepslate_salt_ore",
+            () -> new BlockItem(ModBlocks.DEEPSLATE_SALT_ORE.get(), basicItem()));
+
+    // wild crops
+    public static final RegistryObject<Item> WILD_GARLIC = ITEMS.register("wild_garlic",
+            () -> new BlockItem(ModBlocks.WILD_GARLIC.get(), basicItem()));
+
     // foodstuffs
     public static final RegistryObject<Item> SALT = ITEMS.register("salt",
             () -> new Item(foodItem(new FoodProperties.Builder().nutrition(1).saturationMod(1f).build()).tab(FarmersCornucopia.CREATIVE_TAB)));
@@ -33,11 +48,7 @@ public class ModItems {
             () -> new Item(foodItem(new FoodProperties.Builder().nutrition(1).saturationMod(1f).build()).tab(FarmersCornucopia.CREATIVE_TAB)));
 
 
-
-
-
-
-
+    // register
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
