@@ -38,6 +38,8 @@ public class FarmersCornucopia {
     @SuppressWarnings("removal")
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
+
+        // make plant sprites have transparent pixels
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILD_GARLIC.get(), RenderType.cutoutMipped());

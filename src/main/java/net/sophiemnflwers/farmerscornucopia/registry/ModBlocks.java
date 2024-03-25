@@ -15,8 +15,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwers.farmerscornucopia.FarmersCornucopia;
-import net.sophiemnflwers.farmerscornucopia.registry.ModCreativeModeTab;
-import net.sophiemnflwers.farmerscornucopia.registry.ModItems;
 import vectorwing.farmersdelight.common.block.WildCropBlock;
 
 import java.util.function.Supplier;
