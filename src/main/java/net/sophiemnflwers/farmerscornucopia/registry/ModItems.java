@@ -17,9 +17,15 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FARMERS_CORNUCOPIA_TAB)
                     .food(new FoodProperties.Builder().nutrition(2).saturationMod(2f).build())));
 
+    public static final RegistryObject<Item> GARLIC_CLOVE = ITEMS.register("garlic_clove",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FARMERS_CORNUCOPIA_TAB)
+                    .food(new FoodProperties.Builder().nutrition(1).saturationMod(1f).build())));
+
     public static final RegistryObject<Item> SALT = ITEMS.register("salt",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FARMERS_CORNUCOPIA_TAB)
                     .food(new FoodProperties.Builder().nutrition(1).saturationMod(1f).build())));
+
+
 
 
 
