@@ -1,3 +1,6 @@
 {
-  "parent":
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "farmerscornucopia:block/wild_garlic"
+  }
 }
