@@ -8,6 +8,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -29,11 +30,11 @@ public class ModBlocks {
 
     // salt
     public static final RegistryObject<Block> SALT_BLOCK = registerBlock("salt_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2f).requiresCorrectToolForDrops()), ModCreativeModeTab.FARMERS_CORNUCOPIA_TAB);
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2f).sound(SoundType.STONE).requiresCorrectToolForDrops()), ModCreativeModeTab.FARMERS_CORNUCOPIA_TAB);
     public static final RegistryObject<Block> SALT_ORE = registerBlock("salt_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3,6)), ModCreativeModeTab.FARMERS_CORNUCOPIA_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(2f).sound(SoundType.STONE).requiresCorrectToolForDrops(), UniformInt.of(3,6)), ModCreativeModeTab.FARMERS_CORNUCOPIA_TAB);
     public static final RegistryObject<Block> DEEPSLATE_SALT_ORE = registerBlock("deepslate_salt_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f).requiresCorrectToolForDrops(), UniformInt.of(3,6)), ModCreativeModeTab.FARMERS_CORNUCOPIA_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f).sound(SoundType.STONE).requiresCorrectToolForDrops(), UniformInt.of(3,6)), ModCreativeModeTab.FARMERS_CORNUCOPIA_TAB);
 
 
     // registration
