@@ -3,6 +3,8 @@ package net.sophiemnflwers.farmerscornucopia;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -21,6 +23,13 @@ public class FarmersCornucopia {
 
     public static final String MOD_ID = "farmerscornucopia";
     private static final Logger LOGGER = LogUtils.getLogger();
+
+    public static final CreativeModeTab CREATIVE_TAB = new CreativeModeTab("farmerscornucopiatab") {
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(ModItems.GARLIC.get());
+        }
+    };
 
     public FarmersCornucopia() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();

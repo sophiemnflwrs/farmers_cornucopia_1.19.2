@@ -26,15 +26,15 @@ public class ModBlocks {
 
     // wild crops
     public static final RegistryObject<Block> WILD_GARLIC = registerBlock("wild_garlic",
-            () -> new WildCropBlock(MobEffects.FIRE_RESISTANCE, 6, BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)), ModCreativeModeTab.FARMERS_CORNUCOPIA_TAB);
+            () -> new WildCropBlock(MobEffects.FIRE_RESISTANCE, 6, BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)), FarmersCornucopia.CREATIVE_TAB);
 
     // salt
     public static final RegistryObject<Block> SALT_BLOCK = registerBlock("salt_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2f).sound(SoundType.STONE).requiresCorrectToolForDrops()), ModCreativeModeTab.FARMERS_CORNUCOPIA_TAB);
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2f).sound(SoundType.STONE).requiresCorrectToolForDrops()), FarmersCornucopia.CREATIVE_TAB);
     public static final RegistryObject<Block> SALT_ORE = registerBlock("salt_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(2f).sound(SoundType.STONE).requiresCorrectToolForDrops(), UniformInt.of(3,6)), ModCreativeModeTab.FARMERS_CORNUCOPIA_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(2f).sound(SoundType.STONE).requiresCorrectToolForDrops(), UniformInt.of(3,6)), FarmersCornucopia.CREATIVE_TAB);
     public static final RegistryObject<Block> DEEPSLATE_SALT_ORE = registerBlock("deepslate_salt_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f).sound(SoundType.STONE).requiresCorrectToolForDrops(), UniformInt.of(3,6)), ModCreativeModeTab.FARMERS_CORNUCOPIA_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f).sound(SoundType.STONE).requiresCorrectToolForDrops(), UniformInt.of(3,6)), FarmersCornucopia.CREATIVE_TAB);
 
 
     // registration
