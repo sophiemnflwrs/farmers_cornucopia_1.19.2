@@ -18,7 +18,6 @@ public class ModItems {
     public static Properties basicItem() {
         return new Properties().tab(FarmersCornucopia.CREATIVE_TAB);
     }
-
     public static Properties foodItem(FoodProperties food) {
         return new Properties().food(food).tab(FarmersCornucopia.CREATIVE_TAB);
     }
