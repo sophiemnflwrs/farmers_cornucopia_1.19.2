@@ -36,15 +36,19 @@ public class ModItems {
     public static final RegistryObject<Item> WILD_GARLIC = ITEMS.register("wild_garlic",
             () -> new BlockItem(ModBlocks.WILD_GARLIC.get(), basicItem()));
 
+    //crops
+    public static final RegistryObject<Item> GARLIC_CROP = ITEMS.register("garlic_crop",
+            () -> new BlockItem(ModBlocks.GARLIC_CROP.get(), basicItem()));
+
     // foodstuffs
     public static final RegistryObject<Item> SALT = ITEMS.register("salt",
-            () -> new Item(foodItem(new FoodProperties.Builder().nutrition(1).saturationMod(1f).build()).tab(FarmersCornucopia.CREATIVE_TAB)));
+            () -> new Item(foodItem(new FoodProperties.Builder().nutrition(1).saturationMod(1f).build())));
 
     public static final RegistryObject<Item> GARLIC = ITEMS.register("garlic",
-            () -> new Item(foodItem(new FoodProperties.Builder().nutrition(2).saturationMod(2f).build()).tab(FarmersCornucopia.CREATIVE_TAB)));
+            () -> new Item(foodItem(new FoodProperties.Builder().nutrition(2).saturationMod(2f).build())));
 
     public static final RegistryObject<Item> GARLIC_CLOVE = ITEMS.register("garlic_clove",
-            () -> new Item(foodItem(new FoodProperties.Builder().nutrition(1).saturationMod(1f).build()).tab(FarmersCornucopia.CREATIVE_TAB)));
+            () -> new Item(foodItem(new FoodProperties.Builder().nutrition(1).saturationMod(1f).build())));
 
 
     // register

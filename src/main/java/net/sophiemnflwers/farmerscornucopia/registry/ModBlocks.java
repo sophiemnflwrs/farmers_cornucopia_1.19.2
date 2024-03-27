@@ -13,6 +13,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwers.farmerscornucopia.FarmersCornucopia;
+import net.sophiemnflwers.farmerscornucopia.block.GarlicCrop;
 import vectorwing.farmersdelight.common.block.WildCropBlock;
 
 public class ModBlocks {
@@ -30,6 +31,10 @@ public class ModBlocks {
     // wild crops
     public static final RegistryObject<Block> WILD_GARLIC = BLOCKS.register("wild_garlic",
             () -> new WildCropBlock(MobEffects.FIRE_RESISTANCE, 6, BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
+
+    //crops
+        public static final RegistryObject<Block> GARLIC_CROP = BLOCKS.register("garlic crop",
+            () -> new GarlicCrop(Block.Properties.copy(Blocks.WHEAT)));
 
     // register
     public static void register(IEventBus eventBus) {
