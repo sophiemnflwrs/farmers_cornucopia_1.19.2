@@ -39,7 +39,7 @@ public class ModItems {
 
     // seeds
     public static final RegistryObject<Item> GARLIC_CLOVE = ITEMS.register("garlic_clove",
-            () -> new ItemNameBlockItem(ModBlocks.GARLIC_CROP.get(), basicItem());
+            () -> new ItemNameBlockItem(ModBlocks.GARLIC_CROP.get(), basicItem()));
 
     // foodstuffs
     public static final RegistryObject<Item> SALT = ITEMS.register("salt",
