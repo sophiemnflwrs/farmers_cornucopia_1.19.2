@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.sophiemnflwers.farmerscornucopia.registry.ModBlocks;
 import net.sophiemnflwers.farmerscornucopia.registry.ModItems;
 
 public class GarlicCrop extends CropBlock {
@@ -24,6 +25,10 @@ public class GarlicCrop extends CropBlock {
 
     public GarlicCrop(Properties properties) {
         super(properties);
+    }
+
+    public BlockState getPlant(BlockGetter world, BlockPos pos) {
+        return (ModBlocks.GARLIC_CROP.get()).defaultBlockState();
     }
 
     @Override

@@ -33,7 +33,7 @@ public class ModBlocks {
             () -> new WildCropBlock(MobEffects.FIRE_RESISTANCE, 6, BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
 
     //crops
-        public static final RegistryObject<Block> GARLIC_CROP = BLOCKS.register("garlic crop",
+        public static final RegistryObject<Block> GARLIC_CROP = BLOCKS.register("garlic_crop",
             () -> new GarlicCrop(Block.Properties.copy(Blocks.WHEAT)));
 
     // register

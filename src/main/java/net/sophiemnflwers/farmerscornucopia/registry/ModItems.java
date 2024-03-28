@@ -4,6 +4,7 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Item.Properties;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -36,19 +37,16 @@ public class ModItems {
     public static final RegistryObject<Item> WILD_GARLIC = ITEMS.register("wild_garlic",
             () -> new BlockItem(ModBlocks.WILD_GARLIC.get(), basicItem()));
 
-    //crops
-    public static final RegistryObject<Item> GARLIC_CROP = ITEMS.register("garlic_crop",
-            () -> new BlockItem(ModBlocks.GARLIC_CROP.get(), basicItem()));
+    // seeds
+    public static final RegistryObject<Item> GARLIC_CLOVE = ITEMS.register("garlic_clove",
+            () -> new ItemNameBlockItem(ModBlocks.GARLIC_CROP.get(), basicItem());
 
     // foodstuffs
     public static final RegistryObject<Item> SALT = ITEMS.register("salt",
             () -> new Item(foodItem(new FoodProperties.Builder().nutrition(1).saturationMod(1f).build())));
 
     public static final RegistryObject<Item> GARLIC = ITEMS.register("garlic",
-            () -> new Item(foodItem(new FoodProperties.Builder().nutrition(2).saturationMod(2f).build())));
-
-    public static final RegistryObject<Item> GARLIC_CLOVE = ITEMS.register("garlic_clove",
-            () -> new Item(foodItem(new FoodProperties.Builder().nutrition(1).saturationMod(1f).build())));
+            () -> new Item(foodItem(new FoodProperties.Builder().nutrition(2).saturationMod(0.4f).build())));
 
 
     // register
