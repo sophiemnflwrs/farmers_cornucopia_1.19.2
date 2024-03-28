@@ -62,6 +62,7 @@ public class FarmersCornucopia {
             @SubscribeEvent
             public static void onClientSetup(FMLClientSetupEvent event) {
                 ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILD_GARLIC.get(), RenderType.cutoutMipped());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.GARLIC_CROP.get(), RenderType.cutoutMipped());
             }
         }
     };

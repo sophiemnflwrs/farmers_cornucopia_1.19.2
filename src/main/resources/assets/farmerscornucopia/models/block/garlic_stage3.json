@@ -1,7 +1,7 @@
 {
-  "parent": "block/cross",
+  "parent": "minecraft:block/crop",
   "render_type": "minecraft:cutout",
   "textures": {
-    "cross": "farmerscornucopia:block/garlic_stage3"
+    "crop": "farmerscornucopia:block/garlic_stage3"
   }
 }
