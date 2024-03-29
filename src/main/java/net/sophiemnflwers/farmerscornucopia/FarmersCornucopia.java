@@ -18,6 +18,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.sophiemnflwers.farmerscornucopia.registry.ModBlocks;
 import net.sophiemnflwers.farmerscornucopia.registry.ModItems;
+import net.sophiemnflwers.farmerscornucopia.world.feature.ModConfiguredFeatures;
+import net.sophiemnflwers.farmerscornucopia.world.feature.ModPlacedFeatures;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
@@ -31,8 +33,12 @@ public class FarmersCornucopia {
 
     public FarmersCornucopia() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
     }

@@ -15,7 +15,7 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, FarmersCornucopia.MOD_ID);
 
-    // helper methods for sorting
+    // helper methods
     public static Properties basicItem() {
         return new Properties().tab(FarmersCornucopia.CREATIVE_TAB);
     }
