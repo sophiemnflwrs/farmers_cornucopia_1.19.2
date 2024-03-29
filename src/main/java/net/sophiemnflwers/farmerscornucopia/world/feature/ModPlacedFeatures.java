@@ -31,7 +31,7 @@ public class ModPlacedFeatures {
     // salt ore
     public static final RegistryObject<PlacedFeature> SALT_ORE_PLACED = PLACED_FEATURES.register("salt_ore_placed",
             () -> new PlacedFeature(ModConfiguredFeatures.SALT_ORE.getHolder().get(),
-                    commonOrePlacement(30, // veins per chunk
+                    commonOrePlacement(40, // veins per chunk
                     HeightRangePlacement.triangle(VerticalAnchor.absolute(-40), VerticalAnchor.absolute(120)))));
 
 
