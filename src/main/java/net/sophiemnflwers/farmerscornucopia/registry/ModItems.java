@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwers.farmerscornucopia.FarmersCornucopia;
+import net.sophiemnflwers.farmerscornucopia.FoodValues;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -37,17 +38,16 @@ public class ModItems {
     public static final RegistryObject<Item> WILD_GARLIC = ITEMS.register("wild_garlic",
             () -> new BlockItem(ModBlocks.WILD_GARLIC.get(), basicItem()));
 
-    // seeds
-    public static final RegistryObject<Item> GARLIC_CLOVE = ITEMS.register("garlic_clove",
-            () -> new ItemNameBlockItem(ModBlocks.GARLIC_CROP.get(), basicItem()));
-
     // foodstuffs
     public static final RegistryObject<Item> SALT = ITEMS.register("salt",
-            () -> new Item(foodItem(new FoodProperties.Builder().nutrition(1).saturationMod(1f).build())));
+            () -> new Item(foodItem(FoodValues.SALT)));
 
     public static final RegistryObject<Item> GARLIC = ITEMS.register("garlic",
-            () -> new Item(foodItem(new FoodProperties.Builder().nutrition(2).saturationMod(0.4f).build())));
+            () -> new Item(foodItem(FoodValues.GARLIC)));
 
+    // seeds
+    public static final RegistryObject<Item> GARLIC_CLOVE = ITEMS.register("garlic_clove",
+            () -> new ItemNameBlockItem(ModBlocks.GARLIC_CROP.get(), foodItem(FoodValues.GARLIC_CLOVE)));
 
     // register
     public static void register(IEventBus eventBus){
