@@ -24,6 +24,7 @@ public class SaltOreFeature {
         return orePlacement(CountPlacement.of(p_195344_), p_195345_);
     }
 
+    // placement config
     public static final RegistryObject<PlacedFeature> SALT_ORE_PLACED = SALT_ORE_FEATURE.register("salt_ore_placed",
             () -> new PlacedFeature(SaltOreConfiguration.SALT_ORE.getHolder().get(),
                     commonOrePlacement(40, // veins per chunk
