@@ -56,7 +56,7 @@ public class WildCropGeneration {
 
         // feature config
         FEATURE_PATCH_WILD_GARLIC = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_onions"),
-                ModBiomeFeatures.WILD_CROP.get(), wildCropConfig(ModBlocks.WILD_GARLIC.get(), Blocks.ALLIUM, BlockPredicate.matchesTag(BLOCK_BELOW, BlockTags.DIRT)));
+                ModBiomeFeatures.WILD_CROP.get(), wildCropConfig(ModBlocks.WILD_GARLIC.get(), Blocks.GRASS, BlockPredicate.matchesTag(BLOCK_BELOW, BlockTags.DIRT)));
 
         // placement config
         PATCH_WILD_GARLIC = registerPlacement(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_garlic"),
