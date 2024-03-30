@@ -20,8 +20,6 @@ public record AddFeaturesByBiomeModifierFilter (
         Optional<Float> maximumTemperature,
         Optional<Float> minimumHumidity,
         Optional<Float> maximumHumidity,
-        Optional<HolderSet<Biome>> rainfall,
-        Optional<HolderSet<Biome>> snowfall,
         HolderSet<PlacedFeature> features,
         GenerationStep.Decoration step
 ) implements BiomeModifier {
@@ -41,12 +39,6 @@ public record AddFeaturesByBiomeModifierFilter (
                 return;
             }
             if (maximumHumidity.isPresent() && biome.get().getDownfall() >= maximumHumidity.get()) {
-                return;
-            }
-            if (rainfall.isPresent() && biome.get().getPrecipitation() == Biome.Precipitation.RAIN) {
-                return;
-            }
-            if (snowfall.isPresent() && biome.get().getPrecipitation() == Biome.Precipitation.SNOW){
                 return;
             }
             BiomeGenerationSettingsBuilder generationSettings = builder.getGenerationSettings();

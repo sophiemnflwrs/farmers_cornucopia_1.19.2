@@ -27,8 +27,6 @@ public class ModBiomeModifiers {
                     Codec.FLOAT.optionalFieldOf("max_temperature").orElse(Optional.empty()).forGetter(AddFeaturesByBiomeModifierFilter::maximumTemperature),
                     Codec.FLOAT.optionalFieldOf("min_humidity").orElse(Optional.empty()).forGetter(AddFeaturesByBiomeModifierFilter::minimumHumidity),
                     Codec.FLOAT.optionalFieldOf("max_humidity").orElse(Optional.empty()).forGetter(AddFeaturesByBiomeModifierFilter::maximumHumidity),
-                    Biome.LIST_CODEC.optionalFieldOf("rainfall").orElse(Optional.empty()).forGetter(AddFeaturesByBiomeModifierFilter::rainfall),
-                    Biome.LIST_CODEC.optionalFieldOf("snowfall").orElse(Optional.empty()).forGetter(AddFeaturesByBiomeModifierFilter::snowfall),
                     PlacedFeature.LIST_CODEC.fieldOf("features").forGetter(AddFeaturesByBiomeModifierFilter::features),
                     GenerationStep.Decoration.CODEC.fieldOf("step").forGetter(AddFeaturesByBiomeModifierFilter::step)
             ).apply(builder, AddFeaturesByBiomeModifierFilter::new)));

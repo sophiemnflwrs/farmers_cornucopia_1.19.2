@@ -16,10 +16,11 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.sophiemnflwers.farmerscornucopia.registry.ModBiomeModifiers;
 import net.sophiemnflwers.farmerscornucopia.registry.ModBlocks;
 import net.sophiemnflwers.farmerscornucopia.registry.ModItems;
-import net.sophiemnflwers.farmerscornucopia.world.feature.ModConfiguredFeatures;
-import net.sophiemnflwers.farmerscornucopia.world.feature.ModPlacedFeatures;
+import net.sophiemnflwers.farmerscornucopia.world.configuration.SaltOreConfiguration;
+import net.sophiemnflwers.farmerscornucopia.world.feature.SaltOreFeature;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
@@ -36,8 +37,9 @@ public class FarmersCornucopia {
 
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
-        ModConfiguredFeatures.register(modEventBus);
-        ModPlacedFeatures.register(modEventBus);
+        ModBiomeModifiers.BIOME_MODIFIER_SERIALIZERS.register(modEventBus);
+        SaltOreConfiguration.register(modEventBus);
+        SaltOreFeature.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);

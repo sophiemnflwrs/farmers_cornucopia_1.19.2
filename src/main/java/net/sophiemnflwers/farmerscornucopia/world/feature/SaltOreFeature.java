@@ -7,12 +7,13 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwers.farmerscornucopia.FarmersCornucopia;
+import net.sophiemnflwers.farmerscornucopia.world.configuration.SaltOreConfiguration;
 
 import java.util.List;
 
-public class ModPlacedFeatures {
+public class SaltOreFeature {
 
-    public static final DeferredRegister<PlacedFeature> PLACED_FEATURES =
+    public static final DeferredRegister<PlacedFeature> SALT_ORE_FEATURE =
             DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, FarmersCornucopia.MOD_ID);
 
     // helper methods
@@ -23,16 +24,14 @@ public class ModPlacedFeatures {
         return orePlacement(CountPlacement.of(p_195344_), p_195345_);
     }
 
-
-    // salt ore
-    public static final RegistryObject<PlacedFeature> SALT_ORE_PLACED = PLACED_FEATURES.register("salt_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.SALT_ORE.getHolder().get(),
+    public static final RegistryObject<PlacedFeature> SALT_ORE_PLACED = SALT_ORE_FEATURE.register("salt_ore_placed",
+            () -> new PlacedFeature(SaltOreConfiguration.SALT_ORE.getHolder().get(),
                     commonOrePlacement(40, // veins per chunk
                     HeightRangePlacement.triangle(VerticalAnchor.absolute(-40), VerticalAnchor.absolute(120)))));
 
     // register
     public static void register(IEventBus eventBus) {
-        PLACED_FEATURES.register(eventBus);
+        SALT_ORE_FEATURE.register(eventBus);
     }
 
 }
