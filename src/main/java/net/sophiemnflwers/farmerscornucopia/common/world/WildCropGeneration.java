@@ -1,4 +1,4 @@
-package net.sophiemnflwers.farmerscornucopia.world;
+package net.sophiemnflwers.farmerscornucopia.common.world;
 
 
 import net.minecraft.core.BlockPos;
@@ -17,11 +17,11 @@ import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfigur
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.placement.*;
-import net.sophiemnflwers.farmerscornucopia.Configuration;
+import net.sophiemnflwers.farmerscornucopia.common.Configuration;
 import net.sophiemnflwers.farmerscornucopia.FarmersCornucopia;
-import net.sophiemnflwers.farmerscornucopia.registry.ModBiomeFeatures;
-import net.sophiemnflwers.farmerscornucopia.registry.ModBlocks;
-import net.sophiemnflwers.farmerscornucopia.world.configuration.WildCropConfiguration;
+import net.sophiemnflwers.farmerscornucopia.common.registry.ModBiomeFeatures;
+import net.sophiemnflwers.farmerscornucopia.common.registry.ModBlocks;
+import net.sophiemnflwers.farmerscornucopia.common.world.configuration.WildCropConfiguration;
 
 import java.util.List;
 
@@ -55,7 +55,7 @@ public class WildCropGeneration {
     public static void registerWildCropGeneration() {
 
         // feature config
-        FEATURE_PATCH_WILD_GARLIC = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_onions"),
+        FEATURE_PATCH_WILD_GARLIC = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_garlic"),
                 ModBiomeFeatures.WILD_CROP.get(), wildCropConfig(ModBlocks.WILD_GARLIC.get(), Blocks.GRASS, BlockPredicate.matchesTag(BLOCK_BELOW, BlockTags.DIRT)));
 
         // placement config

@@ -1,4 +1,4 @@
-package net.sophiemnflwers.farmerscornucopia;
+package net.sophiemnflwers.farmerscornucopia.common;
 
 import net.minecraft.world.food.FoodProperties;
 

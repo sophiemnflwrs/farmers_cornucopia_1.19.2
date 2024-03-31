@@ -1,4 +1,4 @@
-package net.sophiemnflwers.farmerscornucopia.world.configuration;
+package net.sophiemnflwers.farmerscornucopia.common.world.configuration;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;

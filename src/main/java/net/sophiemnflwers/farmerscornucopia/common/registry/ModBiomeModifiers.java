@@ -1,4 +1,4 @@
-package net.sophiemnflwers.farmerscornucopia.registry;
+package net.sophiemnflwers.farmerscornucopia.common.registry;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -10,7 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwers.farmerscornucopia.FarmersCornucopia;
-import net.sophiemnflwers.farmerscornucopia.world.modifier.AddFeaturesByBiomeModifierFilter;
+import net.sophiemnflwers.farmerscornucopia.common.world.modifier.AddFeaturesByBiomeModifierFilter;
 
 import java.util.Optional;
 

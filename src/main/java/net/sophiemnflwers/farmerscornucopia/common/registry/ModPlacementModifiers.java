@@ -1,4 +1,4 @@
-package net.sophiemnflwers.farmerscornucopia.registry;
+package net.sophiemnflwers.farmerscornucopia.common.registry;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.core.Registry;
@@ -7,7 +7,7 @@ import net.minecraft.world.level.levelgen.placement.PlacementModifierType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwers.farmerscornucopia.FarmersCornucopia;
-import net.sophiemnflwers.farmerscornucopia.world.filter.BiomeTagFilter;
+import net.sophiemnflwers.farmerscornucopia.common.world.filter.BiomeTagFilter;
 
 public class ModPlacementModifiers {
 

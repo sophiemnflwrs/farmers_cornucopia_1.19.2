@@ -1,4 +1,4 @@
-package net.sophiemnflwers.farmerscornucopia.world.feature;
+package net.sophiemnflwers.farmerscornucopia.common.world.feature;
 
 import net.minecraft.core.Registry;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
@@ -7,7 +7,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwers.farmerscornucopia.FarmersCornucopia;
-import net.sophiemnflwers.farmerscornucopia.world.configuration.SaltOreConfiguration;
+import net.sophiemnflwers.farmerscornucopia.common.world.configuration.SaltOreConfiguration;
 
 import java.util.List;
 

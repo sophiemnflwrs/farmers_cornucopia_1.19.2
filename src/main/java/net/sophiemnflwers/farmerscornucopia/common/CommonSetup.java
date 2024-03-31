@@ -1,7 +1,7 @@
-package net.sophiemnflwers.farmerscornucopia;
+package net.sophiemnflwers.farmerscornucopia.common;
 
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.sophiemnflwers.farmerscornucopia.world.WildCropGeneration;
+import net.sophiemnflwers.farmerscornucopia.common.world.WildCropGeneration;
 
 public class CommonSetup {
 

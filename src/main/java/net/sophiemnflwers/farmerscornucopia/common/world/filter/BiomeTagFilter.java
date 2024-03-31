@@ -1,4 +1,4 @@
-package net.sophiemnflwers.farmerscornucopia.world.filter;
+package net.sophiemnflwers.farmerscornucopia.common.world.filter;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -11,7 +11,7 @@ import net.minecraft.world.level.levelgen.placement.PlacementContext;
 import net.minecraft.world.level.levelgen.placement.PlacementFilter;
 import net.minecraft.world.level.levelgen.placement.PlacementModifierType;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.sophiemnflwers.farmerscornucopia.registry.ModPlacementModifiers;
+import net.sophiemnflwers.farmerscornucopia.common.registry.ModPlacementModifiers;
 
 public class BiomeTagFilter extends PlacementFilter {
 

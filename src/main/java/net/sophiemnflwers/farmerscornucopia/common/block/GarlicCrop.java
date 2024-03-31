@@ -1,4 +1,4 @@
-package net.sophiemnflwers.farmerscornucopia.block;
+package net.sophiemnflwers.farmerscornucopia.common.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
@@ -8,8 +8,8 @@ import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.sophiemnflwers.farmerscornucopia.registry.ModBlocks;
-import net.sophiemnflwers.farmerscornucopia.registry.ModItems;
+import net.sophiemnflwers.farmerscornucopia.common.registry.ModBlocks;
+import net.sophiemnflwers.farmerscornucopia.common.registry.ModItems;
 
 public class GarlicCrop extends CropBlock {
     private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{

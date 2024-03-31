@@ -1,4 +1,4 @@
-package net.sophiemnflwers.farmerscornucopia.registry;
+package net.sophiemnflwers.farmerscornucopia.common.registry;
 
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
@@ -13,7 +13,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwers.farmerscornucopia.FarmersCornucopia;
-import net.sophiemnflwers.farmerscornucopia.block.GarlicCrop;
+import net.sophiemnflwers.farmerscornucopia.common.block.GarlicCrop;
 import vectorwing.farmersdelight.common.block.WildCropBlock;
 
 public class ModBlocks {

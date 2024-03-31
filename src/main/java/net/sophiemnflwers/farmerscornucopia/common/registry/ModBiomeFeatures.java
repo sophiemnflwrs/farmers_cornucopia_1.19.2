@@ -1,12 +1,12 @@
-package net.sophiemnflwers.farmerscornucopia.registry;
+package net.sophiemnflwers.farmerscornucopia.common.registry;
 
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwers.farmerscornucopia.FarmersCornucopia;
-import net.sophiemnflwers.farmerscornucopia.world.configuration.WildCropConfiguration;
-import net.sophiemnflwers.farmerscornucopia.world.feature.WildCropFeature;
+import net.sophiemnflwers.farmerscornucopia.common.world.configuration.WildCropConfiguration;
+import net.sophiemnflwers.farmerscornucopia.common.world.feature.WildCropFeature;
 
 public class ModBiomeFeatures {
 

@@ -1,4 +1,4 @@
-package net.sophiemnflwers.farmerscornucopia.world.feature;
+package net.sophiemnflwers.farmerscornucopia.common.world.feature;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.core.BlockPos;
@@ -8,7 +8,7 @@ import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.sophiemnflwers.farmerscornucopia.world.configuration.WildCropConfiguration;
+import net.sophiemnflwers.farmerscornucopia.common.world.configuration.WildCropConfiguration;
 
 public class WildCropFeature extends Feature<WildCropConfiguration> {
     public WildCropFeature(Codec<WildCropConfiguration> codec) {

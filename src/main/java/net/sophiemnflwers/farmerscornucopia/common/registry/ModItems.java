@@ -1,4 +1,4 @@
-package net.sophiemnflwers.farmerscornucopia.registry;
+package net.sophiemnflwers.farmerscornucopia.common.registry;
 
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
@@ -10,7 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwers.farmerscornucopia.FarmersCornucopia;
-import net.sophiemnflwers.farmerscornucopia.FoodValues;
+import net.sophiemnflwers.farmerscornucopia.common.FoodValues;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =

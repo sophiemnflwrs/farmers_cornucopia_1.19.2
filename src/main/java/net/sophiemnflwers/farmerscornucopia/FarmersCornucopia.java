@@ -10,9 +10,11 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLEnvironment;
-import net.sophiemnflwers.farmerscornucopia.registry.*;
-import net.sophiemnflwers.farmerscornucopia.world.configuration.SaltOreConfiguration;
-import net.sophiemnflwers.farmerscornucopia.world.feature.SaltOreFeature;
+import net.sophiemnflwers.farmerscornucopia.common.CommonSetup;
+import net.sophiemnflwers.farmerscornucopia.common.Configuration;
+import net.sophiemnflwers.farmerscornucopia.common.registry.*;
+import net.sophiemnflwers.farmerscornucopia.common.world.configuration.SaltOreConfiguration;
+import net.sophiemnflwers.farmerscornucopia.common.world.feature.SaltOreFeature;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.slf4j.Logger;
 import vectorwing.farmersdelight.client.ClientSetup;
@@ -35,6 +37,10 @@ public class FarmersCornucopia {
     public FarmersCornucopia() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        modEventBus.addListener(CommonSetup::init);
+        if (FMLEnvironment.dist.isClient()) {
+            modEventBus.addListener(ClientSetup::init);
+        }
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Configuration.COMMON_CONFIG);
 
         ModBlocks.register(modEventBus);
@@ -45,10 +51,7 @@ public class FarmersCornucopia {
         SaltOreConfiguration.register(modEventBus);
         SaltOreFeature.register(modEventBus);
 
-        modEventBus.addListener(CommonSetup::init);
-        if (FMLEnvironment.dist.isClient()) {
-            modEventBus.addListener(ClientSetup::init);
-        }
+
     }
 
         // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent

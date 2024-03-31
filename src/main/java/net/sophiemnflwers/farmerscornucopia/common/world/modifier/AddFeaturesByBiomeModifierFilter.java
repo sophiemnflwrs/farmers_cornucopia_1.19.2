@@ -1,4 +1,4 @@
-package net.sophiemnflwers.farmerscornucopia.world.modifier;
+package net.sophiemnflwers.farmerscornucopia.common.world.modifier;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.core.Holder;
@@ -9,7 +9,7 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ModifiableBiomeInfo;
-import net.sophiemnflwers.farmerscornucopia.registry.ModBiomeModifiers;
+import net.sophiemnflwers.farmerscornucopia.common.registry.ModBiomeModifiers;
 
 import java.util.Optional;
 

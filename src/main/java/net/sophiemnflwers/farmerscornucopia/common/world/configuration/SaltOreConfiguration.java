@@ -1,4 +1,4 @@
-package net.sophiemnflwers.farmerscornucopia.world.configuration;
+package net.sophiemnflwers.farmerscornucopia.common.world.configuration;
 
 import com.google.common.base.Supplier;
 import com.google.common.base.Suppliers;
@@ -11,7 +11,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwers.farmerscornucopia.FarmersCornucopia;
-import net.sophiemnflwers.farmerscornucopia.registry.ModBlocks;
+import net.sophiemnflwers.farmerscornucopia.common.registry.ModBlocks;
 
 import java.util.List;
 

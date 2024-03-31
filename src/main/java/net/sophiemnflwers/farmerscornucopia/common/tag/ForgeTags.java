@@ -1,4 +1,4 @@
-package net.sophiemnflwers.farmerscornucopia.tag;
+package net.sophiemnflwers.farmerscornucopia.common.tag;
 
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
