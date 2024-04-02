@@ -7,5 +7,8 @@
   "block.farmerscornucopia.deepslate_salt_ore": "Deepslate Salt Ore",
   "block.farmerscornucopia.wild_garlic": "Wild Garlic",
   "item.farmerscornucopia.garlic_clove": "Garlic Clove",
-  "block.farmerscornucopia.garlic_crop": "Garlic Crop"
+  "block.farmerscornucopia.garlic_crop": "Garlic Crop",
+  "item.farmerscornucopia.cream": "Cream",
+  "item.farmerscornucopia.butter": "Butter",
+  "item.farmerscornucopia.garlic_bread": "Garlic Bread"
 }
