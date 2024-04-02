@@ -11,7 +11,7 @@ import net.minecraft.world.level.levelgen.placement.PlacementContext;
 import net.minecraft.world.level.levelgen.placement.PlacementFilter;
 import net.minecraft.world.level.levelgen.placement.PlacementModifierType;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.sophiemnflwers.farmerscornucopia.common.registry.ModPlacementModifiers;
+import net.sophiemnflwers.farmerscornucopia.common.registry.FCPlacementModifiers;
 
 public class BiomeTagFilter extends PlacementFilter {
 
@@ -37,6 +37,6 @@ public class BiomeTagFilter extends PlacementFilter {
 
     @Override
     public PlacementModifierType<?> type() {
-        return ModPlacementModifiers.BIOME_TAG.get();
+        return FCPlacementModifiers.BIOME_TAG.get();
     }
 }

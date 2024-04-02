@@ -30,7 +30,7 @@ public class FarmersCornucopia {
         @NonNull
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.GARLIC.get());
+            return new ItemStack(FCItems.GARLIC.get());
         }
     };
 
@@ -43,11 +43,11 @@ public class FarmersCornucopia {
         }
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Configuration.COMMON_CONFIG);
 
-        ModBlocks.register(modEventBus);
-        ModItems.register(modEventBus);
-        ModPlacementModifiers.PLACEMENT_MODIFIERS.register(modEventBus);
-        ModBiomeFeatures.FEATURES.register(modEventBus);
-        ModBiomeModifiers.BIOME_MODIFIER_SERIALIZERS.register(modEventBus);
+        FCBlocks.register(modEventBus);
+        FCItems.register(modEventBus);
+        FCPlacementModifiers.PLACEMENT_MODIFIERS.register(modEventBus);
+        FCBiomeFeatures.FEATURES.register(modEventBus);
+        FCBiomeModifiers.BIOME_MODIFIER_SERIALIZERS.register(modEventBus);
         SaltOreConfiguration.register(modEventBus);
         SaltOreFeature.register(modEventBus);
 

@@ -8,7 +8,7 @@ import net.sophiemnflwers.farmerscornucopia.FarmersCornucopia;
 import net.sophiemnflwers.farmerscornucopia.common.world.configuration.WildCropConfiguration;
 import net.sophiemnflwers.farmerscornucopia.common.world.feature.WildCropFeature;
 
-public class ModBiomeFeatures {
+public class FCBiomeFeatures {
 
     public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, FarmersCornucopia.MOD_ID);
 

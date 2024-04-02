@@ -11,7 +11,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwers.farmerscornucopia.FarmersCornucopia;
-import net.sophiemnflwers.farmerscornucopia.common.registry.ModBlocks;
+import net.sophiemnflwers.farmerscornucopia.common.registry.FCBlocks;
 
 import java.util.List;
 
@@ -21,8 +21,8 @@ public class SaltOreConfiguration {
             DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, FarmersCornucopia.MOD_ID);
 
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_SALT_ORES = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.SALT_ORE.get().defaultBlockState()),
-            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_SALT_ORE.get().defaultBlockState())));
+            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, FCBlocks.SALT_ORE.get().defaultBlockState()),
+            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, FCBlocks.DEEPSLATE_SALT_ORE.get().defaultBlockState())));
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> SALT_ORE = SALT_ORE_CONFIG.register("salt_ore",
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_SALT_ORES.get(), 8)));

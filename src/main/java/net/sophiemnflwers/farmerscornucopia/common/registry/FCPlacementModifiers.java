@@ -9,7 +9,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwers.farmerscornucopia.FarmersCornucopia;
 import net.sophiemnflwers.farmerscornucopia.common.world.filter.BiomeTagFilter;
 
-public class ModPlacementModifiers {
+public class FCPlacementModifiers {
 
     public static final DeferredRegister<PlacementModifierType<?>> PLACEMENT_MODIFIERS = DeferredRegister.create(Registry.PLACEMENT_MODIFIER_REGISTRY, FarmersCornucopia.MOD_ID);
 

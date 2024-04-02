@@ -8,8 +8,8 @@ import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.sophiemnflwers.farmerscornucopia.common.registry.ModBlocks;
-import net.sophiemnflwers.farmerscornucopia.common.registry.ModItems;
+import net.sophiemnflwers.farmerscornucopia.common.registry.FCBlocks;
+import net.sophiemnflwers.farmerscornucopia.common.registry.FCItems;
 
 public class GarlicCrop extends CropBlock {
     private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
@@ -28,12 +28,12 @@ public class GarlicCrop extends CropBlock {
     }
 
     public BlockState getPlant(BlockGetter world, BlockPos pos) {
-        return (ModBlocks.GARLIC_CROP.get()).defaultBlockState();
+        return (FCBlocks.GARLIC_CROP.get()).defaultBlockState();
     }
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ModItems.GARLIC_CLOVE.get();
+        return FCItems.GARLIC_CLOVE.get();
     }
 
     public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {

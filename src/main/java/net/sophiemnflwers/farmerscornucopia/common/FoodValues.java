@@ -19,5 +19,12 @@ public class FoodValues {
             .nutrition(1).saturationMod(0.2f).build();
     public static final FoodProperties SALT = (new FoodProperties.Builder())
             .nutrition(1).saturationMod(0.1f).build();
+    public static final FoodProperties CREAM = (new FoodProperties.Builder())
+            .nutrition(2).saturationMod(0.4f).build();
+    public static final FoodProperties BUTTER = (new FoodProperties.Builder())
+            .nutrition(2).saturationMod(0.4f).build();
+    // meals
+    public static final FoodProperties GARLIC_BREAD = (new FoodProperties.Builder())
+            .nutrition(5).saturationMod(0.6f).build();
 
 }

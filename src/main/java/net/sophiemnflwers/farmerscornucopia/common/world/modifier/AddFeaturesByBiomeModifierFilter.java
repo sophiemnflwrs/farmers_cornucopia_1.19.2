@@ -9,7 +9,7 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ModifiableBiomeInfo;
-import net.sophiemnflwers.farmerscornucopia.common.registry.ModBiomeModifiers;
+import net.sophiemnflwers.farmerscornucopia.common.registry.FCBiomeModifiers;
 
 import java.util.Optional;
 
@@ -48,7 +48,7 @@ public record AddFeaturesByBiomeModifierFilter (
 
     @Override
     public Codec<? extends BiomeModifier> codec() {
-        return ModBiomeModifiers.ADD_FEATURES_BY_FILTER.get();
+        return FCBiomeModifiers.ADD_FEATURES_BY_FILTER.get();
     }
 
 }

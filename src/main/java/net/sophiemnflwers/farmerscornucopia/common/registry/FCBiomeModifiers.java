@@ -14,7 +14,7 @@ import net.sophiemnflwers.farmerscornucopia.common.world.modifier.AddFeaturesByB
 
 import java.util.Optional;
 
-public class ModBiomeModifiers {
+public class FCBiomeModifiers {
 
     public static DeferredRegister<Codec<? extends BiomeModifier>> BIOME_MODIFIER_SERIALIZERS =
             DeferredRegister.create(ForgeRegistries.Keys.BIOME_MODIFIER_SERIALIZERS, FarmersCornucopia.MOD_ID);

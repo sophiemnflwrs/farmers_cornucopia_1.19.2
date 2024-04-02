@@ -16,7 +16,7 @@ import net.sophiemnflwers.farmerscornucopia.FarmersCornucopia;
 import net.sophiemnflwers.farmerscornucopia.common.block.GarlicCrop;
 import vectorwing.farmersdelight.common.block.WildCropBlock;
 
-public class ModBlocks {
+public class FCBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, FarmersCornucopia.MOD_ID);
 
