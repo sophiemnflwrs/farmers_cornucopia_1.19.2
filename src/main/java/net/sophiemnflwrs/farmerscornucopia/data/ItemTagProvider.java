@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 public class ItemTagProvider extends ItemTagsProvider {
 
-    public ItemTagProvider(DataGenerator generatorIn, BlockTagsProvider blockTagProvider,String modId, @Nullable ExistingFileHelper existingFileHelper) {
+    public ItemTagProvider(DataGenerator generatorIn, BlockTagsProvider blockTagProvider, String modId, @Nullable ExistingFileHelper existingFileHelper) {
         super(generatorIn, blockTagProvider, modId, existingFileHelper);
     }
 

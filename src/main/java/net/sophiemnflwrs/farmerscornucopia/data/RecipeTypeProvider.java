@@ -4,8 +4,6 @@ import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
-import net.minecraftforge.common.data.ExistingFileHelper;
 import net.sophiemnflwrs.farmerscornucopia.data.recipe.CookingRecipes;
 import net.sophiemnflwrs.farmerscornucopia.data.recipe.CraftingRecipes;
 import net.sophiemnflwrs.farmerscornucopia.data.recipe.CuttingRecipes;
@@ -16,9 +14,9 @@ import java.util.function.Consumer;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
-public class RecipeTypeProvider extends RecipeProvider implements IConditionBuilder {
+public class RecipeTypeProvider extends RecipeProvider {
 
-    public RecipeTypeProvider(DataGenerator generator, String modId, ExistingFileHelper helper) {
+    public RecipeTypeProvider(DataGenerator generator) {
         super(generator);
     }
 

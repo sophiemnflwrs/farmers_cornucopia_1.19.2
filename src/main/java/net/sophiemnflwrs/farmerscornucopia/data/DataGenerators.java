@@ -15,8 +15,10 @@ public class DataGenerators {
         DataGenerator generator = event.getGenerator();
         ExistingFileHelper helper = event.getExistingFileHelper();
 
-        generator.addProvider(event.includeServer(), new RecipeTypeProvider(generator, FarmersCornucopia.MOD_ID, helper));
+        generator.addProvider(event.includeServer(), new BlockTagProvider(generator, FarmersCornucopia.MOD_ID, helper));
         generator.addProvider(event.includeServer(), new ItemTagProvider(generator, FarmersCornucopia.MOD_ID, helper));
+        generator.addProvider(event.includeServer(), new RecipeTypeProvider(generator));
+
 
     }
 }
