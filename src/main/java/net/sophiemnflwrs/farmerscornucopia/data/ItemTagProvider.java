@@ -1,7 +1,6 @@
 package net.sophiemnflwrs.farmerscornucopia.data;
 
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -14,7 +13,7 @@ import javax.annotation.Nullable;
 
 public class ItemTagProvider extends ItemTagsProvider {
 
-    public ItemTagProvider(DataGenerator generatorIn, BlockTagsProvider blockTagProvider, String modId, @Nullable ExistingFileHelper existingFileHelper) {
+    public ItemTagProvider(DataGenerator generatorIn, String modId, @Nullable ExistingFileHelper existingFileHelper) {
         super(generatorIn, blockTagProvider, modId, existingFileHelper);
     }
         @Override
