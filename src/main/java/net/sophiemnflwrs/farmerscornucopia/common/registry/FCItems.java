@@ -5,12 +5,14 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
 import net.sophiemnflwrs.farmerscornucopia.common.FoodValues;
+import net.sophiemnflwrs.farmerscornucopia.common.item.CreamItem;
 
 public class FCItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -22,6 +24,9 @@ public class FCItems {
     }
     public static Properties foodItem(FoodProperties food) {
         return new Properties().food(food).tab(FarmersCornucopia.CREATIVE_TAB);
+    }
+    public static Item.Properties drinkItem(FoodProperties food) {
+        return new Item.Properties().food(food).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersCornucopia.CREATIVE_TAB);
     }
 
     // blocks
@@ -44,7 +49,7 @@ public class FCItems {
     public static final RegistryObject<Item> GARLIC = ITEMS.register("garlic",
             () -> new Item(foodItem(FoodValues.GARLIC)));
     public static final RegistryObject<Item> CREAM = ITEMS.register("cream",
-            () -> new Item(foodItem(FoodValues.CREAM)));
+            () -> new CreamItem(drinkItem(FoodValues.CREAM)));
     public static final RegistryObject<Item> BUTTER = ITEMS.register("butter",
             () -> new Item(foodItem(FoodValues.BUTTER)));
 

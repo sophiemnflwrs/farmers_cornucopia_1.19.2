@@ -1,24 +1,34 @@
-package net.sophiemnflwrs.farmerscornucopia.data.recipe;
+package net.sophiemnflwrs.farmerscornucopia.data;
 
+import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCItems;
+import org.checkerframework.checker.nullness.qual.NonNull;
 import vectorwing.farmersdelight.common.registry.ModItems;
 
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.function.Consumer;
 
-public class CraftingRecipes {
-    public static void register(Consumer<FinishedRecipe> consumer) {
-        recipesIngredient(consumer);
-        recipesFoodStuffs(consumer);
+@ParametersAreNonnullByDefault
+@MethodsReturnNonnullByDefault
+public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
+
+    public RecipeProvider(DataGenerator generator) {
+        super(generator);
     }
 
-    // ingredient recipes
-    private static void recipesIngredient(Consumer<FinishedRecipe> consumer) {
+    @Override
+    protected void buildCraftingRecipes(@NonNull Consumer<FinishedRecipe> consumer) {
+
+        // CRAFTING
+
+        // ingredients
         ShapelessRecipeBuilder.shapeless(FCItems.CREAM.get(), 2)
                 .requires(Items.MILK_BUCKET)
                 .requires(Items.GLASS_BOTTLE)
@@ -38,15 +48,14 @@ public class CraftingRecipes {
                 .requires(FCItems.SALT.get())
                 .unlockedBy("has_cream", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.CREAM.get()))
                 .save(consumer);
-    }
 
-    // non-meal food recipes
-    private static void recipesFoodStuffs(Consumer<FinishedRecipe> consumer) {
+        // non-meal foods
         ShapelessRecipeBuilder.shapeless(FCItems.GARLIC_BREAD.get(), 2)
                 .requires(Items.BREAD)
                 .requires(FCItems.GARLIC.get())
                 .requires(FCItems.BUTTER.get())
                 .unlockedBy("has_garlic", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.GARLIC.get()))
                 .save(consumer);
+
     }
 }

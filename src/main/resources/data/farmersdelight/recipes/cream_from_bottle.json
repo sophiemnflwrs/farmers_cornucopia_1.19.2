@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "forge:milk_bottle"
+      "item": "farmersdelight:milk_bottle"
     },
     {
       "item": "minecraft:glass_bottle"

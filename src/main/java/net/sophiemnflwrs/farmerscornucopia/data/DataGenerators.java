@@ -19,7 +19,7 @@ public class DataGenerators {
 
         generator.addProvider(event.includeServer(), new BlockTagProvider(generator, FarmersCornucopia.MOD_ID, helper));
         generator.addProvider(event.includeServer(), new ItemTagProvider(generator, blockTags, FarmersCornucopia.MOD_ID, helper));
-        generator.addProvider(event.includeServer(), new RecipeTypeProvider(generator));
+        generator.addProvider(event.includeServer(), new RecipeProvider(generator));
 
 
     }
