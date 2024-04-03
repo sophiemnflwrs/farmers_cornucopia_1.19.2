@@ -35,18 +35,14 @@ public class BlockTagProvider extends BlockTagsProvider {
     }
 
     protected void registerMinecraftTags() {
-        tag(net.minecraft.tags.BlockTags.CROPS).add(
-                FCBlocks.GARLIC_CROP.get()
-        );
-        tag(net.minecraft.tags.BlockTags.SMALL_FLOWERS).add(
-                FCBlocks.WILD_GARLIC.get()
-        );
+        tag(net.minecraft.tags.BlockTags.CROPS).add(FCBlocks.GARLIC_CROP.get());
+        tag(net.minecraft.tags.BlockTags.SMALL_FLOWERS).add(FCBlocks.WILD_GARLIC.get());
+        tag(net.minecraft.tags.BlockTags.SMALL_FLOWERS).add(FCBlocks.WILD_GINGER.get());
     }
 
     protected void registerModTags() {
-        tag(FCTags.WILD_CROPS).add(
-                FCBlocks.WILD_GARLIC.get()
-        );
+        tag(FCTags.WILD_CROPS).add(FCBlocks.WILD_GARLIC.get());
+        tag(FCTags.WILD_CROPS).add(FCBlocks.WILD_GINGER.get());
     }
 
 }

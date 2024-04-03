@@ -41,8 +41,9 @@ public class ItemTagProvider extends ItemTagsProvider {
         tag(ForgeTags.FOODSTUFFS).addTags(ForgeTags.FOODSTUFFS_SALT);
             tag(ForgeTags.FOODSTUFFS_SALT).add(FCItems.SALT.get());
 
-        tag(ForgeTags.VEGETABLES).addTags(ForgeTags.VEGETABLES_GARLIC);
+        tag(ForgeTags.VEGETABLES).addTags(ForgeTags.VEGETABLES_GARLIC, ForgeTags.VEGETABLES_GINGER);
             tag(ForgeTags.VEGETABLES_GARLIC).add(FCItems.GARLIC.get());
+            tag(ForgeTags.VEGETABLES_GINGER).add(FCItems.GINGER.get());
 
         tag(ForgeTags.BREAD).addTag(ForgeTags.BREAD_WHEAT);
             tag(ForgeTags.BREAD_WHEAT).add(Items.BREAD);

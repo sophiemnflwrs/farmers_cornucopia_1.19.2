@@ -39,28 +39,34 @@ public class WildCropGeneration {
                 BlockPredicate.allOf(BlockPredicate.replaceable(BLOCK_ABOVE), replaces));
     }
 
-    // main helper methods
     public static WildCropConfiguration wildCropConfig(Block primaryBlock, Block secondaryBlock, BlockPredicate plantedOn) {
         return new WildCropConfiguration(128, 6, 3, plantBlockConfig(primaryBlock, plantedOn), plantBlockConfig(secondaryBlock, plantedOn), null);
     }
 
     // generation
     public static Holder<ConfiguredFeature<WildCropConfiguration, ?>> FEATURE_PATCH_WILD_GARLIC;
+    public static Holder<ConfiguredFeature<WildCropConfiguration, ?>> FEATURE_PATCH_WILD_GINGER;
 
     public static Holder<PlacedFeature> PATCH_WILD_GARLIC;
+    public static Holder<PlacedFeature> PATCH_WILD_GINGER;
 
     public static final BlockPos BLOCK_BELOW = new BlockPos(0, -1, 0);
     public static final BlockPos BLOCK_ABOVE = new BlockPos(0, 1, 0);
 
+    // configuration of that generation
     public static void registerWildCropGeneration() {
 
         // feature config
         FEATURE_PATCH_WILD_GARLIC = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_garlic"),
                 FCBiomeFeatures.WILD_CROP.get(), wildCropConfig(FCBlocks.WILD_GARLIC.get(), Blocks.GRASS, BlockPredicate.matchesTag(BLOCK_BELOW, BlockTags.DIRT)));
+        FEATURE_PATCH_WILD_GINGER = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_ginger"),
+                FCBiomeFeatures.WILD_CROP.get(), wildCropConfig(FCBlocks.WILD_GINGER.get(), Blocks.FERN, BlockPredicate.matchesTag(BLOCK_BELOW, BlockTags.DIRT)));
 
         // placement config
         PATCH_WILD_GARLIC = registerPlacement(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_garlic"),
                 FEATURE_PATCH_WILD_GARLIC, RarityFilter.onAverageOnceEvery(Configuration.CHANCE_WILD_GARLIC.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
+        PATCH_WILD_GINGER = registerPlacement(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_ginger"),
+                FEATURE_PATCH_WILD_GINGER, RarityFilter.onAverageOnceEvery(Configuration.CHANCE_WILD_GINGER.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
     }
 
     // register

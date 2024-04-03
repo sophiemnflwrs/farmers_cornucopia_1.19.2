@@ -32,10 +32,8 @@ public class FCItems {
     // blocks
     public static final RegistryObject<Item> SALT_BLOCK = ITEMS.register("salt_block",
             () -> new BlockItem(FCBlocks.SALT_BLOCK.get(), basicItem()));
-
     public static final RegistryObject<Item> SALT_ORE = ITEMS.register("salt_ore",
             () -> new BlockItem(FCBlocks.SALT_ORE.get(), basicItem()));
-
     public static final RegistryObject<Item> DEEPSLATE_SALT_ORE = ITEMS.register("deepslate_salt_ore",
             () -> new BlockItem(FCBlocks.DEEPSLATE_SALT_ORE.get(), basicItem()));
 
@@ -48,6 +46,8 @@ public class FCItems {
             () -> new Item(foodItem(FoodValues.SALT)));
     public static final RegistryObject<Item> GARLIC = ITEMS.register("garlic",
             () -> new Item(foodItem(FoodValues.GARLIC)));
+    public static final RegistryObject<Item> GINGER = ITEMS.register("ginger",
+            () -> new Item(foodItem(FoodValues.GINGER)));
     public static final RegistryObject<Item> CREAM = ITEMS.register("cream",
             () -> new CreamItem(drinkItem(FoodValues.CREAM)));
     public static final RegistryObject<Item> BUTTER = ITEMS.register("butter",
