@@ -14,6 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
 import net.sophiemnflwrs.farmerscornucopia.common.block.GarlicCrop;
+import net.sophiemnflwrs.farmerscornucopia.common.block.GingerCrop;
 import vectorwing.farmersdelight.common.block.WildCropBlock;
 
 public class FCBlocks {
@@ -31,10 +32,14 @@ public class FCBlocks {
     // wild crops
     public static final RegistryObject<Block> WILD_GARLIC = BLOCKS.register("wild_garlic",
             () -> new WildCropBlock(MobEffects.FIRE_RESISTANCE, 6, BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
+    public static final RegistryObject<Block> WILD_GINGER = BLOCKS.register("wild_ginger",
+            () -> new WildCropBlock(MobEffects.FIRE_RESISTANCE, 10, BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
 
     //crops
         public static final RegistryObject<Block> GARLIC_CROP = BLOCKS.register("garlic_crop",
             () -> new GarlicCrop(Block.Properties.copy(Blocks.WHEAT)));
+        public static final RegistryObject<Block> GINGER_CROP = BLOCKS.register("ginger_crop",
+            () -> new GingerCrop(Block.Properties.copy(Blocks.WHEAT)));
 
     // register
     public static void register(IEventBus eventBus) {

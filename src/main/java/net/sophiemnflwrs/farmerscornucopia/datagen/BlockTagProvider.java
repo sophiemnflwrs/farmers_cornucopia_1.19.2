@@ -1,4 +1,4 @@
-package net.sophiemnflwrs.farmerscornucopia.data;
+package net.sophiemnflwrs.farmerscornucopia.datagen;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;

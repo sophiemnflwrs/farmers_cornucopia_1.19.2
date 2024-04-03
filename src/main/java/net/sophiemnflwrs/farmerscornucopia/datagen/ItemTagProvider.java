@@ -1,4 +1,4 @@
-package net.sophiemnflwrs.farmerscornucopia.data;
+package net.sophiemnflwrs.farmerscornucopia.datagen;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
@@ -30,11 +30,13 @@ public class ItemTagProvider extends ItemTagsProvider {
     @SuppressWarnings("unchecked")
     private void registerForgeTags() {
 
-        tag(ForgeTags.SEEDS).addTags(ForgeTags.SEEDS_GARLIC);
+        tag(ForgeTags.SEEDS).addTags(ForgeTags.SEEDS_GARLIC, ForgeTags.SEEDS_GINGER);
             tag(ForgeTags.SEEDS_GARLIC).add(FCItems.GARLIC_CLOVE.get());
+            tag(ForgeTags.SEEDS_GINGER).add(FCItems.GINGER_SEEDS.get());
 
-        tag(ForgeTags.CROPS).addTags(ForgeTags.CROPS_GARLIC);
+        tag(ForgeTags.CROPS).addTags(ForgeTags.CROPS_GARLIC, ForgeTags.CROPS_GINGER);
             tag(ForgeTags.CROPS_GARLIC).add(FCItems.GARLIC.get());
+            tag(ForgeTags.CROPS_GINGER).add(FCItems.GINGER.get());
 
         tag(ForgeTags.FOODSTUFFS).addTags(ForgeTags.FOODSTUFFS_SALT);
             tag(ForgeTags.FOODSTUFFS_SALT).add(FCItems.SALT.get());

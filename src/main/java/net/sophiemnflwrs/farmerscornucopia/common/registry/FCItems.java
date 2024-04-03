@@ -56,6 +56,8 @@ public class FCItems {
     // seeds
     public static final RegistryObject<Item> GARLIC_CLOVE = ITEMS.register("garlic_clove",
             () -> new ItemNameBlockItem(FCBlocks.GARLIC_CROP.get(), foodItem(FoodValues.GARLIC_CLOVE)));
+    public static final RegistryObject<Item> GINGER_SEEDS = ITEMS.register("ginger_seeds",
+            () -> new ItemNameBlockItem(FCBlocks.GINGER_CROP.get(), foodItem(FoodValues.GARLIC_CLOVE)));
 
     // meals/food items
     public static final RegistryObject<Item> GARLIC_BREAD = ITEMS.register("garlic_bread",

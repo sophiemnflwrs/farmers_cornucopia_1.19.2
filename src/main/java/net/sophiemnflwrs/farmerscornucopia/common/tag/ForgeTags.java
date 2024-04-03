@@ -20,10 +20,12 @@ public class ForgeTags {
     // seeds
     public static final TagKey<Item> SEEDS = forgeItemTag("seeds");
     public static final TagKey<Item> SEEDS_GARLIC = forgeItemTag("seeds/garlic");
+    public static final TagKey<Item> SEEDS_GINGER = forgeItemTag("seeds/ginger");
 
     // crops
     public static final TagKey<Item> CROPS = forgeItemTag("crops");
     public static final TagKey<Item> CROPS_GARLIC = forgeItemTag("crops/garlic");
+    public static final TagKey<Item> CROPS_GINGER = forgeItemTag("crops/ginger");
 
     // foodstuffs
     public static final TagKey<Item> FOODSTUFFS = forgeItemTag("foodstuffs");
@@ -31,6 +33,7 @@ public class ForgeTags {
 
     public static final TagKey<Item> VEGETABLES = forgeItemTag("vegetables");
     public static final TagKey<Item> VEGETABLES_GARLIC = forgeItemTag("vegetables/garlic");
+    public static final TagKey<Item> VEGETABLES_GINGER = forgeItemTag("vegetables/ginger");
 
     public static final TagKey<Item> BREAD = forgeItemTag("bread");
     public static final TagKey<Item> BREAD_WHEAT = forgeItemTag("bread/wheat");

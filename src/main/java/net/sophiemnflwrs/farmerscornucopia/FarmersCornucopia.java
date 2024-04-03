@@ -16,7 +16,7 @@ import net.sophiemnflwrs.farmerscornucopia.common.Configuration;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.*;
 import net.sophiemnflwrs.farmerscornucopia.common.world.configuration.SaltOreConfiguration;
 import net.sophiemnflwrs.farmerscornucopia.common.world.feature.SaltOreFeature;
-import net.sophiemnflwrs.farmerscornucopia.data.DataGenerators;
+import net.sophiemnflwrs.farmerscornucopia.datagen.DataGenerators;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.checkerframework.checker.nullness.qual.NonNull;

@@ -1,4 +1,4 @@
-package net.sophiemnflwrs.farmerscornucopia.data;
+package net.sophiemnflwrs.farmerscornucopia.datagen;
 
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
