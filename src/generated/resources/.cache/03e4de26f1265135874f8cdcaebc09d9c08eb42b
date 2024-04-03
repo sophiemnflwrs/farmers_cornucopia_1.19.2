@@ -1,0 +1,18 @@
+// 1.19.2	2024-04-02T22:25:39.6818313	Tags for minecraft:item
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/farmerscornucopia/tags/items/wild_crops.json
+3c97b80407cb369d06f88b8b31da41587486fa84 data/forge/tags/items/bread.json
+0bdc999a7f653eecbb3c513a0baf1b963a2587ab data/forge/tags/items/bread/wheat.json
+d75d438b847a2dc232548a7923a87cd790a91a1b data/forge/tags/items/crops.json
+be28e79a6e6c2b7ebd9aae76742666c69afc7fda data/forge/tags/items/crops/garlic.json
+f7c6813106f203da0cf5eef64b6214fc967c0777 data/forge/tags/items/foodstuffs.json
+d45425a0f9e803d9457ba935af87f1c35904e7b6 data/forge/tags/items/foodstuffs/salt.json
+89648848e40755ab2a5a8b39a7a0ca76140ef728 data/forge/tags/items/milk.json
+172baec474620bcc2a8d81df176c9e7fe2815886 data/forge/tags/items/milk/butter.json
+f07d3986a4fe27faa4eb65315446e824ac4431c4 data/forge/tags/items/milk/cream.json
+edb5947f84984a39ab47c98c6fb0b3c3a9a8cc39 data/forge/tags/items/milk/milk.json
+9f3f07dbd96f9d69d569c7918bfe0e7bab509d9e data/forge/tags/items/milk/milk_bottle.json
+3212e383c4f846afcb69ec47b420bd4ace8e491e data/forge/tags/items/seeds.json
+6378c26e6c9731530046209e8d12bdaf75d7b694 data/forge/tags/items/seeds/garlic.json
+0d6660c2177d69440666ec7a391b72ef43c0627d data/forge/tags/items/vegetables.json
+be28e79a6e6c2b7ebd9aae76742666c69afc7fda data/forge/tags/items/vegetables/garlic.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/items/small_flowers.json

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "minecraft:milk_bucket"
+      "item": "minecraft:milk_bucket"
     },
     {
       "item": "minecraft:glass_bottle"
@@ -12,7 +12,7 @@
     }
   ],
   "result": {
-    "item": "farmerscornucopia:cream",
-    "count": 2
+    "count": 2,
+    "item": "farmerscornucopia:cream"
   }
 }

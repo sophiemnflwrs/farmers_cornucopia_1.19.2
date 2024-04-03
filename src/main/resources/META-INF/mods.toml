@@ -62,7 +62,7 @@ description="A Farmer's Delight add-on mod that greatly expands the variety of c
     versionRange="[1.19.2,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.culturaldelights]]
+[[dependencies.farmerscornucopia]]
     modId = "farmersdelight"
     mandatory = true
     versionRange = "[1.2.4,)"
