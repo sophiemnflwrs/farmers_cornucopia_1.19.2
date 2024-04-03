@@ -13,6 +13,8 @@ import net.sophiemnflwrs.farmerscornucopia.common.registry.FCBiomeModifiers;
 
 import java.util.Optional;
 
+// credit to vectorwing for a majority of this code!
+
 public record AddFeaturesByBiomeModifierFilter (
         HolderSet<Biome> allowedBiomes,
         Optional<HolderSet<Biome>> deniedBiomes,
@@ -29,10 +31,10 @@ public record AddFeaturesByBiomeModifierFilter (
             if (deniedBiomes.isPresent() && this.deniedBiomes.get().contains(biome)) {
                 return;
             }
-            if (minimumTemperature.isPresent() && biome.get().getBaseTemperature() < minimumTemperature.get()) {
+            if (minimumTemperature.isPresent() && biome.get().getBaseTemperature() <= minimumTemperature.get()) {
                 return;
             }
-            if (maximumTemperature.isPresent() && biome.get().getBaseTemperature() > maximumTemperature.get()) {
+            if (maximumTemperature.isPresent() && biome.get().getBaseTemperature() >= maximumTemperature.get()) {
                 return;
             }
             if (minimumHumidity.isPresent() && biome.get().getDownfall() <= minimumHumidity.get()) {

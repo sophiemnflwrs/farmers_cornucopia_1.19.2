@@ -10,9 +10,11 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import javax.annotation.Nullable;
 import java.util.Optional;
 
+// credit to vectorwing for the majority of this code!
+
  public record WildCropConfiguration(int tries, int xzSpread, int ySpread, Holder<PlacedFeature> primaryFeature, Holder<PlacedFeature> secondaryFeature, @Nullable Holder<PlacedFeature> floorFeature) implements FeatureConfiguration {
     public static final Codec<WildCropConfiguration> CODEC = RecordCodecBuilder.create((config) -> config.group(
-            ExtraCodecs.POSITIVE_INT.fieldOf("tries").orElse(128).forGetter(WildCropConfiguration::tries),
+            ExtraCodecs.POSITIVE_INT.fieldOf("tries").orElse(256).forGetter(WildCropConfiguration::tries),
             ExtraCodecs.NON_NEGATIVE_INT.fieldOf("xz_spread").orElse(6).forGetter(WildCropConfiguration::xzSpread),
             ExtraCodecs.NON_NEGATIVE_INT.fieldOf("y_spread").orElse(3).forGetter(WildCropConfiguration::ySpread),
             PlacedFeature.CODEC.fieldOf("primary_feature").forGetter(WildCropConfiguration::primaryFeature),

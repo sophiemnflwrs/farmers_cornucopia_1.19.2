@@ -40,6 +40,8 @@ public class FCItems {
     // wild crops
     public static final RegistryObject<Item> WILD_GARLIC = ITEMS.register("wild_garlic",
             () -> new BlockItem(FCBlocks.WILD_GARLIC.get(), basicItem()));
+    public static final RegistryObject<Item> WILD_GINGER = ITEMS.register("wild_ginger",
+            () -> new BlockItem(FCBlocks.WILD_GINGER.get(), basicItem()));
 
     // ingredients + foodstuffs
     public static final RegistryObject<Item> SALT = ITEMS.register("salt",

@@ -10,6 +10,8 @@ import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.sophiemnflwrs.farmerscornucopia.common.world.configuration.WildCropConfiguration;
 
+// credit to vectorwing for this code!
+
 public class WildCropFeature extends Feature<WildCropConfiguration> {
     public WildCropFeature(Codec<WildCropConfiguration> codec) {
         super(codec);

@@ -12,5 +12,7 @@
   "item.farmerscornucopia.butter": "Butter",
   "item.farmerscornucopia.garlic_bread": "Garlic Bread",
   "item.farmerscornucopia.ginger_seeds": "Ginger Seeds",
-  "block.farmerscornucopia.wild_ginger": "Wild Ginger"
+  "block.farmerscornucopia.wild_ginger": "Wild Ginger",
+  "item.farmerscornucopia.ginger": "Ginger",
+  "block.farmerscornucopia.ginger_crop": "Ginger Crop"
 }

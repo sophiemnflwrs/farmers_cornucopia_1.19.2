@@ -40,11 +40,8 @@ public class WildCropGeneration {
     }
 
     public static WildCropConfiguration wildCropConfig(Block primaryBlock, Block secondaryBlock, BlockPredicate plantedOn) {
-        return new WildCropConfiguration(128, 6, 3, plantBlockConfig(primaryBlock, plantedOn), plantBlockConfig(secondaryBlock, plantedOn), null);
+        return new WildCropConfiguration(256, 6, 3, plantBlockConfig(primaryBlock, plantedOn), plantBlockConfig(secondaryBlock, plantedOn), null);
     }
-    public static final BlockPos BLOCK_BELOW = new BlockPos(0, -1, 0);
-    public static final BlockPos BLOCK_ABOVE = new BlockPos(0, 1, 0);
-
 
     // generation
     public static Holder<ConfiguredFeature<WildCropConfiguration, ?>> FEATURE_PATCH_WILD_GARLIC;
@@ -52,6 +49,11 @@ public class WildCropGeneration {
 
     public static Holder<PlacedFeature> PATCH_WILD_GARLIC;
     public static Holder<PlacedFeature> PATCH_WILD_GINGER;
+
+    // helper method 2
+    public static final BlockPos BLOCK_BELOW = new BlockPos(0, -1, 0);
+    public static final BlockPos BLOCK_ABOVE = new BlockPos(0, 1, 0);
+
 
     // configuration of that generation
     public static void registerWildCropGeneration() {

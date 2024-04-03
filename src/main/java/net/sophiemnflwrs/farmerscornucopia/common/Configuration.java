@@ -22,10 +22,11 @@ public class Configuration {
         COMMON_BUILDER.comment("World generation").push(CATEGORY_WORLD);
             COMMON_BUILDER.comment("Wild Garlic generation").push("wild_garlic");
             CHANCE_WILD_GARLIC = COMMON_BUILDER.comment("Chance of generating clusters. Smaller value = more frequent.")
-                    .defineInRange("chance", 120, 0, Integer.MAX_VALUE);
+                    .defineInRange("chance", 30, 5, Integer.MAX_VALUE);
+        COMMON_BUILDER.pop();
             COMMON_BUILDER.comment("Wild Ginger generation").push("wild_ginger");
-            CHANCE_WILD_GARLIC = COMMON_BUILDER.comment("Chance of generating clusters. Smaller value = more frequent.")
-                    .defineInRange("chance", 120, 0, Integer.MAX_VALUE);
+            CHANCE_WILD_GINGER = COMMON_BUILDER.comment("Chance of generating clusters. Smaller value = more frequent.")
+                    .defineInRange("chance", 30, 5, Integer.MAX_VALUE);
         COMMON_BUILDER.pop();
 
         COMMON_CONFIG = COMMON_BUILDER.build();
