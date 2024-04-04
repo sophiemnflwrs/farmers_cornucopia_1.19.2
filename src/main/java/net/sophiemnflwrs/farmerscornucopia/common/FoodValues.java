@@ -1,5 +1,7 @@
 package net.sophiemnflwrs.farmerscornucopia.common;
 
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 
 public class FoodValues {
@@ -25,8 +27,11 @@ public class FoodValues {
             .nutrition(2).saturationMod(0.4f).build();
     public static final FoodProperties BUTTER = (new FoodProperties.Builder())
             .nutrition(2).saturationMod(0.4f).build();
+
     // meals
     public static final FoodProperties GARLIC_BREAD = (new FoodProperties.Builder())
-            .nutrition(5).saturationMod(0.6f).build();
+            .nutrition(5).saturationMod(0.6f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 600, 0), 0.2f).build();
+
 
 }
