@@ -6,7 +6,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import vectorwing.farmersdelight.common.item.DrinkableItem;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -35,10 +34,5 @@ public class CreamItem extends DrinkableItem {
                 consumer.removeEffect(selectedEffect.getEffect());
             }
         }
-
-       /* @Override
-        public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
-            FCTextUtility.addFoodEffectTooltip(stack, tooltip, 1.0F); *
-        } */
     }
 }
