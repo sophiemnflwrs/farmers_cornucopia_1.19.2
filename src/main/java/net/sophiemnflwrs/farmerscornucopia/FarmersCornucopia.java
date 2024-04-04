@@ -26,7 +26,7 @@ import org.checkerframework.checker.nullness.qual.NonNull;
 public class FarmersCornucopia {
 
     public static final String MOD_ID = "farmerscornucopia";
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
     public static final Gson GSON = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
 
     // creative tab
