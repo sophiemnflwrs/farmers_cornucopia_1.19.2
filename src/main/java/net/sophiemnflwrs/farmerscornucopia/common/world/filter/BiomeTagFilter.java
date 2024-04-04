@@ -23,9 +23,9 @@ public class BiomeTagFilter extends PlacementFilter {
     private final TagKey<Biome> biomeTag;
 
     private BiomeTagFilter(TagKey<Biome> biomeTag) {
+
         this.biomeTag = biomeTag;
     }
-
     public static BiomeTagFilter biomeIsInTag(TagKey<Biome> biomeTag) {
         return new BiomeTagFilter(biomeTag);
     }
