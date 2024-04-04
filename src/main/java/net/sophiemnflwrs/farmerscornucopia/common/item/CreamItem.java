@@ -35,5 +35,10 @@ public class CreamItem extends DrinkableItem {
                 consumer.removeEffect(selectedEffect.getEffect());
             }
         }
+
+       /* @Override
+        public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
+            FCTextUtility.addFoodEffectTooltip(stack, tooltip, 1.0F); *
+        } */
     }
 }

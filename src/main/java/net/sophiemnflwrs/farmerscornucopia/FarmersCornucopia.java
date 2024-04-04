@@ -42,7 +42,9 @@ public class FarmersCornucopia {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         modEventBus.addListener(CommonSetup::init);
+
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Configuration.COMMON_CONFIG);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, Configuration.CLIENT_CONFIG);
 
         MinecraftForge.EVENT_BUS.register(DataGenerators.class);
 

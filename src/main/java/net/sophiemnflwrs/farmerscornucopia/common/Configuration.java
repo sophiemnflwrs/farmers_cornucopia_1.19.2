@@ -15,8 +15,13 @@ public class Configuration {
     public static ForgeConfigSpec.BooleanValue GENERATE_WILD_GINGER;
     public static ForgeConfigSpec.IntValue CHANCE_WILD_GINGER;
 
+    public static final String CATEGORY_CLIENT = "client";
+    public static ForgeConfigSpec.BooleanValue FOOD_EFFECT_TOOLTIP;
+
 
     static {
+
+        // common
         ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
 
         COMMON_BUILDER.comment("World generation").push(CATEGORY_WORLD);
@@ -30,5 +35,15 @@ public class Configuration {
         COMMON_BUILDER.pop();
 
         COMMON_CONFIG = COMMON_BUILDER.build();
+
+        //client
+        ForgeConfigSpec.Builder CLIENT_BUILDER = new ForgeConfigSpec.Builder();
+
+        CLIENT_BUILDER.comment("Client settings").push(CATEGORY_CLIENT);
+        FOOD_EFFECT_TOOLTIP = CLIENT_BUILDER.comment("Should meal and drink tooltips display which effects they provide?")
+                .define("foodEffectTooltip", true);
+        CLIENT_BUILDER.pop();
+
+        CLIENT_CONFIG = CLIENT_BUILDER.build();
     }
 }
