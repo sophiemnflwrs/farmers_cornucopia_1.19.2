@@ -41,18 +41,18 @@ public class WildCropFeature extends Feature<WildCropConfiguration> {
             }
         }
 
-        for (int k = 0; k < tries; ++k) {
-            int shorterXZ = xzSpread - 2;
-            mutablePos.setWithOffset(origin, random.nextInt(shorterXZ) - random.nextInt(shorterXZ), random.nextInt(ySpread) - random.nextInt(ySpread), random.nextInt(shorterXZ) - random.nextInt(shorterXZ));
-            if (config.primaryFeature().value().place(level, context.chunkGenerator(), random, mutablePos)) {
-                ++i;
+            for (int k = 0; k < tries; ++k) {
+                int shorterXZ = xzSpread - 1;
+                mutablePos.setWithOffset(origin, random.nextInt(shorterXZ) - random.nextInt(shorterXZ), random.nextInt(ySpread) - random.nextInt(ySpread), random.nextInt(shorterXZ) - random.nextInt(shorterXZ));
+                if (config.primaryFeature().value().place(level, context.chunkGenerator(), random, mutablePos)) {
+                    ++i;
+                }
             }
-        }
 
-        for (int l = 0; l < tries; ++l) {
-            mutablePos.setWithOffset(origin, random.nextInt(xzSpread) - random.nextInt(xzSpread), random.nextInt(ySpread) - random.nextInt(ySpread), random.nextInt(xzSpread) - random.nextInt(xzSpread));
-            if (config.secondaryFeature().value().place(level, context.chunkGenerator(), random, mutablePos)) {
-                ++i;
+            for (int l = 0; l < tries; ++l) {
+                mutablePos.setWithOffset(origin, random.nextInt(xzSpread) - random.nextInt(xzSpread), random.nextInt(ySpread) - random.nextInt(ySpread), random.nextInt(xzSpread) - random.nextInt(xzSpread));
+                if (config.secondaryFeature().value().place(level, context.chunkGenerator(), random, mutablePos)) {
+                    ++i;
             }
         }
 
