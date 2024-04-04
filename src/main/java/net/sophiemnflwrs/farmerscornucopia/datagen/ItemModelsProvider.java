@@ -31,6 +31,14 @@ public class ItemModelsProvider extends ItemModelProvider {
         Set<Item> items = ForgeRegistries.ITEMS.getValues().stream().filter(i -> FarmersCornucopia.MOD_ID.equals(ForgeRegistries.ITEMS.getKey(i).getNamespace()))
                 .collect(Collectors.toSet());
 
+        // blocks w/ special sprites
+        Set<Item> spriteBlockItems = Sets.newHashSet(
+                FCItems.GARLIC_CLOVE.get(),
+                FCItems.GINGER_SEEDS.get()
+        );
+        takeAll(items, spriteBlockItems.toArray(new Item[0])).forEach(item -> withExistingParent(itemName(item), GENERATED).texture("layer0", resourceItem(itemName(item))));
+
+
         // blocks w/ flat block textures for their items
         Set<Item> flatBlockItems = Sets.newHashSet(
                 FCItems.WILD_GARLIC.get(),

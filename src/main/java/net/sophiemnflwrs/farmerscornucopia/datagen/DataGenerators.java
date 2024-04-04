@@ -22,6 +22,7 @@ public class DataGenerators {
 
         BlockStatesProvider blockStates = new BlockStatesProvider(generator, helper);
         generator.addProvider(event.includeClient(), blockStates);
+        generator.addProvider(event.includeClient(), new ItemModelsProvider(generator, blockStates.models().existingFileHelper));
 
 
     }
