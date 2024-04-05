@@ -16,7 +16,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
 import net.sophiemnflwrs.farmerscornucopia.common.block.crops.GarlicCrop;
 import net.sophiemnflwrs.farmerscornucopia.common.block.crops.GingerCrop;
-import net.sophiemnflwrs.farmerscornucopia.common.block.tree.WoodBlock;
+import net.sophiemnflwrs.farmerscornucopia.common.block.tree.ModLogBlock;
 import vectorwing.farmersdelight.common.block.WildCropBlock;
 
 public class FCBlocks {
@@ -39,13 +39,13 @@ public class FCBlocks {
 
     // trees
     public static final RegistryObject<Block> OLIVE_LOG = BLOCKS.register("olive_log",
-            () -> new WoodBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+            () -> new ModLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> OLIVE_WOOD = BLOCKS.register("olive_wood",
-            () -> new WoodBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+            () -> new ModLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
     public static final RegistryObject<Block> STRIPPED_OLIVE_LOG = BLOCKS.register("stripped_olive_log",
-            () -> new WoodBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+            () -> new ModLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_OLIVE_WOOD = BLOCKS.register("stripped_olive_wood",
-            () -> new WoodBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+            () -> new ModLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
 
     public static final RegistryObject<Block> OLIVE_LEAVES = BLOCKS.register("olive_log",
             () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)){

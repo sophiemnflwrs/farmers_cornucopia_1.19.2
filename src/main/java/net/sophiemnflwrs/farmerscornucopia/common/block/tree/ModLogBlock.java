@@ -2,19 +2,24 @@ package net.sophiemnflwrs.farmerscornucopia.common.block.tree;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.ToolAction;
-import net.sophiemnflwrs.farmerscornucopia.common.registry.FCBlocks;
+import net.minecraftforge.common.ToolActions;
+import net.sophiemnflwrs.farmerscornucopia.common.utility.FCBlockUtility;
 
 import javax.annotation.Nullable;
+import java.util.function.Supplier;
 
-public class WoodBlock extends RotatedPillarBlock {
-    public WoodBlock(Properties properties) {
+public class ModLogBlock extends RotatedPillarBlock {
+    private final Supplier<Block> block;
+
+    public ModLogBlock(Supplier<Block> strippedBlock, Properties properties) {
         super(properties);
+        this.block = strippedBlock;
     }
 
     @Override
@@ -33,16 +38,10 @@ public class WoodBlock extends RotatedPillarBlock {
     }
 
     @Override
-    public @Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate) {
-        if(context.getItemInHand().getItem() instanceof AxeItem) {
-            if(state.is(FCBlocks.OLIVE_LOG.get())) {
-                return FCBlocks.STRIPPED_OLIVE_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
-            }
-            if(state.is(FCBlocks.OLIVE_WOOD.get())){
-                return FCBlocks.STRIPPED_OLIVE_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
-            }
-        }
-
-        return super.getToolModifiedState(state, context, toolAction, simulate);
+    @Nullable
+    public BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction action, boolean simulate) {
+        if (action == ToolActions.AXE_STRIP)
+            return this.block != null ? FCBlockUtility.transferAllBlockStates(state, this.block.get().defaultBlockState()) : null;
+        return super.getToolModifiedState(state, context, action, simulate);
     }
 }
