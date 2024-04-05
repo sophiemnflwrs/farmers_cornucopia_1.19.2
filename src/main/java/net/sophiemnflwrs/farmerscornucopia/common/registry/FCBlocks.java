@@ -1,13 +1,9 @@
 package net.sophiemnflwrs.farmerscornucopia.common.registry;
 
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -16,7 +12,10 @@ import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
 import net.sophiemnflwrs.farmerscornucopia.common.block.crops.GarlicCrop;
 import net.sophiemnflwrs.farmerscornucopia.common.block.crops.GingerCrop;
+import net.sophiemnflwrs.farmerscornucopia.common.block.tree.ModLeavesBlock;
 import net.sophiemnflwrs.farmerscornucopia.common.block.tree.ModLogBlock;
+import net.sophiemnflwrs.farmerscornucopia.common.block.tree.ModPlanksBlock;
+import net.sophiemnflwrs.farmerscornucopia.common.world.feature.tree.OliveTreeGrower;
 import vectorwing.farmersdelight.common.block.WildCropBlock;
 
 public class FCBlocks {
@@ -48,44 +47,12 @@ public class FCBlocks {
             () -> new ModLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
 
     public static final RegistryObject<Block> OLIVE_LEAVES = BLOCKS.register("olive_log",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)){
-                @Override
-                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return true;
-                }
-
-                @Override
-                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 30;
-                }
-
-                @Override
-                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 60;
-                }
-            }
-        );
+            () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> OLIVE_SAPLING = BLOCKS.register("olive_sapling",
-            () -> new SaplingBlock( , BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+            () -> new SaplingBlock(new OliveTreeGrower(),  BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     public static final RegistryObject<Block> OLIVE_PLANKS = BLOCKS.register("olive_planks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
-                    @Override
-                    public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return true;
-                }
-
-                    @Override
-                    public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 5;
-                }
-
-                    @Override
-                    public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 20;
-                }
-            }
-        );
+            () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
 
     // crops
         public static final RegistryObject<Block> GARLIC_CROP = BLOCKS.register("garlic_crop",

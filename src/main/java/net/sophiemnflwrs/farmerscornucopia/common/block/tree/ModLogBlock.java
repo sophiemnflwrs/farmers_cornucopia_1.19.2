@@ -4,22 +4,18 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.ToolAction;
 import net.minecraftforge.common.ToolActions;
-import net.sophiemnflwrs.farmerscornucopia.common.utility.FCBlockUtility;
+import net.sophiemnflwrs.farmerscornucopia.common.registry.FCBlocks;
 
 import javax.annotation.Nullable;
-import java.util.function.Supplier;
 
 public class ModLogBlock extends RotatedPillarBlock {
-    private final Supplier<Block> block;
 
-    public ModLogBlock(Supplier<Block> strippedBlock, Properties properties) {
+    public ModLogBlock(Properties properties) {
         super(properties);
-        this.block = strippedBlock;
     }
 
     @Override
@@ -41,7 +37,12 @@ public class ModLogBlock extends RotatedPillarBlock {
     @Nullable
     public BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction action, boolean simulate) {
         if (action == ToolActions.AXE_STRIP)
-            return this.block != null ? FCBlockUtility.transferAllBlockStates(state, this.block.get().defaultBlockState()) : null;
+            if (state.is(FCBlocks.OLIVE_LOG.get())) {
+                return FCBlocks.STRIPPED_OLIVE_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if (state.is(FCBlocks.OLIVE_WOOD.get())) {
+                return FCBlocks.STRIPPED_OLIVE_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
         return super.getToolModifiedState(state, context, action, simulate);
     }
 }

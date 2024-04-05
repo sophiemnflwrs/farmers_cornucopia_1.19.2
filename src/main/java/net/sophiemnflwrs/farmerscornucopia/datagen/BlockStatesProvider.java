@@ -3,6 +3,7 @@ package net.sophiemnflwrs.farmerscornucopia.datagen;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -44,10 +45,18 @@ public class BlockStatesProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
 
-        // salt ores + blocks
+        // salt ores + block
         this.simpleBlock(FCBlocks.SALT_ORE.get(), models().cubeAll("salt_ore", resourceBlock("salt_ore")));
         this.simpleBlock(FCBlocks.DEEPSLATE_SALT_ORE.get(), models().cubeAll("deepslate_salt_ore", resourceBlock("deepslate_salt_ore")));
         this.simpleBlock(FCBlocks.SALT_BLOCK.get(), models().cubeAll("salt_block", resourceBlock("salt_block")));
+
+        // trees
+        this.logBlock((RotatedPillarBlock) FCBlocks.OLIVE_LOG.get());
+        this.logBlock((RotatedPillarBlock) FCBlocks.OLIVE_WOOD.get());
+        this.logBlock((RotatedPillarBlock) FCBlocks.STRIPPED_OLIVE_LOG.get());
+        this.logBlock((RotatedPillarBlock) FCBlocks.STRIPPED_OLIVE_WOOD.get());
+        this.simpleBlock(FCBlocks.OLIVE_LEAVES.get(), models().cubeAll("olive_leaves", resourceBlock("olive_leaves")));
+        this.simpleBlock(FCBlocks.OLIVE_PLANKS.get(), models().cubeAll("olive_planks", resourceBlock("olive_planks")));
 
         // wild crops
         this.wildCropBlock(FCBlocks.WILD_GARLIC.get());
