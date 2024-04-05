@@ -1,6 +1,24 @@
 {
   "itemGroup.farmerscornucopiatab": "Farmer's Cornucopia",
 
+  "block.farmerscornucopia.salt_ore": "Salt Ore",
+  "block.farmerscornucopia.deepslate_salt_ore": "Deepslate Salt Ore",
+  "block.farmerscornucopia.salt_block": "Block of Salt",
+
+  "block.farmerscornucopia.wild_garlic": "Wild Garlic",
+  "block.farmerscornucopia.wild_ginger": "Wild Ginger",
+
+  "block.farmerscornucopia.olive_log": "Olive Log",
+  "block.farmerscornucopia.olive_wood": "Olive Wood",
+  "block.farmerscornucopia.stripped_olive_log": "Stripped Olive Log",
+  "block.farmerscornucopia.stripped_olive_wood": "Stripped Olive Wood",
+  "block.farmerscornucopia.olive_leaves": "Olive Leaves",
+  "block.farmerscornucopia.olive_sapling": "Olive Sapling",
+  "block.farmerscornucopia.olive_planks": "Olive Planks",
+
+  "block.farmerscornucopia.garlic_crop": "Garlic Crop",
+  "block.farmerscornucopia.ginger_crop": "Ginger Crop",
+
   "item.farmerscornucopia.salt": "Salt",
   "item.farmerscornucopia.garlic": "Garlic",
   "item.farmerscornucopia.ginger": "Ginger",
@@ -12,15 +30,6 @@
   "item.farmerscornucopia.butter": "Butter",
 
   "item.farmerscornucopia.garlic_bread": "Garlic Bread",
-
-  "block.farmerscornucopia.salt_ore": "Salt Ore",
-  "block.farmerscornucopia.deepslate_salt_ore": "Deepslate Salt Ore",
-  "block.farmerscornucopia.salt_block": "Block of Salt",
-  "block.farmerscornucopia.wild_garlic": "Wild Garlic",
-  "block.farmerscornucopia.wild_ginger": "Wild Ginger",
-
-  "block.farmerscornucopia.garlic_crop": "Garlic Crop",
-  "block.farmerscornucopia.ginger_crop": "Ginger Crop",
 
   "farmerscornucopia.tooltip.cream": "Clears one effect."
 }

@@ -11,8 +11,8 @@ import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
-import net.sophiemnflwrs.farmerscornucopia.common.block.GarlicCrop;
-import net.sophiemnflwrs.farmerscornucopia.common.block.GingerCrop;
+import net.sophiemnflwrs.farmerscornucopia.common.block.crops.GarlicCrop;
+import net.sophiemnflwrs.farmerscornucopia.common.block.crops.GingerCrop;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCBlocks;
 
 import javax.annotation.Nullable;

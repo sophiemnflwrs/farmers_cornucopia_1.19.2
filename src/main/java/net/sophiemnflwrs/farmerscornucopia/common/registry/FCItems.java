@@ -12,7 +12,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
 import net.sophiemnflwrs.farmerscornucopia.common.FoodValues;
-import net.sophiemnflwrs.farmerscornucopia.common.item.CreamItem;
+import net.sophiemnflwrs.farmerscornucopia.common.item.drinks.CreamItem;
 
 public class FCItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -29,13 +29,31 @@ public class FCItems {
         return new Item.Properties().food(food).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersCornucopia.CREATIVE_TAB);
     }
 
-    // blocks
+    // salt blocks
     public static final RegistryObject<Item> SALT_BLOCK = ITEMS.register("salt_block",
             () -> new BlockItem(FCBlocks.SALT_BLOCK.get(), basicItem()));
     public static final RegistryObject<Item> SALT_ORE = ITEMS.register("salt_ore",
             () -> new BlockItem(FCBlocks.SALT_ORE.get(), basicItem()));
     public static final RegistryObject<Item> DEEPSLATE_SALT_ORE = ITEMS.register("deepslate_salt_ore",
             () -> new BlockItem(FCBlocks.DEEPSLATE_SALT_ORE.get(), basicItem()));
+
+    // trees
+    public static final RegistryObject<Item> OLIVE_LOG = ITEMS.register("olive_log",
+            () -> new BlockItem(FCBlocks.OLIVE_LOG.get(), basicItem()));
+    public static final RegistryObject<Item> OLIVE_WOOD = ITEMS.register("olive_wood",
+            () -> new BlockItem(FCBlocks.OLIVE_WOOD.get(), basicItem()));
+    public static final RegistryObject<Item> STRIPPED_OLIVE_LOG = ITEMS.register("stripped_olive_log",
+            () -> new BlockItem(FCBlocks.STRIPPED_OLIVE_LOG.get(), basicItem()));
+    public static final RegistryObject<Item> STRIPPED_OLIVE_WOOD = ITEMS.register("stripped_olive_wood",
+            () -> new BlockItem(FCBlocks.STRIPPED_OLIVE_WOOD.get(), basicItem()));
+
+    public static final RegistryObject<Item> OLIVE_LEAVES = ITEMS.register("olive_leaves",
+            () -> new BlockItem(FCBlocks.OLIVE_LEAVES.get(), basicItem()));
+    public static final RegistryObject<Item> OLIVE_SAPLING = ITEMS.register("olive_sapling",
+            () -> new BlockItem(FCBlocks.OLIVE_SAPLING.get(), basicItem()));
+
+    public static final RegistryObject<Item> OLIVE_PLANKS = ITEMS.register("olive_planks",
+            () -> new BlockItem(FCBlocks.OLIVE_PLANKS.get(), basicItem()));
 
     // wild crops
     public static final RegistryObject<Item> WILD_GARLIC = ITEMS.register("wild_garlic",

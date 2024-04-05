@@ -1,4 +1,4 @@
-package net.sophiemnflwrs.farmerscornucopia.common.item;
+package net.sophiemnflwrs.farmerscornucopia.common.item.drinks;
 
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -6,6 +6,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.sophiemnflwrs.farmerscornucopia.common.item.DrinkableItem;
 
 import java.util.ArrayList;
 import java.util.Iterator;

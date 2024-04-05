@@ -49,7 +49,7 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
                 .unlockedBy("has_cream", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.CREAM.get()))
                 .save(consumer);
 
-        // non-meal foods
+        // foods
         ShapelessRecipeBuilder.shapeless(FCItems.GARLIC_BREAD.get(), 2)
                 .requires(Items.BREAD)
                 .requires(FCItems.GARLIC.get())
