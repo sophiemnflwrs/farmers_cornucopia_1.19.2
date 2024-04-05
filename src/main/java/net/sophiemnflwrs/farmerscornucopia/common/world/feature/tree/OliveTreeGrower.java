@@ -12,5 +12,4 @@ public class OliveTreeGrower extends AbstractTreeGrower {
     public Holder<? extends ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomSource, boolean hasFlowers) {
         return ModPlantGeneration.FEATURE_OLIVE_TREE;
     }
-
 }
