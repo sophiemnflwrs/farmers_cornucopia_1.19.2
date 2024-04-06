@@ -40,12 +40,8 @@ public class FCItems {
     // trees
     public static final RegistryObject<Item> OLIVE_LOG = ITEMS.register("olive_log",
             () -> new BlockItem(FCBlocks.OLIVE_LOG.get(), basicItem()));
-    public static final RegistryObject<Item> OLIVE_WOOD = ITEMS.register("olive_wood",
-            () -> new BlockItem(FCBlocks.OLIVE_WOOD.get(), basicItem()));
     public static final RegistryObject<Item> STRIPPED_OLIVE_LOG = ITEMS.register("stripped_olive_log",
             () -> new BlockItem(FCBlocks.STRIPPED_OLIVE_LOG.get(), basicItem()));
-    public static final RegistryObject<Item> STRIPPED_OLIVE_WOOD = ITEMS.register("stripped_olive_wood",
-            () -> new BlockItem(FCBlocks.STRIPPED_OLIVE_WOOD.get(), basicItem()));
 
     public static final RegistryObject<Item> OLIVE_LEAVES = ITEMS.register("olive_leaves",
             () -> new BlockItem(FCBlocks.OLIVE_LEAVES.get(), basicItem()));

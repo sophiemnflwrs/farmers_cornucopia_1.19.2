@@ -2,6 +2,7 @@ package net.sophiemnflwrs.farmerscornucopia.datagen;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCBlocks;
 import net.sophiemnflwrs.farmerscornucopia.common.tag.FCTags;
@@ -23,10 +24,15 @@ public class BlockTagProvider extends BlockTagsProvider {
     }
 
     protected void registerBlockMineables() {
-        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
                 FCBlocks.SALT_BLOCK.get(),
                 FCBlocks.SALT_ORE.get(),
                 FCBlocks.DEEPSLATE_SALT_ORE.get()
+        );
+        tag(BlockTags.MINEABLE_WITH_AXE).add(
+                FCBlocks.OLIVE_LOG.get(),
+                FCBlocks.STRIPPED_OLIVE_LOG.get(),
+                FCBlocks.OLIVE_PLANKS.get()
         );
     }
 
@@ -35,9 +41,21 @@ public class BlockTagProvider extends BlockTagsProvider {
     }
 
     protected void registerMinecraftTags() {
-        tag(net.minecraft.tags.BlockTags.CROPS).add(FCBlocks.GARLIC_CROP.get());
-        tag(net.minecraft.tags.BlockTags.SMALL_FLOWERS).add(FCBlocks.WILD_GARLIC.get());
-        tag(net.minecraft.tags.BlockTags.SMALL_FLOWERS).add(FCBlocks.WILD_GINGER.get());
+        tag(BlockTags.CROPS).add(FCBlocks.GARLIC_CROP.get());
+        tag(BlockTags.CROPS).add(FCBlocks.GINGER_CROP.get());
+
+        tag(BlockTags.LEAVES).add(FCBlocks.OLIVE_LEAVES.get());
+
+        tag(BlockTags.LOGS).add(FCBlocks.OLIVE_LOG.get());
+        tag(BlockTags.LOGS).add(FCBlocks.STRIPPED_OLIVE_LOG.get());
+
+        tag(BlockTags.PLANKS).add(FCBlocks.OLIVE_PLANKS.get());
+
+        tag(BlockTags.SAPLINGS).add(FCBlocks.OLIVE_SAPLING.get());
+
+        tag(BlockTags.SMALL_FLOWERS).add(FCBlocks.WILD_GARLIC.get());
+        tag(BlockTags.SMALL_FLOWERS).add(FCBlocks.WILD_GINGER.get());
+
     }
 
     protected void registerModTags() {

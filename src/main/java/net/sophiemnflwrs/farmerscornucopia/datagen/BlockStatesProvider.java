@@ -52,11 +52,10 @@ public class BlockStatesProvider extends BlockStateProvider {
 
         // trees
         this.logBlock((RotatedPillarBlock) FCBlocks.OLIVE_LOG.get());
-        this.logBlock((RotatedPillarBlock) FCBlocks.OLIVE_WOOD.get());
         this.logBlock((RotatedPillarBlock) FCBlocks.STRIPPED_OLIVE_LOG.get());
-        this.logBlock((RotatedPillarBlock) FCBlocks.STRIPPED_OLIVE_WOOD.get());
         this.simpleBlock(FCBlocks.OLIVE_LEAVES.get(), models().cubeAll("olive_leaves", resourceBlock("olive_leaves")));
         this.simpleBlock(FCBlocks.OLIVE_PLANKS.get(), models().cubeAll("olive_planks", resourceBlock("olive_planks")));
+        this.simpleBlock(FCBlocks.OLIVE_SAPLING.get(), models().cross("olive_sapling", resourceBlock("olive_sapling")).renderType("cutout"));
 
         // wild crops
         this.wildCropBlock(FCBlocks.WILD_GARLIC.get());

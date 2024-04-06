@@ -38,11 +38,11 @@ public class ItemModelsProvider extends ItemModelProvider {
         );
         takeAll(items, spriteBlockItems.toArray(new Item[0])).forEach(item -> withExistingParent(itemName(item), GENERATED).texture("layer0", resourceItem(itemName(item))));
 
-
         // blocks w/ flat block textures for their items
         Set<Item> flatBlockItems = Sets.newHashSet(
                 FCItems.WILD_GARLIC.get(),
-                FCItems.WILD_GINGER.get()
+                FCItems.WILD_GINGER.get(),
+                FCItems.OLIVE_SAPLING.get()
         );
         takeAll(items, flatBlockItems.toArray(new Item[0])).forEach(item -> itemGeneratedModel(item, resourceBlock(itemName(item))));
 

@@ -40,9 +40,6 @@ public class ModLogBlock extends RotatedPillarBlock {
             if (state.is(FCBlocks.OLIVE_LOG.get())) {
                 return FCBlocks.STRIPPED_OLIVE_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
-            if (state.is(FCBlocks.OLIVE_WOOD.get())) {
-                return FCBlocks.STRIPPED_OLIVE_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
-            }
         return super.getToolModifiedState(state, context, action, simulate);
     }
 }

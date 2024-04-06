@@ -39,18 +39,12 @@ public class FCBlocks {
     // trees
     public static final RegistryObject<Block> OLIVE_LOG = BLOCKS.register("olive_log",
             () -> new ModLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
-    public static final RegistryObject<Block> OLIVE_WOOD = BLOCKS.register("olive_wood",
-            () -> new ModLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
     public static final RegistryObject<Block> STRIPPED_OLIVE_LOG = BLOCKS.register("stripped_olive_log",
             () -> new ModLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
-    public static final RegistryObject<Block> STRIPPED_OLIVE_WOOD = BLOCKS.register("stripped_olive_wood",
-            () -> new ModLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
-
-    public static final RegistryObject<Block> OLIVE_LEAVES = BLOCKS.register("olive_log",
+    public static final RegistryObject<Block> OLIVE_LEAVES = BLOCKS.register("olive_leaves",
             () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> OLIVE_SAPLING = BLOCKS.register("olive_sapling",
             () -> new SaplingBlock(new OliveTreeGrower(),  BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-
     public static final RegistryObject<Block> OLIVE_PLANKS = BLOCKS.register("olive_planks",
             () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
 
