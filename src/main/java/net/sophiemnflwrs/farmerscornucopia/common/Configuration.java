@@ -15,6 +15,9 @@ public class Configuration {
     public static ForgeConfigSpec.BooleanValue GENERATE_WILD_GINGER;
     public static ForgeConfigSpec.IntValue CHANCE_WILD_GINGER;
 
+    public static ForgeConfigSpec.BooleanValue GENERATE_OLIVE_TREE;
+    public static ForgeConfigSpec.IntValue CHANCE_OLIVE_TREE;
+
     public static final String CATEGORY_CLIENT = "client";
     public static ForgeConfigSpec.BooleanValue FOOD_EFFECT_TOOLTIP;
 
@@ -31,6 +34,10 @@ public class Configuration {
         COMMON_BUILDER.pop();
             COMMON_BUILDER.comment("Wild Ginger generation").push("wild_ginger");
             CHANCE_WILD_GINGER = COMMON_BUILDER.comment("Chance of generating clusters. Smaller value = more frequent.")
+                    .defineInRange("chance", 30, 5, Integer.MAX_VALUE);
+        COMMON_BUILDER.pop();
+            COMMON_BUILDER.comment("Olive Tree generation").push("olive_tree");
+            CHANCE_OLIVE_TREE = COMMON_BUILDER.comment("Chance of generating trees. Smaller values = more frequent.")
                     .defineInRange("chance", 30, 5, Integer.MAX_VALUE);
         COMMON_BUILDER.pop();
 
