@@ -38,7 +38,7 @@ public class Configuration {
         COMMON_BUILDER.pop();
             COMMON_BUILDER.comment("Olive Tree generation").push("olive_tree");
             CHANCE_OLIVE_TREE = COMMON_BUILDER.comment("Chance of generating trees. Smaller values = more frequent.")
-                    .defineInRange("chance", 30, 5, Integer.MAX_VALUE);
+                    .defineInRange("chance", 20, 5, Integer.MAX_VALUE);
         COMMON_BUILDER.pop();
 
         COMMON_CONFIG = COMMON_BUILDER.build();

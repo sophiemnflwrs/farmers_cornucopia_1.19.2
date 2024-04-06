@@ -7,7 +7,6 @@ import net.minecraft.core.Registry;
 import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -30,6 +29,8 @@ import net.sophiemnflwrs.farmerscornucopia.common.world.configuration.WildCropCo
 
 import java.util.List;
 import java.util.OptionalInt;
+
+import static net.minecraft.tags.BlockTags.DIRT;
 
 public class ModPlantGeneration {
 
@@ -69,14 +70,14 @@ public class ModPlantGeneration {
 
         // feature config
         FEATURE_PATCH_WILD_GARLIC = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_garlic"),
-                FCBiomeFeatures.WILD_CROP.get(), wildCropConfig(FCBlocks.WILD_GARLIC.get(), Blocks.GRASS, BlockPredicate.matchesTag(BLOCK_BELOW, BlockTags.DIRT)));
+                FCBiomeFeatures.WILD_CROP.get(), wildCropConfig(FCBlocks.WILD_GARLIC.get(), Blocks.GRASS, BlockPredicate.matchesTag(BLOCK_BELOW, DIRT)));
         FEATURE_PATCH_WILD_GINGER = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_ginger"),
-                FCBiomeFeatures.WILD_CROP.get(), wildCropConfig(FCBlocks.WILD_GINGER.get(), Blocks.FERN, BlockPredicate.matchesTag(BLOCK_BELOW, BlockTags.DIRT)));
+                FCBiomeFeatures.WILD_CROP.get(), wildCropConfig(FCBlocks.WILD_GINGER.get(), Blocks.FERN, BlockPredicate.matchesTag(BLOCK_BELOW, DIRT)));
 
         FEATURE_OLIVE_TREE = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "olive_tree"),
                 FCBiomeFeatures.FRUITING_TREES.get(), new TreeConfiguration.TreeConfigurationBuilder(
                         BlockStateProvider.simple(FCBlocks.OLIVE_LOG.get()),
-                        new DarkOakTrunkPlacer(7, 3, 1),
+                        new DarkOakTrunkPlacer(6, 3, 1),
                         BlockStateProvider.simple(FCBlocks.OLIVE_LEAVES.get()),
                         new DarkOakFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0)),
                         new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty())).build());
@@ -86,8 +87,9 @@ public class ModPlantGeneration {
                 FEATURE_PATCH_WILD_GARLIC, RarityFilter.onAverageOnceEvery(Configuration.CHANCE_WILD_GARLIC.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
         PATCH_WILD_GINGER = registerPlacement(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_ginger"),
                 FEATURE_PATCH_WILD_GINGER, RarityFilter.onAverageOnceEvery(Configuration.CHANCE_WILD_GINGER.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
+
         OLIVE_TREE = registerPlacement(new ResourceLocation(FarmersCornucopia.MOD_ID, "olive_tree"),
-                FEATURE_OLIVE_TREE, RarityFilter.onAverageOnceEvery(Configuration.CHANCE_OLIVE_TREE.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, PlacementUtils.filteredByBlockSurvival(FCBlocks.OLIVE_SAPLING.get()), BiomeFilter.biome());
+                FEATURE_OLIVE_TREE, RarityFilter.onAverageOnceEvery(Configuration.CHANCE_OLIVE_TREE.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, PlacementUtils.filteredByBlockSurvival(FCBlocks.OLIVE_SAPLING.get()), PlacementUtils.isEmpty(), BiomeFilter.biome());
     }
 
     // register
