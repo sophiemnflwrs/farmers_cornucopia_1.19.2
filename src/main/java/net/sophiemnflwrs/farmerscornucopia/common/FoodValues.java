@@ -17,6 +17,8 @@ public class FoodValues {
             .nutrition(1).saturationMod(0.4f).build();
     public static final FoodProperties GINGER = (new FoodProperties.Builder())
             .nutrition(1).saturationMod(0.6f).build();
+    public static final FoodProperties OLIVE = (new FoodProperties.Builder())
+            .nutrition(1).saturationMod(0.3f).build();
 
     // misc. foodstuffs
     public static final FoodProperties GARLIC_CLOVE = (new FoodProperties.Builder())

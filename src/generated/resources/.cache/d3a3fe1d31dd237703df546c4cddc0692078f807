@@ -1,4 +1,4 @@
-// 1.19.2	2024-04-05T22:21:32.7239993	Item Models: farmerscornucopia
+// 1.19.2	2024-04-18T10:30:16.1999211	Item Models: farmerscornucopia
 9ade40e89eccce87efcbff82568289eb7833c58b assets/farmerscornucopia/models/item/butter.json
 d67ed8af2eda1a6a364ed3ef62fc7ddaa0ef63e1 assets/farmerscornucopia/models/item/cream.json
 e3e6c0a83fd7d0992a48a2a03e0278f2a70f25e4 assets/farmerscornucopia/models/item/deepslate_salt_ore.json
@@ -7,6 +7,7 @@ ea98012939567efd61160d5de9207d1a8279b657 assets/farmerscornucopia/models/item/ga
 3d147d028ffa17be36f370948d3c7d143bbe81ab assets/farmerscornucopia/models/item/garlic_clove.json
 1de06d14f1044fffeeaa904e81efceca26720b34 assets/farmerscornucopia/models/item/ginger.json
 6b40557d3e3284c311f25f55bd02d3fb693999b3 assets/farmerscornucopia/models/item/ginger_seeds.json
+3d140fe4c7f8a9ab690e2ffd92ebca4751f166f2 assets/farmerscornucopia/models/item/olive.json
 1808131826e86fa2cfa68bf0bff493618fd8b112 assets/farmerscornucopia/models/item/olive_leaves.json
 2468ef6b6110f85d7a2b528d55895ac57a3739a0 assets/farmerscornucopia/models/item/olive_log.json
 3afbc6d07ea759c9a9de1870c5059ba2d9bf83a6 assets/farmerscornucopia/models/item/olive_planks.json

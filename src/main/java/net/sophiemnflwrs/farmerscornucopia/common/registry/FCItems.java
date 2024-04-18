@@ -64,6 +64,8 @@ public class FCItems {
             () -> new Item(foodItem(FoodValues.GARLIC)));
     public static final RegistryObject<Item> GINGER = ITEMS.register("ginger",
             () -> new Item(foodItem(FoodValues.GINGER)));
+    public static final RegistryObject<Item> OLIVE = ITEMS.register("olive",
+            () -> new Item(foodItem(FoodValues.OLIVE)));
     public static final RegistryObject<Item> CREAM = ITEMS.register("cream",
             () -> new CreamItem(drinkItem(FoodValues.CREAM)));
     public static final RegistryObject<Item> BUTTER = ITEMS.register("butter",

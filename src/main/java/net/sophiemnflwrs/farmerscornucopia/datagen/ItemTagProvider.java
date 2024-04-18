@@ -34,16 +34,18 @@ public class ItemTagProvider extends ItemTagsProvider {
             tag(ForgeTags.SEEDS_GARLIC).add(FCItems.GARLIC_CLOVE.get());
             tag(ForgeTags.SEEDS_GINGER).add(FCItems.GINGER_SEEDS.get());
 
-        tag(ForgeTags.CROPS).addTags(ForgeTags.CROPS_GARLIC, ForgeTags.CROPS_GINGER);
+        tag(ForgeTags.CROPS).addTags(ForgeTags.CROPS_GARLIC, ForgeTags.CROPS_GINGER, ForgeTags.CROPS_OLIVE);
             tag(ForgeTags.CROPS_GARLIC).add(FCItems.GARLIC.get());
             tag(ForgeTags.CROPS_GINGER).add(FCItems.GINGER.get());
+            tag(ForgeTags.CROPS_OLIVE).add(FCItems.OLIVE.get());
 
         tag(ForgeTags.FOODSTUFFS).addTags(ForgeTags.FOODSTUFFS_SALT);
             tag(ForgeTags.FOODSTUFFS_SALT).add(FCItems.SALT.get());
 
-        tag(ForgeTags.VEGETABLES).addTags(ForgeTags.VEGETABLES_GARLIC, ForgeTags.VEGETABLES_GINGER);
+        tag(ForgeTags.VEGETABLES).addTags(ForgeTags.VEGETABLES_GARLIC, ForgeTags.VEGETABLES_GINGER, ForgeTags.VEGETABLES_OLIVE);
             tag(ForgeTags.VEGETABLES_GARLIC).add(FCItems.GARLIC.get());
             tag(ForgeTags.VEGETABLES_GINGER).add(FCItems.GINGER.get());
+            tag(ForgeTags.VEGETABLES_OLIVE).add(FCItems.OLIVE.get());
 
         tag(ForgeTags.BREAD).addTag(ForgeTags.BREAD_WHEAT);
             tag(ForgeTags.BREAD_WHEAT).add(Items.BREAD);
