@@ -7,9 +7,11 @@ import net.minecraft.core.Registry;
 import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -19,10 +21,12 @@ import net.minecraft.world.level.levelgen.feature.configurations.TreeConfigurati
 import net.minecraft.world.level.levelgen.feature.featuresize.ThreeLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.DarkOakFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.DarkOakTrunkPlacer;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
 import net.sophiemnflwrs.farmerscornucopia.common.Configuration;
+import net.sophiemnflwrs.farmerscornucopia.common.block.tree.FruitingLeavesBlock;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCBiomeFeatures;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCBlocks;
 import net.sophiemnflwrs.farmerscornucopia.common.world.configuration.WildCropConfiguration;
@@ -78,7 +82,8 @@ public class ModPlantGeneration {
                 FCBiomeFeatures.FRUITING_TREES.get(), new TreeConfiguration.TreeConfigurationBuilder(
                         BlockStateProvider.simple(FCBlocks.OLIVE_LOG.get()),
                         new DarkOakTrunkPlacer(6, 3, 1),
-                        BlockStateProvider.simple(FCBlocks.OLIVE_LEAVES.get()),
+                        new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(FCBlocks.OLIVE_LEAVES.get().defaultBlockState(),
+                                4).add(FCBlocks.FRUITING_OLIVE_LEAVES.get().defaultBlockState().setValue(FruitingLeavesBlock.AGE, 4), 1)),
                         new DarkOakFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0)),
                         new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty())).build());
 

@@ -13,6 +13,9 @@ public class FCTags {
     public static final TagKey<Block> WILD_CROPS = modBlockTag("wild_crops");
     public static final TagKey<Item> WILD_CROPS_ITEM = modItemTag("wild_crops");
 
+    public static final TagKey<Block> FRUITING_LEAVES = modBlockTag("fruiting_leaves");
+    public static final TagKey<Item> FRUITING_LEAVES_ITEM = modItemTag("fruiting_leaves");
+
     // register
     private static TagKey<Item> modItemTag(String path) {
         return TagKey.create(Registry.ITEM_REGISTRY, new ResourceLocation(FarmersCornucopia.MOD_ID, path));

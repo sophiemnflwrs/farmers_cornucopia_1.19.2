@@ -14,6 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
 import net.sophiemnflwrs.farmerscornucopia.common.block.crops.GarlicCrop;
 import net.sophiemnflwrs.farmerscornucopia.common.block.crops.GingerCrop;
+import net.sophiemnflwrs.farmerscornucopia.common.block.tree.FruitingLeavesBlock;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCBlocks;
 
 import javax.annotation.Nullable;
@@ -54,6 +55,7 @@ public class BlockStatesProvider extends BlockStateProvider {
         this.logBlock((RotatedPillarBlock) FCBlocks.OLIVE_LOG.get());
         this.logBlock((RotatedPillarBlock) FCBlocks.STRIPPED_OLIVE_LOG.get());
         this.simpleBlock(FCBlocks.OLIVE_LEAVES.get(), models().cubeAll("olive_leaves", resourceBlock("olive_leaves")));
+        this.customStageBlock(FCBlocks.FRUITING_OLIVE_LEAVES.get(), mcLoc("fruiting_leaves"), "fruiting_leaves", FruitingLeavesBlock.AGE, Arrays.asList(0, 1, 2, 3, 4));
         this.simpleBlock(FCBlocks.OLIVE_PLANKS.get(), models().cubeAll("olive_planks", resourceBlock("olive_planks")));
         this.simpleBlock(FCBlocks.OLIVE_SAPLING.get(), models().cross("olive_sapling", resourceBlock("olive_sapling")).renderType("cutout"));
 

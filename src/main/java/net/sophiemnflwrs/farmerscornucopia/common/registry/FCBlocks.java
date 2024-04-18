@@ -12,6 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
 import net.sophiemnflwrs.farmerscornucopia.common.block.crops.GarlicCrop;
 import net.sophiemnflwrs.farmerscornucopia.common.block.crops.GingerCrop;
+import net.sophiemnflwrs.farmerscornucopia.common.block.tree.FruitingLeavesBlock;
 import net.sophiemnflwrs.farmerscornucopia.common.block.tree.ModLeavesBlock;
 import net.sophiemnflwrs.farmerscornucopia.common.block.tree.ModLogBlock;
 import net.sophiemnflwrs.farmerscornucopia.common.block.tree.ModPlanksBlock;
@@ -43,6 +44,8 @@ public class FCBlocks {
             () -> new ModLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
     public static final RegistryObject<Block> OLIVE_LEAVES = BLOCKS.register("olive_leaves",
             () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> FRUITING_OLIVE_LEAVES = BLOCKS.register("fruiting_olive_leaves",
+            () -> new FruitingLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> OLIVE_SAPLING = BLOCKS.register("olive_sapling",
             () -> new SaplingBlock(new OliveTreeGrower(),  BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<Block> OLIVE_PLANKS = BLOCKS.register("olive_planks",

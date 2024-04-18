@@ -45,6 +45,8 @@ public class FCItems {
 
     public static final RegistryObject<Item> OLIVE_LEAVES = ITEMS.register("olive_leaves",
             () -> new BlockItem(FCBlocks.OLIVE_LEAVES.get(), basicItem()));
+    public static final RegistryObject<Item> FRUITING_OLIVE_LEAVES = ITEMS.register("fruiting_olive_leaves",
+            () -> new BlockItem(FCBlocks.FRUITING_OLIVE_LEAVES.get(), basicItem()));
     public static final RegistryObject<Item> OLIVE_SAPLING = ITEMS.register("olive_sapling",
             () -> new BlockItem(FCBlocks.OLIVE_SAPLING.get(), basicItem()));
 
