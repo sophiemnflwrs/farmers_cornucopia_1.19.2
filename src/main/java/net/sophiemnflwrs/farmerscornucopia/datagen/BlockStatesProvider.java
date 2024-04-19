@@ -47,6 +47,9 @@ public class BlockStatesProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
 
+        // crop crates
+        this.crateBlock(FCBlocks.GARLIC_CRATE.get(), "garlic");
+
         // salt ores + block
         this.simpleBlock(FCBlocks.SALT_ORE.get(), models().cubeAll("salt_ore", resourceBlock("salt_ore")));
         this.simpleBlock(FCBlocks.DEEPSLATE_SALT_ORE.get(), models().cubeAll("deepslate_salt_ore", resourceBlock("deepslate_salt_ore")));
@@ -67,12 +70,14 @@ public class BlockStatesProvider extends BlockStateProvider {
         // crops
         this.customStageBlock(FCBlocks.GARLIC_CROP.get(), mcLoc("crop"), "crop", GarlicCrop.AGE, Arrays.asList(0, 0, 1, 1, 2, 2, 2, 3));
         this.customStageBlock(FCBlocks.GINGER_CROP.get(), mcLoc("crop"), "crop", GingerCrop.AGE, Arrays.asList(0, 0, 1, 1, 2, 2, 2, 3));
+
     }
 
     // main methods
     public void wildCropBlock(Block block) {
         this.wildCropBlock(block, false);
     }
+
     public void wildCropBlock(Block block, boolean isBushCrop) {
         if (isBushCrop) {
             this.simpleBlock(block, models().singleTexture(blockName(block), resourceBlock("bush_crop"), "crop", resourceBlock(blockName(block))).renderType("cutout"));
@@ -102,5 +107,10 @@ public class BlockStatesProvider extends BlockStateProvider {
                     return ConfiguredModel.builder()
                             .modelFile(models().singleTexture(stageName, parent, textureKey, resourceBlock(stageName)).renderType("cutout")).build();
                 }, ignored);
+    }
+
+    public void crateBlock(Block block, String cropName) {
+        this.simpleBlock(block,
+                models().cubeBottomTop(blockName(block), resourceBlock(cropName + "_crate_side"), resourceBlock("crate_bottom"), resourceBlock(cropName + "_crate_top")));
     }
 }

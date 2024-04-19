@@ -12,6 +12,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
 import net.sophiemnflwrs.farmerscornucopia.common.FoodValues;
+import net.sophiemnflwrs.farmerscornucopia.common.item.DrinkableItem;
 import net.sophiemnflwrs.farmerscornucopia.common.item.drinks.CreamItem;
 
 public class FCItems {
@@ -28,6 +29,10 @@ public class FCItems {
     public static Item.Properties drinkItem(FoodProperties food) {
         return new Item.Properties().food(food).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersCornucopia.CREATIVE_TAB);
     }
+
+    // crop crates
+    public static final RegistryObject<Item> GARLIC_CRATE = ITEMS.register("garlic_crate",
+            () -> new BlockItem(FCBlocks.GARLIC_CRATE.get(), basicItem()));
 
     // salt blocks
     public static final RegistryObject<Item> SALT_BLOCK = ITEMS.register("salt_block",
@@ -62,16 +67,20 @@ public class FCItems {
     // ingredients + foodstuffs
     public static final RegistryObject<Item> SALT = ITEMS.register("salt",
             () -> new Item(foodItem(FoodValues.SALT)));
+
     public static final RegistryObject<Item> GARLIC = ITEMS.register("garlic",
             () -> new Item(foodItem(FoodValues.GARLIC)));
     public static final RegistryObject<Item> GINGER = ITEMS.register("ginger",
             () -> new Item(foodItem(FoodValues.GINGER)));
     public static final RegistryObject<Item> OLIVE = ITEMS.register("olive",
             () -> new Item(foodItem(FoodValues.OLIVE)));
+
     public static final RegistryObject<Item> CREAM = ITEMS.register("cream",
             () -> new CreamItem(drinkItem(FoodValues.CREAM)));
     public static final RegistryObject<Item> BUTTER = ITEMS.register("butter",
             () -> new Item(foodItem(FoodValues.BUTTER)));
+    public static final RegistryObject<Item> OLIVE_OIL = ITEMS.register("olive_oil",
+            () -> new DrinkableItem(drinkItem(FoodValues.OLIVE_OIL)));
 
     // seeds
     public static final RegistryObject<Item> GARLIC_CLOVE = ITEMS.register("garlic_clove",

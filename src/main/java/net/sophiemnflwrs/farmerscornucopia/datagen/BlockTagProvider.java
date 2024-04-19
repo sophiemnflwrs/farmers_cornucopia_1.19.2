@@ -32,7 +32,8 @@ public class BlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.MINEABLE_WITH_AXE).add(
                 FCBlocks.OLIVE_LOG.get(),
                 FCBlocks.STRIPPED_OLIVE_LOG.get(),
-                FCBlocks.OLIVE_PLANKS.get()
+                FCBlocks.OLIVE_PLANKS.get(),
+                FCBlocks.GARLIC_CRATE.get()
         );
     }
 

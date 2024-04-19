@@ -23,6 +23,10 @@ public class FCBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, FarmersCornucopia.MOD_ID);
 
+    // crop crates
+    public static final RegistryObject<Block> GARLIC_CRATE = BLOCKS.register("garlic_crate",
+            () -> new Block(Block.Properties.of(Material.WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+
     // salt
     public static final RegistryObject<Block> SALT_BLOCK = BLOCKS.register("salt_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
@@ -56,6 +60,8 @@ public class FCBlocks {
             () -> new GarlicCrop(Block.Properties.copy(Blocks.WHEAT)));
         public static final RegistryObject<Block> GINGER_CROP = BLOCKS.register("ginger_crop",
             () -> new GingerCrop(Block.Properties.copy(Blocks.WHEAT)));
+
+
 
     // register
     public static void register(IEventBus eventBus) {

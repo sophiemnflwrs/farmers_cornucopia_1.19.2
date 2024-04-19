@@ -4,6 +4,7 @@ import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
@@ -28,6 +29,15 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
 
         // CRAFTING
 
+        // crop crates
+        ShapedRecipeBuilder.shaped(FCItems.GARLIC_CRATE.get(), 1)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', FCItems.GARLIC.get())
+                .unlockedBy("has_garlic", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.GARLIC.get()))
+                .save(consumer);
+
         // ingredients
         ShapelessRecipeBuilder.shapeless(FCItems.CREAM.get(), 2)
                 .requires(Items.MILK_BUCKET)
@@ -38,7 +48,7 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
         ShapelessRecipeBuilder.shapeless(FCItems.CREAM.get(), 1)
                 .requires(ModItems.MILK_BOTTLE.get())
                 .requires(Items.GLASS_BOTTLE)
-                .unlockedBy("has_milk_bucket", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.MILK_BOTTLE.get()))
+                .unlockedBy("has_milk_bottle", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.MILK_BOTTLE.get()))
                 .save(consumer, new ResourceLocation(FarmersCornucopia.MOD_ID, "cream_from_bottle"));
         ShapelessRecipeBuilder.shapeless(FCItems.BUTTER.get(), 1)
                 .requires(FCItems.CREAM.get())
@@ -47,6 +57,14 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
                 .requires(FCItems.CREAM.get())
                 .requires(FCItems.SALT.get())
                 .unlockedBy("has_cream", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.CREAM.get()))
+                .save(consumer);
+        ShapelessRecipeBuilder.shapeless(FCItems.OLIVE_OIL.get(), 1)
+                .requires(FCItems.OLIVE.get())
+                .requires(FCItems.OLIVE.get())
+                .requires(FCItems.OLIVE.get())
+                .requires(FCItems.OLIVE.get())
+                .requires(Items.GLASS_BOTTLE)
+                .unlockedBy("has_olive", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.OLIVE.get()))
                 .save(consumer);
 
         // foods
