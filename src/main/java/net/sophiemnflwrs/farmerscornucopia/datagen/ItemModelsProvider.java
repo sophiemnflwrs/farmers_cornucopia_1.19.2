@@ -32,7 +32,7 @@ public class ItemModelsProvider extends ItemModelProvider {
                 .collect(Collectors.toSet());
 
         // specific cases
-        itemGeneratedModel(FCItems.FRUITING_OLIVE_LEAVES.get(), resourceBlock(itemName(FCItems.FRUITING_OLIVE_LEAVES.get()) + "_stage1"));
+        blockBasedModel(FCItems.FRUITING_OLIVE_LEAVES.get(), "_stage1");
         items.remove(FCItems.FRUITING_OLIVE_LEAVES.get());
 
 
