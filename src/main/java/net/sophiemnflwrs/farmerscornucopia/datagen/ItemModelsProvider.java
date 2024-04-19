@@ -31,6 +31,11 @@ public class ItemModelsProvider extends ItemModelProvider {
         Set<Item> items = ForgeRegistries.ITEMS.getValues().stream().filter(i -> FarmersCornucopia.MOD_ID.equals(ForgeRegistries.ITEMS.getKey(i).getNamespace()))
                 .collect(Collectors.toSet());
 
+        // specific cases
+        itemGeneratedModel(FCItems.FRUITING_OLIVE_LEAVES.get(), resourceBlock(itemName(FCItems.FRUITING_OLIVE_LEAVES.get()) + "_stage1"));
+        items.remove(FCItems.FRUITING_OLIVE_LEAVES.get());
+
+
         // blocks w/ special sprites
         Set<Item> spriteBlockItems = Sets.newHashSet(
                 FCItems.GARLIC_CLOVE.get(),
@@ -47,7 +52,7 @@ public class ItemModelsProvider extends ItemModelProvider {
         takeAll(items, flatBlockItems.toArray(new Item[0])).forEach(item -> itemGeneratedModel(item, resourceBlock(itemName(item))));
 
         // blocks whose items look alike
-        takeAll(items, i -> i instanceof BlockItem).forEach(item -> blockBasedModel(item, ""));
+      takeAll(items, i -> i instanceof BlockItem).forEach(item -> blockBasedModel(item, ""));
 
         // all other items; generated here
         items.forEach(item -> itemGeneratedModel(item, resourceItem(itemName(item))));
@@ -55,7 +60,7 @@ public class ItemModelsProvider extends ItemModelProvider {
 
     // main helper methods
     public void blockBasedModel(Item item, String suffix) {
-        withExistingParent(itemName(item), resourceBlock(itemName(item) + suffix));
+        withExistingParent(itemName(item), BlockStatesProvider.resourceBlock(itemName(item) + suffix));
     }
     public void itemHandheldModel(Item item, ResourceLocation texture) {
         withExistingParent(itemName(item), HANDHELD).texture("layer0", texture);

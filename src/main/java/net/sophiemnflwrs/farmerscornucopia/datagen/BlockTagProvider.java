@@ -45,7 +45,6 @@ public class BlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.CROPS).add(FCBlocks.GINGER_CROP.get());
 
         tag(BlockTags.LEAVES).add(FCBlocks.OLIVE_LEAVES.get());
-        tag(BlockTags.LEAVES).add(FCBlocks.FRUITING_OLIVE_LEAVES.get());
 
         tag(BlockTags.LOGS).add(FCBlocks.OLIVE_LOG.get());
         tag(BlockTags.LOGS).add(FCBlocks.STRIPPED_OLIVE_LOG.get());
@@ -62,6 +61,8 @@ public class BlockTagProvider extends BlockTagsProvider {
     protected void registerModTags() {
         tag(FCTags.WILD_CROPS).add(FCBlocks.WILD_GARLIC.get());
         tag(FCTags.WILD_CROPS).add(FCBlocks.WILD_GINGER.get());
+
+        tag(FCTags.FRUITING_LEAVES).add(FCBlocks.FRUITING_OLIVE_LEAVES.get());
     }
 
 }

@@ -4,6 +4,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCItems;
@@ -23,6 +24,9 @@ public class ItemTagProvider extends ItemTagsProvider {
         protected void addTags() {
             copy(FCTags.WILD_CROPS, FCTags.WILD_CROPS_ITEM);
             copy(BlockTags.SMALL_FLOWERS, net.minecraft.tags.ItemTags.SMALL_FLOWERS);
+
+            copy(FCTags.FRUITING_LEAVES, FCTags.FRUITING_LEAVES_ITEM);
+            copy(BlockTags.LEAVES, ItemTags.LEAVES);
 
             this.registerForgeTags();
     }
