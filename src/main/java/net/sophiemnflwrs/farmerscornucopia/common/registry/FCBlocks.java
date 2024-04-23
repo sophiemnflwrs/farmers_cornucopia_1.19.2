@@ -10,12 +10,14 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
-import net.sophiemnflwrs.farmerscornucopia.common.block.crops.GarlicCrop;
-import net.sophiemnflwrs.farmerscornucopia.common.block.crops.GingerCrop;
+import net.sophiemnflwrs.farmerscornucopia.common.block.shrub.LemonSeedling;
+import net.sophiemnflwrs.farmerscornucopia.common.block.shrub.LemonShrub;
+import net.sophiemnflwrs.farmerscornucopia.common.block.crop.GarlicCrop;
+import net.sophiemnflwrs.farmerscornucopia.common.block.crop.GingerCrop;
 import net.sophiemnflwrs.farmerscornucopia.common.block.tree.FruitingLeavesBlock;
-import net.sophiemnflwrs.farmerscornucopia.common.block.tree.ModLeavesBlock;
-import net.sophiemnflwrs.farmerscornucopia.common.block.tree.ModLogBlock;
-import net.sophiemnflwrs.farmerscornucopia.common.block.tree.ModPlanksBlock;
+import net.sophiemnflwrs.farmerscornucopia.common.block.tree.FCLeavesBlock;
+import net.sophiemnflwrs.farmerscornucopia.common.block.tree.FCLogBlock;
+import net.sophiemnflwrs.farmerscornucopia.common.block.tree.FCPlanksBlock;
 import net.sophiemnflwrs.farmerscornucopia.common.world.feature.tree.OliveTreeGrower;
 import vectorwing.farmersdelight.common.block.WildCropBlock;
 
@@ -47,17 +49,23 @@ public class FCBlocks {
 
     // trees
     public static final RegistryObject<Block> OLIVE_LOG = BLOCKS.register("olive_log",
-            () -> new ModLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+            () -> new FCLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_OLIVE_LOG = BLOCKS.register("stripped_olive_log",
-            () -> new ModLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+            () -> new FCLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
     public static final RegistryObject<Block> OLIVE_LEAVES = BLOCKS.register("olive_leaves",
-            () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+            () -> new FCLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> FRUITING_OLIVE_LEAVES = BLOCKS.register("fruiting_olive_leaves",
             () -> new FruitingLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> OLIVE_SAPLING = BLOCKS.register("olive_sapling",
             () -> new SaplingBlock(new OliveTreeGrower(),  BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<Block> OLIVE_PLANKS = BLOCKS.register("olive_planks",
-            () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+            () -> new FCPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+
+    // shrubs
+    public static final RegistryObject<Block> LEMON_SEEDLING = BLOCKS.register("lemon_seedling",
+            () -> new LemonSeedling(BlockBehaviour.Properties.of(Material.PLANT).instabreak().sound(SoundType.GRASS).noOcclusion()));
+    public static final RegistryObject<Block> LEMON_SHRUB = BLOCKS.register("lemon_shrub",
+            () -> new LemonShrub(BlockBehaviour.Properties.of(Material.PLANT).instabreak().sound(SoundType.GRASS).noOcclusion()));
 
     // crops
         public static final RegistryObject<Block> GARLIC_CROP = BLOCKS.register("garlic_crop",

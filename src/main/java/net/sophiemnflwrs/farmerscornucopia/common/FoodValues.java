@@ -12,13 +12,17 @@ public class FoodValues {
     public static final int MEDIUM_DURATION = 3600;    // 3 minutes
     public static final int LONG_DURATION = 6000;    // 5 minutes
 
-    // raw crops
+    // raw veg
     public static final FoodProperties GARLIC = (new FoodProperties.Builder())
             .nutrition(1).saturationMod(0.4f).build();
     public static final FoodProperties GINGER = (new FoodProperties.Builder())
             .nutrition(1).saturationMod(0.6f).build();
+
+    // raw fruits
     public static final FoodProperties OLIVE = (new FoodProperties.Builder())
             .nutrition(1).saturationMod(0.3f).build();
+    public static final FoodProperties LEMON = (new FoodProperties.Builder())
+            .nutrition(1).saturationMod(0.5f).build();
 
     // edible seeds
     public static final FoodProperties GARLIC_CLOVE = (new FoodProperties.Builder())

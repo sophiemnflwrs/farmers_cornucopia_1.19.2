@@ -6,8 +6,8 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class ModPlanksBlock extends Block {
-    public ModPlanksBlock(Properties properties) {
+public class FCPlanksBlock extends Block {
+    public FCPlanksBlock(Properties properties) {
         super(properties);
     }
     @Override

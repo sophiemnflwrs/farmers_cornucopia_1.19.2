@@ -24,7 +24,7 @@ import net.minecraftforge.common.ForgeHooks;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCBlocks;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCItems;
 
-public class FruitingLeavesBlock extends ModLeavesBlock implements BonemealableBlock {
+public class FruitingLeavesBlock extends FCLeavesBlock implements BonemealableBlock {
     public static final int MAX_AGE = 4;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_4;
 

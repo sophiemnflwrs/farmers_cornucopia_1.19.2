@@ -42,6 +42,7 @@ public class ItemTagProvider extends ItemTagsProvider {
             tag(ForgeTags.CROPS_GARLIC).add(FCItems.GARLIC.get());
             tag(ForgeTags.CROPS_GINGER).add(FCItems.GINGER.get());
             tag(ForgeTags.CROPS_OLIVE).add(FCItems.OLIVE.get());
+            tag(ForgeTags.CROPS_LEMON).add(FCItems.LEMON.get());
 
         tag(ForgeTags.FOODSTUFFS).addTags(ForgeTags.FOODSTUFFS_SALT, ForgeTags.FOODSTUFFS_OLIVE_OIL);
             tag(ForgeTags.FOODSTUFFS_SALT).add(FCItems.SALT.get());
@@ -51,8 +52,9 @@ public class ItemTagProvider extends ItemTagsProvider {
             tag(ForgeTags.VEGETABLES_GARLIC).add(FCItems.GARLIC.get());
             tag(ForgeTags.VEGETABLES_GINGER).add(FCItems.GINGER.get());
 
-        tag(ForgeTags.FRUITS).addTags(ForgeTags.FRUITS_OLIVE);
+        tag(ForgeTags.FRUITS).addTags(ForgeTags.FRUITS_OLIVE, ForgeTags.FRUITS_LEMON);
             tag(ForgeTags.FRUITS_OLIVE).add(FCItems.OLIVE.get());
+            tag(ForgeTags.FRUITS_LEMON).add(FCItems.LEMON.get());
 
         tag(ForgeTags.BREAD).addTag(ForgeTags.BREAD_WHEAT);
             tag(ForgeTags.BREAD_WHEAT).add(Items.BREAD);

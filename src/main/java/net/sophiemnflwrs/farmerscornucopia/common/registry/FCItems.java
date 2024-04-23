@@ -51,16 +51,18 @@ public class FCItems {
             () -> new BlockItem(FCBlocks.OLIVE_LOG.get(), basicItem()));
     public static final RegistryObject<Item> STRIPPED_OLIVE_LOG = ITEMS.register("stripped_olive_log",
             () -> new BlockItem(FCBlocks.STRIPPED_OLIVE_LOG.get(), basicItem()));
-
     public static final RegistryObject<Item> OLIVE_LEAVES = ITEMS.register("olive_leaves",
             () -> new BlockItem(FCBlocks.OLIVE_LEAVES.get(), basicItem()));
     public static final RegistryObject<Item> FRUITING_OLIVE_LEAVES = ITEMS.register("fruiting_olive_leaves",
             () -> new BlockItem(FCBlocks.FRUITING_OLIVE_LEAVES.get(), basicItem()));
     public static final RegistryObject<Item> OLIVE_SAPLING = ITEMS.register("olive_sapling",
             () -> new BlockItem(FCBlocks.OLIVE_SAPLING.get(), basicItem()));
-
     public static final RegistryObject<Item> OLIVE_PLANKS = ITEMS.register("olive_planks",
             () -> new BlockItem(FCBlocks.OLIVE_PLANKS.get(), basicItem()));
+
+    // shrubs
+    public static final RegistryObject<Item> LEMON_SEEDLING = ITEMS.register("lemon_seedling",
+            () -> new BlockItem(FCBlocks.LEMON_SEEDLING.get(), basicItem()));
 
     // wild crops
     public static final RegistryObject<Item> WILD_GARLIC = ITEMS.register("wild_garlic",
@@ -76,8 +78,11 @@ public class FCItems {
             () -> new Item(foodItem(FoodValues.GARLIC)));
     public static final RegistryObject<Item> GINGER = ITEMS.register("ginger",
             () -> new Item(foodItem(FoodValues.GINGER)));
+
     public static final RegistryObject<Item> OLIVE = ITEMS.register("olive",
             () -> new Item(foodItem(FoodValues.OLIVE)));
+    public static final RegistryObject<Item> LEMON = ITEMS.register("lemon",
+            () -> new Item(foodItem(FoodValues.LEMON)));
 
     public static final RegistryObject<Item> CREAM = ITEMS.register("cream",
             () -> new CreamItem(drinkItem(FoodValues.CREAM)));
@@ -90,7 +95,9 @@ public class FCItems {
     public static final RegistryObject<Item> GARLIC_CLOVE = ITEMS.register("garlic_clove",
             () -> new ItemNameBlockItem(FCBlocks.GARLIC_CROP.get(), foodItem(FoodValues.GARLIC_CLOVE)));
     public static final RegistryObject<Item> GINGER_SEEDS = ITEMS.register("ginger_seeds",
-            () -> new ItemNameBlockItem(FCBlocks.GINGER_CROP.get(), foodItem(FoodValues.GARLIC_CLOVE)));
+            () -> new ItemNameBlockItem(FCBlocks.GINGER_CROP.get(), basicItem()));
+    public static final RegistryObject<Item> LEMON_SEEDS = ITEMS.register("lemon_seeds",
+            () -> new ItemNameBlockItem(FCBlocks.LEMON_SHRUB.get(), basicItem()));
 
     // meals/food items
     public static final RegistryObject<Item> GARLIC_BREAD = ITEMS.register("garlic_bread",

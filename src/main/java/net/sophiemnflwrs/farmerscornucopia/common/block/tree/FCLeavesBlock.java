@@ -6,8 +6,8 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class ModLeavesBlock extends LeavesBlock {
-    public ModLeavesBlock(Properties properties) {
+public class FCLeavesBlock extends LeavesBlock {
+    public FCLeavesBlock(Properties properties) {
         super(properties);
     }
 

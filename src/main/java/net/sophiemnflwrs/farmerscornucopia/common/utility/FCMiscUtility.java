@@ -1,16 +1,14 @@
 package net.sophiemnflwrs.farmerscornucopia.common.utility;
 
-import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
-import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
 import org.jetbrains.annotations.Nullable;
+
 import java.util.Objects;
 import java.util.function.Supplier;
 
@@ -18,26 +16,13 @@ import java.util.function.Supplier;
 
 public class FCMiscUtility {
 
-    public static ResourceLocation rl(String modid, String path) {
-    return new ResourceLocation(modid, path);
-}
-
-    public static ResourceLocation rl(String separated) {
-        return new ResourceLocation(separated);
-    }
-
     public static ResourceLocation cr(String path) {
         return new ResourceLocation(FarmersCornucopia.MOD_ID, path);
     }
 
-    public static TagKey<Item> it(String modid, String path) {
-        return ItemTags.create(rl(modid, path));
-    }
-
-    public static ObjectArrayList<ItemStack> with(ObjectArrayList<ItemStack> before, ItemStack addition) {
-        before.add(addition);
-        return before;
-    }
+    public static ResourceLocation rl(String modid, String path) {
+    return new ResourceLocation(modid, path);
+}
 
     @Nullable
     public static Item item(String modid, String path) {

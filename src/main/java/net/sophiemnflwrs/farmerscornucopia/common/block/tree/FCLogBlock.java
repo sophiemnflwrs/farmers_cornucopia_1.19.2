@@ -12,9 +12,9 @@ import net.sophiemnflwrs.farmerscornucopia.common.registry.FCBlocks;
 
 import javax.annotation.Nullable;
 
-public class ModLogBlock extends RotatedPillarBlock {
+public class FCLogBlock extends RotatedPillarBlock {
 
-    public ModLogBlock(Properties properties) {
+    public FCLogBlock(Properties properties) {
         super(properties);
     }
 

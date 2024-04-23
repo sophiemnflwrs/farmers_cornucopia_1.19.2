@@ -1,4 +1,4 @@
-package net.sophiemnflwrs.farmerscornucopia.common.block.crops;
+package net.sophiemnflwrs.farmerscornucopia.common.block.crop;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;

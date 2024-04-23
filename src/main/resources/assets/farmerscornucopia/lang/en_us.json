@@ -1,12 +1,20 @@
 {
   "itemGroup.farmerscornucopiatab": "Farmer's Cornucopia",
 
+  "block.farmerscornucopia.garlic_crate": "Garlic Crate",
+  "block.farmerscornucopia.ginger_crate": "Ginger Crate",
+  "block.farmerscornucopia.olive_crate": "Olive Crate",
+
   "block.farmerscornucopia.salt_ore": "Salt Ore",
   "block.farmerscornucopia.deepslate_salt_ore": "Deepslate Salt Ore",
   "block.farmerscornucopia.salt_block": "Block of Salt",
+  "item.farmerscornucopia.salt": "Salt",
 
   "block.farmerscornucopia.wild_garlic": "Wild Garlic",
   "block.farmerscornucopia.wild_ginger": "Wild Ginger",
+
+  "block.farmerscornucopia.lemon_seedling": "Lemon Seedling",
+  "block.farmerscornucopia.lemon_shrub": "Lemon Shrub",
 
   "block.farmerscornucopia.olive_log": "Olive Log",
   "block.farmerscornucopia.olive_wood": "Olive Wood",
@@ -20,13 +28,15 @@
   "block.farmerscornucopia.garlic_crop": "Garlic Crop",
   "block.farmerscornucopia.ginger_crop": "Ginger Crop",
 
-  "item.farmerscornucopia.salt": "Salt",
   "item.farmerscornucopia.garlic": "Garlic",
   "item.farmerscornucopia.ginger": "Ginger",
+
   "item.farmerscornucopia.olive": "Olive",
+  "item.farmerscornucopia.lemon": "Lemon",
 
   "item.farmerscornucopia.garlic_clove": "Garlic Clove",
   "item.farmerscornucopia.ginger_seeds": "Ginger Seeds",
+  "item.farmerscornucopia.lemon_seeds": "Lemon Seeds",
 
   "item.farmerscornucopia.cream": "Cream",
   "item.farmerscornucopia.butter": "Butter",

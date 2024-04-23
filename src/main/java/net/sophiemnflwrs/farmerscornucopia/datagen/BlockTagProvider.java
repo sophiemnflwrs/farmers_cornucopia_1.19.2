@@ -58,12 +58,16 @@ public class BlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.SMALL_FLOWERS).add(FCBlocks.WILD_GARLIC.get());
         tag(BlockTags.SMALL_FLOWERS).add(FCBlocks.WILD_GINGER.get());
+        tag(BlockTags.SMALL_FLOWERS).add(FCBlocks.LEMON_SEEDLING.get());
 
     }
 
     protected void registerModTags() {
         tag(FCTags.WILD_CROPS).add(FCBlocks.WILD_GARLIC.get());
         tag(FCTags.WILD_CROPS).add(FCBlocks.WILD_GINGER.get());
+
+        tag(FCTags.FRUITING_SHRUB).add(FCBlocks.LEMON_SEEDLING.get());
+        tag(FCTags.FRUITING_SHRUB).add(FCBlocks.LEMON_SHRUB.get());
 
         tag(FCTags.FRUITING_LEAVES).add(FCBlocks.FRUITING_OLIVE_LEAVES.get());
     }

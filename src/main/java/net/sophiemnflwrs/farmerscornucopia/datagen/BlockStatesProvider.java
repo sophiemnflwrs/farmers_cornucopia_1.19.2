@@ -4,6 +4,8 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -12,8 +14,10 @@ import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
-import net.sophiemnflwrs.farmerscornucopia.common.block.crops.GarlicCrop;
-import net.sophiemnflwrs.farmerscornucopia.common.block.crops.GingerCrop;
+import net.sophiemnflwrs.farmerscornucopia.common.block.crop.GarlicCrop;
+import net.sophiemnflwrs.farmerscornucopia.common.block.crop.GingerCrop;
+import net.sophiemnflwrs.farmerscornucopia.common.block.shrub.LemonSeedling;
+import net.sophiemnflwrs.farmerscornucopia.common.block.shrub.LemonShrub;
 import net.sophiemnflwrs.farmerscornucopia.common.block.tree.FruitingLeavesBlock;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCBlocks;
 import net.sophiemnflwrs.farmerscornucopia.common.utility.FCMiscUtility;
@@ -65,6 +69,18 @@ public class BlockStatesProvider extends BlockStateProvider {
         this.simpleBlock(FCBlocks.OLIVE_PLANKS.get(), models().cubeAll("olive_planks", resourceBlock("olive_planks")));
         this.simpleBlock(FCBlocks.OLIVE_SAPLING.get(), models().cross("olive_sapling", resourceBlock("olive_sapling")).renderType("cutout"));
 
+        // shrubs
+        this.getVariantBuilder(FCBlocks.LEMON_SEEDLING.get())
+                .partialState().with(LemonSeedling.AGE, 0).modelForState().modelFile(existingModel("lemon_seedling_stage0")).addModel()
+                .partialState().with(LemonSeedling.AGE, 1).modelForState().modelFile(models()
+                        .withExistingParent("block/lemon_seedling_stage1", FCMiscUtility.rl("minecraft", "block/template_azalea"))
+                        .texture("side", resourceBlock("lemon_seedling_stage1"))
+                        .texture("top", resourceBlock("lemon_seedling_stage1"))
+                        .texture("plant", resourceBlock("lemon_seedling_stage1"))
+                        .texture("particle", resourceBlock("lemon_seedling_stage1"))
+                        .renderType("cutout")).addModel();
+        this.upperLowerStageBlock(FCBlocks.LEMON_SHRUB.get(), LemonShrub.AGE, LemonShrub.HALF, LemonShrub.STUNTED);
+
         // wild crops
         this.wildCropBlock(FCBlocks.WILD_GARLIC.get());
         this.wildCropBlock(FCBlocks.WILD_GINGER.get());
@@ -86,6 +102,21 @@ public class BlockStatesProvider extends BlockStateProvider {
         } else {
             this.simpleBlock(block, models().cross(blockName(block), resourceBlock(blockName(block))).renderType("cutout"));
         }
+    }
+
+    public void upperLowerStageBlock(Block block, IntegerProperty ageProperty, EnumProperty<DoubleBlockHalf> halfProperty, Property<?> ignored) {
+        getVariantBuilder(block).forAllStatesExcept(state -> {
+            String name = FCMiscUtility.name(block) + "_" + state.getValue(halfProperty).getSerializedName();
+            var mod = models()
+                    .withExistingParent("block/" + name + "_stage" + state.getValue(ageProperty), FCMiscUtility.cr(name))
+                    .texture("side", resourceBlock(FCMiscUtility.name(block) + "_side_stage" + state.getValue(ageProperty)))
+                    .texture("plant", resourceBlock(FCMiscUtility.name(block) + "_plant_" + state.getValue(halfProperty).getSerializedName() + "_stage" + state.getValue(ageProperty)))
+                    .texture("particle", resourceBlock(FCMiscUtility.name(block) + "_plant_" + state.getValue(halfProperty).getSerializedName() + "_stage" + state.getValue(ageProperty)));
+            if (state.getValue(halfProperty) == DoubleBlockHalf.UPPER) {
+                mod.texture("top", resourceBlock(FCMiscUtility.name(block) + "_top_stage" + state.getValue(ageProperty)));
+            }
+            return ConfiguredModel.builder().modelFile(mod).build();
+        }, ignored);
     }
 
     public void fruitingLeavesBlock(Block block, IntegerProperty ageProperty, Property<?>... ignored) {
