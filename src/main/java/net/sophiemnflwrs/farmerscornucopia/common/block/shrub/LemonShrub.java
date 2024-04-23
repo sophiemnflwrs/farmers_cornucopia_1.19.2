@@ -34,8 +34,8 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 
 public class LemonShrub extends CropBlock implements FruitingShrub {
-    public static final int MAX_AGE = 3;
-    public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
+    public static final int MAX_AGE = 4;
+    public static final IntegerProperty AGE = BlockStateProperties.AGE_4;
     public static final BooleanProperty STUNTED = BooleanProperty.create("stunted");
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
     private static final VoxelShape SHAPE_LOWER = Shapes.or(

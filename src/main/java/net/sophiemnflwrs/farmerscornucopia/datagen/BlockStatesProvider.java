@@ -71,7 +71,7 @@ public class BlockStatesProvider extends BlockStateProvider {
 
         // shrubs
         this.getVariantBuilder(FCBlocks.LEMON_SEEDLING.get())
-                .partialState().with(LemonSeedling.AGE, 0).modelForState().modelFile(existingModel("lemon_seedling_stage0")).addModel()
+                .partialState().with(LemonSeedling.AGE, 0).modelForState().modelFile(existingModel("lemon_seedling_stage0.json")).addModel()
                 .partialState().with(LemonSeedling.AGE, 1).modelForState().modelFile(models()
                         .withExistingParent("block/lemon_seedling_stage1", FCMiscUtility.rl("minecraft", "block/template_azalea"))
                         .texture("side", resourceBlock("lemon_seedling_stage1"))
@@ -110,8 +110,8 @@ public class BlockStatesProvider extends BlockStateProvider {
             var mod = models()
                     .withExistingParent("block/" + name + "_stage" + state.getValue(ageProperty), FCMiscUtility.cr(name))
                     .texture("side", resourceBlock(FCMiscUtility.name(block) + "_side_stage" + state.getValue(ageProperty)))
-                    .texture("plant", resourceBlock(FCMiscUtility.name(block) + "_plant_" + state.getValue(halfProperty).getSerializedName() + "_stage" + state.getValue(ageProperty)))
-                    .texture("particle", resourceBlock(FCMiscUtility.name(block) + "_plant_" + state.getValue(halfProperty).getSerializedName() + "_stage" + state.getValue(ageProperty)));
+                    .texture("plant", resourceBlock(FCMiscUtility.name(block) + "" + state.getValue(halfProperty).getSerializedName() + "_stage" + state.getValue(ageProperty)))
+                    .texture("particle", resourceBlock(FCMiscUtility.name(block) + "" + state.getValue(halfProperty).getSerializedName() + "_stage" + state.getValue(ageProperty)));
             if (state.getValue(halfProperty) == DoubleBlockHalf.UPPER) {
                 mod.texture("top", resourceBlock(FCMiscUtility.name(block) + "_top_stage" + state.getValue(ageProperty)));
             }
