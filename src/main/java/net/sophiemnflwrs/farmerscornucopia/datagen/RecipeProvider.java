@@ -37,6 +37,20 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
                 .define('#', FCItems.GARLIC.get())
                 .unlockedBy("has_garlic", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.GARLIC.get()))
                 .save(consumer);
+        ShapedRecipeBuilder.shaped(FCItems.GINGER_CRATE.get(), 1)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', FCItems.GINGER.get())
+                .unlockedBy("has_ginger", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.GINGER.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(FCItems.OLIVE_CRATE.get(), 1)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', FCItems.OLIVE.get())
+                .unlockedBy("has_olive", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.OLIVE.get()))
+                .save(consumer);
 
         // ingredients
         ShapelessRecipeBuilder.shapeless(FCItems.CREAM.get(), 2)

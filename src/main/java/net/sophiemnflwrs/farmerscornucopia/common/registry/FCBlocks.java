@@ -26,6 +26,10 @@ public class FCBlocks {
     // crop crates
     public static final RegistryObject<Block> GARLIC_CRATE = BLOCKS.register("garlic_crate",
             () -> new Block(Block.Properties.of(Material.WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> GINGER_CRATE = BLOCKS.register("ginger_crate",
+            () -> new Block(Block.Properties.of(Material.WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> OLIVE_CRATE = BLOCKS.register("olive_crate",
+            () -> new Block(Block.Properties.of(Material.WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
 
     // salt
     public static final RegistryObject<Block> SALT_BLOCK = BLOCKS.register("salt_block",

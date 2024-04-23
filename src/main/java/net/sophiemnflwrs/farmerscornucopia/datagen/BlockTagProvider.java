@@ -33,7 +33,9 @@ public class BlockTagProvider extends BlockTagsProvider {
                 FCBlocks.OLIVE_LOG.get(),
                 FCBlocks.STRIPPED_OLIVE_LOG.get(),
                 FCBlocks.OLIVE_PLANKS.get(),
-                FCBlocks.GARLIC_CRATE.get()
+                FCBlocks.GARLIC_CRATE.get(),
+                FCBlocks.GINGER_CRATE.get(),
+                FCBlocks.OLIVE_CRATE.get()
         );
     }
 

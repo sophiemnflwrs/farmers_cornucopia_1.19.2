@@ -2,6 +2,9 @@
   "values": [
     "farmerscornucopia:olive_log",
     "farmerscornucopia:stripped_olive_log",
-    "farmerscornucopia:olive_planks"
+    "farmerscornucopia:olive_planks",
+    "farmerscornucopia:garlic_crate",
+    "farmerscornucopia:ginger_crate",
+    "farmerscornucopia:olive_crate"
   ]
 }

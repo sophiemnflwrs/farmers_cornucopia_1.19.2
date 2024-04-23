@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_milk_bottle": {
+    "has_ginger": {
       "conditions": {
         "items": [
           {
             "items": [
-              "farmersdelight:milk_bottle"
+              "farmerscornucopia:ginger"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "farmerscornucopia:cream_from_bottle"
+        "recipe": "farmerscornucopia:ginger_crate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_milk_bottle",
+      "has_ginger",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "farmerscornucopia:cream_from_bottle"
+      "farmerscornucopia:ginger_crate"
     ]
   }
 }
