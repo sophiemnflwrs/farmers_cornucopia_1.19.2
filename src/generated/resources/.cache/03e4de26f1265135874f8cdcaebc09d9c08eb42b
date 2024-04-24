@@ -1,4 +1,4 @@
-// 1.19.2	2024-04-24T11:03:01.0925281	Tags for minecraft:item
+// 1.19.2	2024-04-24T11:06:55.5329935	Tags for minecraft:item
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/farmerscornucopia/tags/items/fruiting_leaves.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/farmerscornucopia/tags/items/wild_crops.json
 3c97b80407cb369d06f88b8b31da41587486fa84 data/forge/tags/items/bread.json
@@ -19,9 +19,10 @@ a5220f14ec52cfdee32af8731f2afc97dc91a616 data/forge/tags/items/fruits/olive.json
 f07d3986a4fe27faa4eb65315446e824ac4431c4 data/forge/tags/items/milk/cream.json
 edb5947f84984a39ab47c98c6fb0b3c3a9a8cc39 data/forge/tags/items/milk/milk.json
 9f3f07dbd96f9d69d569c7918bfe0e7bab509d9e data/forge/tags/items/milk/milk_bottle.json
-cd618e82f89dbd40062ea22918dc9882a969e793 data/forge/tags/items/seeds.json
+45cae5b292c0fcc6e2759d8914481a2dbc9eb69b data/forge/tags/items/seeds.json
 6378c26e6c9731530046209e8d12bdaf75d7b694 data/forge/tags/items/seeds/garlic.json
 26b4f5376030522c25740a5f16dafaff5af7929b data/forge/tags/items/seeds/ginger.json
+8357b866b11bf849b7fddeaac75d318766cbea28 data/forge/tags/items/seeds/lemon.json
 8c0dde009318387f5474594a099f51a01e350600 data/forge/tags/items/vegetables.json
 be28e79a6e6c2b7ebd9aae76742666c69afc7fda data/forge/tags/items/vegetables/garlic.json
 bd69f5c71c7c2aef880f70c88c74efe9d223f606 data/forge/tags/items/vegetables/ginger.json

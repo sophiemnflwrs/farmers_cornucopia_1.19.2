@@ -21,6 +21,7 @@ public class ForgeTags {
     public static final TagKey<Item> SEEDS = forgeItemTag("seeds");
     public static final TagKey<Item> SEEDS_GARLIC = forgeItemTag("seeds/garlic");
     public static final TagKey<Item> SEEDS_GINGER = forgeItemTag("seeds/ginger");
+    public static final TagKey<Item> SEEDS_LEMON = forgeItemTag("seeds/lemon");
 
     // crops
     public static final TagKey<Item> CROPS = forgeItemTag("crops");

@@ -34,9 +34,10 @@ public class ItemTagProvider extends ItemTagsProvider {
     @SuppressWarnings("unchecked")
     private void registerForgeTags() {
 
-        tag(ForgeTags.SEEDS).addTags(ForgeTags.SEEDS_GARLIC, ForgeTags.SEEDS_GINGER);
+        tag(ForgeTags.SEEDS).addTags(ForgeTags.SEEDS_GARLIC, ForgeTags.SEEDS_GINGER, ForgeTags.SEEDS_LEMON);
             tag(ForgeTags.SEEDS_GARLIC).add(FCItems.GARLIC_CLOVE.get());
             tag(ForgeTags.SEEDS_GINGER).add(FCItems.GINGER_SEEDS.get());
+            tag(ForgeTags.SEEDS_LEMON).add(FCItems.LEMON_SEEDS.get());
 
         tag(ForgeTags.CROPS).addTags(ForgeTags.CROPS_GARLIC, ForgeTags.CROPS_GINGER, ForgeTags.CROPS_OLIVE);
             tag(ForgeTags.CROPS_GARLIC).add(FCItems.GARLIC.get());
