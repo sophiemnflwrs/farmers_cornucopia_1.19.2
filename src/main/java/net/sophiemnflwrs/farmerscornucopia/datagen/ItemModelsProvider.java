@@ -33,13 +33,15 @@ public class ItemModelsProvider extends ItemModelProvider {
 
         // specific cases
         blockBasedModel(FCItems.FRUITING_OLIVE_LEAVES.get(), "_stage1");
-        items.remove(FCItems.FRUITING_OLIVE_LEAVES.get());
-
+            items.remove(FCItems.FRUITING_OLIVE_LEAVES.get());
+        blockBasedModel(FCItems.LEMON_SEEDLING.get(), "_stage0");
+            items.remove(FCItems.LEMON_SEEDLING.get());
 
         // blocks w/ special sprites
         Set<Item> spriteBlockItems = Sets.newHashSet(
                 FCItems.GARLIC_CLOVE.get(),
-                FCItems.GINGER_SEEDS.get()
+                FCItems.GINGER_SEEDS.get(),
+                FCItems.LEMON_SEEDS.get()
         );
         takeAll(items, spriteBlockItems.toArray(new Item[0])).forEach(item -> withExistingParent(itemName(item), GENERATED).texture("layer0", resourceItem(itemName(item))));
 
@@ -47,8 +49,7 @@ public class ItemModelsProvider extends ItemModelProvider {
         Set<Item> flatBlockItems = Sets.newHashSet(
                 FCItems.WILD_GARLIC.get(),
                 FCItems.WILD_GINGER.get(),
-                FCItems.OLIVE_SAPLING.get(),
-                FCItems.LEMON_SEEDLING.get()
+                FCItems.OLIVE_SAPLING.get()
         );
         takeAll(items, flatBlockItems.toArray(new Item[0])).forEach(item -> itemGeneratedModel(item, resourceBlock(itemName(item))));
 

@@ -110,8 +110,8 @@ public class BlockStatesProvider extends BlockStateProvider {
             var mod = models()
                     .withExistingParent("block/" + name + "_stage" + state.getValue(ageProperty), FCMiscUtility.cr(name))
                     .texture("side", resourceBlock(FCMiscUtility.name(block) + "_side_stage" + state.getValue(ageProperty)))
-                    .texture("plant", resourceBlock(FCMiscUtility.name(block) + "" + state.getValue(halfProperty).getSerializedName() + "_stage" + state.getValue(ageProperty)))
-                    .texture("particle", resourceBlock(FCMiscUtility.name(block) + "" + state.getValue(halfProperty).getSerializedName() + "_stage" + state.getValue(ageProperty)));
+                    .texture("plant", resourceBlock(FCMiscUtility.name(block) + "_" + state.getValue(halfProperty).getSerializedName() + "_stage" + state.getValue(ageProperty)))
+                    .texture("particle", resourceBlock(FCMiscUtility.name(block) + "_" + state.getValue(halfProperty).getSerializedName() + "_stage" + state.getValue(ageProperty)));
             if (state.getValue(halfProperty) == DoubleBlockHalf.UPPER) {
                 mod.texture("top", resourceBlock(FCMiscUtility.name(block) + "_top_stage" + state.getValue(ageProperty)));
             }
