@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.RandomPatchFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
@@ -31,6 +32,7 @@ import net.sophiemnflwrs.farmerscornucopia.common.block.shrub.LemonShrub;
 import net.sophiemnflwrs.farmerscornucopia.common.block.tree.FruitingLeavesBlock;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCBiomeFeatures;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCBlocks;
+import net.sophiemnflwrs.farmerscornucopia.common.utility.FCMiscUtility;
 import net.sophiemnflwrs.farmerscornucopia.common.world.configuration.WildCropConfiguration;
 
 import java.util.List;
@@ -70,8 +72,8 @@ public class ModPlantGeneration {
         FEATURE_PATCH_WILD_GINGER = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_ginger"),
                 FCBiomeFeatures.WILD_CROP.get(), wildCropConfig(FCBlocks.WILD_GINGER.get(), Blocks.FERN, BlockPredicate.matchesTag(BLOCK_BELOW, DIRT)));
 
-        FEATURE_PATCH_LEMON_SHRUB = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_lemon_shrub"),
-                FCBiomeFeatures.FRUITING_SHRUBS.get(), shrubConfig(FCBlocks.LEMON_SHRUB.get().defaultBlockState().setValue(LemonShrub.AGE,LemonShrub.MAX_AGE), 18, 5, 3, BlockPredicate.matchesTag(BLOCK_BELOW, DIRT)));
+        FEATURE_PATCH_LEMON_SHRUB = register(FCMiscUtility.cr("patch_lemon_shrub"),
+                RandomPatchFeature.RANDOM_PATCH, shrubConfig(FCBlocks.LEMON_SHRUB.get().defaultBlockState().setValue(LemonShrub.AGE,LemonShrub.MAX_AGE), 18, 5, 3, BlockPredicate.matchesTag(BLOCK_BELOW, DIRT)));
 
         FEATURE_OLIVE_TREE = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "olive_tree"),
                 FCBiomeFeatures.FRUITING_TREES.get(), new TreeConfiguration.TreeConfigurationBuilder(
@@ -105,7 +107,8 @@ public class ModPlantGeneration {
         return new WildCropConfiguration(256, 6, 3, plantBlockConfig(primaryBlock, plantedOn), plantBlockConfig(secondaryBlock, plantedOn), null);
     }
     public static RandomPatchConfiguration shrubConfig(BlockState block, int tries, int xzSpread, int ySpread, BlockPredicate plantedOn) {
-        return new RandomPatchConfiguration(tries, xzSpread, ySpread, plantBlockConfig(block.getBlock(), plantedOn));
+        return new RandomPatchConfiguration(tries, xzSpread, ySpread, PlacementUtils.filtered(FCBiomeFeatures.FRUITING_SHRUBS.get(),
+                new SimpleBlockConfiguration(BlockStateProvider.simple(block)), BlockPredicate.allOf(plantedOn, BlockPredicate.ONLY_IN_AIR_PREDICATE)));
     }
 
     // register

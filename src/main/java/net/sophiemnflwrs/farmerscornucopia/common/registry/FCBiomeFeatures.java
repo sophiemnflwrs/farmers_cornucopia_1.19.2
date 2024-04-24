@@ -2,7 +2,7 @@ package net.sophiemnflwrs.farmerscornucopia.common.registry;
 
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.TreeFeature;
-import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -19,8 +19,8 @@ public class FCBiomeFeatures {
     public static final RegistryObject<Feature<WildCropConfiguration>> WILD_CROP = FEATURES.register("wild_crop",
             () -> new WildCropFeature(WildCropConfiguration.CODEC));
 
-    public static final RegistryObject<Feature<RandomPatchConfiguration>> FRUITING_SHRUBS = FEATURES.register("fruiting_shrubs",
-            () -> new FruitingShrubFeature(RandomPatchConfiguration.CODEC));
+    public static final RegistryObject<Feature<SimpleBlockConfiguration>> FRUITING_SHRUBS = FEATURES.register("fruiting_shrubs",
+            () -> new FruitingShrubFeature(SimpleBlockConfiguration.CODEC));
 
     public static final RegistryObject<Feature<TreeConfiguration>> FRUITING_TREES = FEATURES.register("fruiting_trees",
             () -> new TreeFeature(TreeConfiguration.CODEC));
