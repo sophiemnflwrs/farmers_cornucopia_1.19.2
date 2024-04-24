@@ -25,6 +25,10 @@
   "block.farmerscornucopia.olive_sapling": "Olive Sapling",
   "block.farmerscornucopia.olive_planks": "Olive Planks",
 
+  "item.farmerscornucopia.garlic_clove": "Garlic Clove",
+  "item.farmerscornucopia.ginger_seeds": "Ginger Seeds",
+  "item.farmerscornucopia.lemon_seeds": "Lemon Seeds",
+
   "block.farmerscornucopia.garlic_crop": "Garlic Crop",
   "block.farmerscornucopia.ginger_crop": "Ginger Crop",
 
@@ -34,14 +38,17 @@
   "item.farmerscornucopia.olive": "Olive",
   "item.farmerscornucopia.lemon": "Lemon",
 
-  "item.farmerscornucopia.garlic_clove": "Garlic Clove",
-  "item.farmerscornucopia.ginger_seeds": "Ginger Seeds",
-  "item.farmerscornucopia.lemon_seeds": "Lemon Seeds",
-
   "item.farmerscornucopia.cream": "Cream",
   "item.farmerscornucopia.butter": "Butter",
+  "item.farmerscornucopia.olive_oil": "Olive Oil",
+
+  "item.farmerscornucopia.lemonade": "Lemonade",
 
   "item.farmerscornucopia.garlic_bread": "Garlic Bread",
+
+  "effect.farmerscornucopia.corrosion": "Corrosion",
+
+  "effect.farmerscornucopia.corrosion.0.desc": "Provides the user with an acid shield, corroding away projectiles, but damaging attack weapons.",
 
   "farmerscornucopia.tooltip.cream": "Clears one effect."
 }

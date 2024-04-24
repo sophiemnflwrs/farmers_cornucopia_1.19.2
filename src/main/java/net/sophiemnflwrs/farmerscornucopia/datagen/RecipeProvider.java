@@ -7,7 +7,11 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionUtils;
+import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCItems;
 import org.checkerframework.checker.nullness.qual.NonNull;
@@ -81,7 +85,17 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
                 .unlockedBy("has_olive", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.OLIVE.get()))
                 .save(consumer);
 
-        // foods
+        // drinks
+        ShapelessRecipeBuilder.shapeless(FCItems.LEMONADE.get(), 3)
+                .requires(Ingredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
+                .requires(Ingredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
+                .requires(Ingredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
+                .requires(Items.SUGAR)
+                .requires(FCItems.LEMON.get())
+                .unlockedBy("has_lemon", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.LEMON.get()))
+                .save(consumer);
+
+        // foods + meals
         ShapelessRecipeBuilder.shapeless(FCItems.GARLIC_BREAD.get(), 2)
                 .requires(Items.BREAD)
                 .requires(FCItems.GARLIC.get())

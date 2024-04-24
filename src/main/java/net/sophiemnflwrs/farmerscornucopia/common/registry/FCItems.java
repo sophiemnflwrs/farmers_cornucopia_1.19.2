@@ -95,6 +95,10 @@ public class FCItems {
     public static final RegistryObject<Item> LEMON_SEEDS = ITEMS.register("lemon_seeds",
             () -> new ItemNameBlockItem(FCBlocks.LEMON_SEEDLING.get(), basicItem()));
 
+    // drinks
+    public static final RegistryObject<Item> LEMONADE = ITEMS.register("lemonade",
+            () -> new DrinkableItem(drinkItem(FoodValues.LEMONADE)));
+
     // meals/food items
     public static final RegistryObject<Item> GARLIC_BREAD = ITEMS.register("garlic_bread",
             () -> new Item(foodItem(FoodValues.GARLIC_BREAD)));
