@@ -16,6 +16,7 @@ import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.ThreeLayersFeatureSize;
@@ -26,6 +27,7 @@ import net.minecraft.world.level.levelgen.feature.trunkplacers.DarkOakTrunkPlace
 import net.minecraft.world.level.levelgen.placement.*;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
 import net.sophiemnflwrs.farmerscornucopia.common.Configuration;
+import net.sophiemnflwrs.farmerscornucopia.common.block.shrub.LemonShrub;
 import net.sophiemnflwrs.farmerscornucopia.common.block.tree.FruitingLeavesBlock;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCBiomeFeatures;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCBlocks;
@@ -38,33 +40,23 @@ import static net.minecraft.tags.BlockTags.DIRT;
 
 public class ModPlantGeneration {
 
-    // helper methods + variables
-    public static Holder<PlacedFeature> plantBlockConfig(Block block, BlockPredicate plantedOn) {
-        return PlacementUtils.filtered(
-                Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(block)),
-                BlockPredicate.allOf(BlockPredicate.ONLY_IN_AIR_PREDICATE, plantedOn));
-    }
-    public static Holder<PlacedFeature> floorBlockConfig(Block block, BlockPredicate replaces) {
-        return PlacementUtils.filtered(
-                Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(block)),
-                BlockPredicate.allOf(BlockPredicate.replaceable(BLOCK_ABOVE), replaces));
-    }
-    public static WildCropConfiguration wildCropConfig(Block primaryBlock, Block secondaryBlock, BlockPredicate plantedOn) {
-        return new WildCropConfiguration(256, 6, 3, plantBlockConfig(primaryBlock, plantedOn), plantBlockConfig(secondaryBlock, plantedOn), null);
-    }
-
-    // generation
+    // feature generation
     public static Holder<ConfiguredFeature<WildCropConfiguration, ?>> FEATURE_PATCH_WILD_GARLIC;
     public static Holder<ConfiguredFeature<WildCropConfiguration, ?>> FEATURE_PATCH_WILD_GINGER;
 
+    public static Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FEATURE_PATCH_LEMON_SHRUB;
+
     public static Holder<ConfiguredFeature<TreeConfiguration, ?>> FEATURE_OLIVE_TREE;
 
+    // placement generation
     public static Holder<PlacedFeature> PATCH_WILD_GARLIC;
     public static Holder<PlacedFeature> PATCH_WILD_GINGER;
 
+    public static Holder<PlacedFeature> PATCH_LEMON_SHRUB;
+
     public static Holder<PlacedFeature> OLIVE_TREE;
 
-    // helper method 2
+    // helper variables
     public static final BlockPos BLOCK_BELOW = new BlockPos(0, -1, 0);
     public static final BlockPos BLOCK_ABOVE = new BlockPos(0, 1, 0);
 
@@ -77,6 +69,9 @@ public class ModPlantGeneration {
                 FCBiomeFeatures.WILD_CROP.get(), wildCropConfig(FCBlocks.WILD_GARLIC.get(), Blocks.GRASS, BlockPredicate.matchesTag(BLOCK_BELOW, DIRT)));
         FEATURE_PATCH_WILD_GINGER = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_ginger"),
                 FCBiomeFeatures.WILD_CROP.get(), wildCropConfig(FCBlocks.WILD_GINGER.get(), Blocks.FERN, BlockPredicate.matchesTag(BLOCK_BELOW, DIRT)));
+
+        FEATURE_PATCH_LEMON_SHRUB = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_lemon_shrub"),
+                FCBiomeFeatures.FRUITING_SHRUBS.get(), shrubConfig(FCBlocks.LEMON_SHRUB.get().defaultBlockState().setValue(LemonShrub.AGE,LemonShrub.MAX_AGE), 18, 5, 3, BlockPredicate.matchesTag(BLOCK_BELOW, DIRT)));
 
         FEATURE_OLIVE_TREE = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "olive_tree"),
                 FCBiomeFeatures.FRUITING_TREES.get(), new TreeConfiguration.TreeConfigurationBuilder(
@@ -93,8 +88,24 @@ public class ModPlantGeneration {
         PATCH_WILD_GINGER = registerPlacement(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_ginger"),
                 FEATURE_PATCH_WILD_GINGER, RarityFilter.onAverageOnceEvery(Configuration.CHANCE_WILD_GINGER.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 
+        PATCH_LEMON_SHRUB = registerPlacement(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_lemon_shrub"),
+                FEATURE_PATCH_LEMON_SHRUB, RarityFilter.onAverageOnceEvery(Configuration.CHANCE_LEMON_SHRUB.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
+
         OLIVE_TREE = registerPlacement(new ResourceLocation(FarmersCornucopia.MOD_ID, "olive_tree"),
                 FEATURE_OLIVE_TREE, RarityFilter.onAverageOnceEvery(Configuration.CHANCE_OLIVE_TREE.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, PlacementUtils.filteredByBlockSurvival(FCBlocks.OLIVE_SAPLING.get()), PlacementUtils.isEmpty(), BiomeFilter.biome());
+    }
+
+    // helper methods
+    public static Holder<PlacedFeature> plantBlockConfig(Block block, BlockPredicate plantedOn) {
+        return PlacementUtils.filtered(
+                Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(block)),
+                BlockPredicate.allOf(BlockPredicate.ONLY_IN_AIR_PREDICATE, plantedOn));
+    }
+    public static WildCropConfiguration wildCropConfig(Block primaryBlock, Block secondaryBlock, BlockPredicate plantedOn) {
+        return new WildCropConfiguration(256, 6, 3, plantBlockConfig(primaryBlock, plantedOn), plantBlockConfig(secondaryBlock, plantedOn), null);
+    }
+    public static RandomPatchConfiguration shrubConfig(BlockState block, int tries, int xzSpread, int ySpread, BlockPredicate plantedOn) {
+        return new RandomPatchConfiguration(tries, xzSpread, ySpread, plantBlockConfig(block.getBlock(), plantedOn));
     }
 
     // register
