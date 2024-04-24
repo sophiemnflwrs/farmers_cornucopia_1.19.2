@@ -13,6 +13,8 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.sophiemnflwrs.farmerscornucopia.common.CommonSetup;
 import net.sophiemnflwrs.farmerscornucopia.common.Configuration;
+import net.sophiemnflwrs.farmerscornucopia.common.effect.FCEffects;
+import net.sophiemnflwrs.farmerscornucopia.common.effect.FCParticles;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.*;
 import net.sophiemnflwrs.farmerscornucopia.common.world.configuration.SaltOreConfiguration;
 import net.sophiemnflwrs.farmerscornucopia.common.world.feature.SaltOreFeature;
@@ -53,6 +55,8 @@ public class FarmersCornucopia {
         FCPlacementModifiers.PLACEMENT_MODIFIERS.register(modEventBus);
         FCBiomeFeatures.FEATURES.register(modEventBus);
         FCBiomeModifiers.BIOME_MODIFIER_SERIALIZERS.register(modEventBus);
+        FCEffects.EFFECTS.register(modEventBus);
+        FCParticles.PARTICLES.register(modEventBus);
         SaltOreConfiguration.register(modEventBus);
         SaltOreFeature.register(modEventBus);
 
