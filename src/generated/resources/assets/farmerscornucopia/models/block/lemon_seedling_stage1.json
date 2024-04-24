@@ -1,5 +1,6 @@
 {
   "parent": "minecraft:block/template_azalea",
+  "render_type": "minecraft:cutout",
   "textures": {
     "particle": "farmerscornucopia:block/lemon_seedling_stage1",
     "plant": "farmerscornucopia:block/lemon_seedling_stage1",

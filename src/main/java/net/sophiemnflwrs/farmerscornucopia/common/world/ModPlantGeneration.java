@@ -78,8 +78,8 @@ public class ModPlantGeneration {
                 FCBiomeFeatures.FRUITING_TREES.get(), new TreeConfiguration.TreeConfigurationBuilder(
                         BlockStateProvider.simple(FCBlocks.OLIVE_LOG.get()),
                         new DarkOakTrunkPlacer(6, 3, 1),
-                        new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(FCBlocks.OLIVE_LEAVES.get().defaultBlockState(),
-                                4).add(FCBlocks.FRUITING_OLIVE_LEAVES.get().defaultBlockState().setValue(FruitingLeavesBlock.AGE, 4), 1)),
+                        new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(FCBlocks.OLIVE_LEAVES.get().defaultBlockState(), 4)
+                            .add(FCBlocks.FRUITING_OLIVE_LEAVES.get().defaultBlockState().setValue(FruitingLeavesBlock.AGE, 4), 1)),
                         new DarkOakFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0)),
                         new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty())).build());
 

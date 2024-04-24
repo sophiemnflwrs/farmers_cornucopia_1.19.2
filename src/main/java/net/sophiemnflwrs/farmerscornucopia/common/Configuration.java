@@ -45,7 +45,7 @@ public class Configuration {
             // shrubs
             COMMON_BUILDER.comment("Lemon Shrub generation").push("wild_ginger");
                 CHANCE_LEMON_SHRUB = COMMON_BUILDER.comment("Chance of generating clusters. Smaller value = more frequent.")
-                        .defineInRange("chance", 40, 0, Integer.MAX_VALUE);
+                        .defineInRange("chance", 20, 0, Integer.MAX_VALUE);
                 COMMON_BUILDER.pop();
 
             // trees

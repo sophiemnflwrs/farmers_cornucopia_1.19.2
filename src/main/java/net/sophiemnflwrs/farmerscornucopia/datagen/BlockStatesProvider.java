@@ -107,7 +107,8 @@ public class BlockStatesProvider extends BlockStateProvider {
                 .texture("side", resourceBlock(FCMiscUtility.name(block) + "_side_stage" + ageSuffix))
                 .texture("top", resourceBlock(FCMiscUtility.name(block) + "_top_stage" + ageSuffix))
                 .texture("plant", resourceBlock(FCMiscUtility.name(block) + "_stage" + ageSuffix))
-                .texture("particle", resourceBlock(FCMiscUtility.name(block) + "_stage" + ageSuffix));
+                .texture("particle", resourceBlock(FCMiscUtility.name(block) + "_stage" + ageSuffix))
+                .renderType("cutout");
                 ConfiguredModel.builder().modelFile(mod).build();
 
                 return ConfiguredModel.builder().modelFile(mod).build();

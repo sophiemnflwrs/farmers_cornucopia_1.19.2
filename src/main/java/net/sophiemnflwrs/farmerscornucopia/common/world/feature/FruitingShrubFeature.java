@@ -23,7 +23,7 @@ public class FruitingShrubFeature extends Feature<SimpleBlockConfiguration> {
         BlockState blockstate = pContext.config().toPlace().getState(pContext.random(), blockpos);
         if (blockstate.canSurvive(worldgenlevel, blockpos) && worldgenlevel.isEmptyBlock(blockpos.above())) {
             if (blockstate.getBlock() instanceof LemonShrub) {
-                LemonShrub.placeAt(worldgenlevel, blockstate, blockpos, 2);
+                LemonShrub.placeAt(worldgenlevel, blockstate, blockpos, 20);
                 return true;
             }
         }
