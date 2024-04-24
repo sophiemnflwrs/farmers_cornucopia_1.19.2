@@ -60,10 +60,6 @@ public class FCItems {
     public static final RegistryObject<Item> OLIVE_PLANKS = ITEMS.register("olive_planks",
             () -> new BlockItem(FCBlocks.OLIVE_PLANKS.get(), basicItem()));
 
-    // shrubs
-    public static final RegistryObject<Item> LEMON_SEEDLING = ITEMS.register("lemon_seedling",
-            () -> new BlockItem(FCBlocks.LEMON_SEEDLING.get(), basicItem()));
-
     // wild crops
     public static final RegistryObject<Item> WILD_GARLIC = ITEMS.register("wild_garlic",
             () -> new BlockItem(FCBlocks.WILD_GARLIC.get(), basicItem()));
@@ -97,7 +93,7 @@ public class FCItems {
     public static final RegistryObject<Item> GINGER_SEEDS = ITEMS.register("ginger_seeds",
             () -> new ItemNameBlockItem(FCBlocks.GINGER_CROP.get(), basicItem()));
     public static final RegistryObject<Item> LEMON_SEEDS = ITEMS.register("lemon_seeds",
-            () -> new ItemNameBlockItem(FCBlocks.LEMON_SHRUB.get(), basicItem()));
+            () -> new ItemNameBlockItem(FCBlocks.LEMON_SEEDLING.get(), basicItem()));
 
     // meals/food items
     public static final RegistryObject<Item> GARLIC_BREAD = ITEMS.register("garlic_bread",

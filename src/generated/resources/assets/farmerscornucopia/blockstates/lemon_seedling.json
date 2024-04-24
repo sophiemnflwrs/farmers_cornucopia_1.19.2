@@ -1,7 +1,7 @@
 {
   "variants": {
     "age=0": {
-      "model": "farmerscornucopia:block/lemon_seedling_stage0.json"
+      "model": "farmerscornucopia:block/lemon_seedling_stage0"
     },
     "age=1": {
       "model": "farmerscornucopia:block/lemon_seedling_stage1"

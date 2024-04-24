@@ -34,8 +34,6 @@ public class ItemModelsProvider extends ItemModelProvider {
         // specific cases
         blockBasedModel(FCItems.FRUITING_OLIVE_LEAVES.get(), "_stage1");
             items.remove(FCItems.FRUITING_OLIVE_LEAVES.get());
-        blockBasedModel(FCItems.LEMON_SEEDLING.get(), "_stage0");
-            items.remove(FCItems.LEMON_SEEDLING.get());
 
         // blocks w/ special sprites
         Set<Item> spriteBlockItems = Sets.newHashSet(

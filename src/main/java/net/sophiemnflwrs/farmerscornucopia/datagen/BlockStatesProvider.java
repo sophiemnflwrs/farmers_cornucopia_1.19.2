@@ -70,15 +70,7 @@ public class BlockStatesProvider extends BlockStateProvider {
         this.simpleBlock(FCBlocks.OLIVE_SAPLING.get(), models().cross("olive_sapling", resourceBlock("olive_sapling")).renderType("cutout"));
 
         // shrubs
-        this.getVariantBuilder(FCBlocks.LEMON_SEEDLING.get())
-                .partialState().with(LemonSeedling.AGE, 0).modelForState().modelFile(existingModel("lemon_seedling_stage0.json")).addModel()
-                .partialState().with(LemonSeedling.AGE, 1).modelForState().modelFile(models()
-                        .withExistingParent("block/lemon_seedling_stage1", FCMiscUtility.rl("minecraft", "block/template_azalea"))
-                        .texture("side", resourceBlock("lemon_seedling_stage1"))
-                        .texture("top", resourceBlock("lemon_seedling_stage1"))
-                        .texture("plant", resourceBlock("lemon_seedling_stage1"))
-                        .texture("particle", resourceBlock("lemon_seedling_stage1"))
-                        .renderType("cutout")).addModel();
+        this.shrubSeedlingBlock(FCBlocks.LEMON_SEEDLING.get(), LemonSeedling.AGE);
         this.upperLowerStageBlock(FCBlocks.LEMON_SHRUB.get(), LemonShrub.AGE, LemonShrub.HALF, LemonShrub.STUNTED);
 
         // wild crops
@@ -102,6 +94,24 @@ public class BlockStatesProvider extends BlockStateProvider {
         } else {
             this.simpleBlock(block, models().cross(blockName(block), resourceBlock(blockName(block))).renderType("cutout"));
         }
+    }
+
+    public void shrubSeedlingBlock (Block block, IntegerProperty ageProperty) {
+        getVariantBuilder(block).forAllStatesExcept(state -> {
+            int ageSuffix = state.getValue(ageProperty);
+            var seedling = existingModel(FCMiscUtility.name(block) + "_stage0");
+            if (ageSuffix == 0) {
+                return ConfiguredModel.builder().modelFile(seedling).build();
+            } var mod = models()
+                .withExistingParent(FCMiscUtility.name(block) + "_stage1", FCMiscUtility.rl("minecraft", "block/template_azalea"))
+                .texture("side", resourceBlock(FCMiscUtility.name(block) + "_side_stage" + ageSuffix))
+                .texture("top", resourceBlock(FCMiscUtility.name(block) + "_top_stage" + ageSuffix))
+                .texture("plant", resourceBlock(FCMiscUtility.name(block) + "_stage" + ageSuffix))
+                .texture("particle", resourceBlock(FCMiscUtility.name(block) + "_stage" + ageSuffix));
+                ConfiguredModel.builder().modelFile(mod).build();
+
+                return ConfiguredModel.builder().modelFile(mod).build();
+        });
     }
 
     public void upperLowerStageBlock(Block block, IntegerProperty ageProperty, EnumProperty<DoubleBlockHalf> halfProperty, Property<?> ignored) {

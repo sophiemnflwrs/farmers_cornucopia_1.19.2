@@ -56,9 +56,10 @@ public class BlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.SAPLINGS).add(FCBlocks.OLIVE_SAPLING.get());
 
+        tag(BlockTags.FLOWERS).add(FCBlocks.LEMON_SHRUB.get());
+
         tag(BlockTags.SMALL_FLOWERS).add(FCBlocks.WILD_GARLIC.get());
         tag(BlockTags.SMALL_FLOWERS).add(FCBlocks.WILD_GINGER.get());
-        tag(BlockTags.SMALL_FLOWERS).add(FCBlocks.LEMON_SEEDLING.get());
 
     }
 

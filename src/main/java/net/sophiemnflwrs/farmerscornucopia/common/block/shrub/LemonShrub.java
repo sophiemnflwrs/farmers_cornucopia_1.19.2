@@ -139,7 +139,7 @@ public class LemonShrub extends CropBlock implements FruitingShrub {
 
     @Override
     public boolean isValidBonemealTarget(@NotNull BlockGetter pLevel, @NotNull BlockPos pPos, BlockState pState, boolean pIsClient) {
-        return pState.getValue(AGE) < (this.getMaxAge() - 1);
+        return true;
     }
 
     @Override
