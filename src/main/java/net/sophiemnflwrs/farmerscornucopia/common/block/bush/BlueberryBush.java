@@ -47,7 +47,7 @@ public class BlueberryBush extends BushBlock implements IPlantable, Bonemealable
 
     public BlueberryBush(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(AGE, 0));
+        this.registerDefaultState(this.stateDefinition.any().setValue(AGE, 5));
     }
 
     // helper methods

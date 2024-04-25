@@ -118,7 +118,7 @@ public class ModPlantGeneration {
     }
 
     public static FruitingBushConfiguration fruitingBushConfig(Block primaryBlock, Block secondaryBlock, Block tertiaryBlock, BlockPredicate plantedOn) {
-        return new FruitingBushConfiguration(256, 9, 4, plantBlockConfig(primaryBlock, plantedOn), plantBlockConfig(secondaryBlock, plantedOn), plantBlockConfig(tertiaryBlock, plantedOn), null);
+        return new FruitingBushConfiguration(256, 6, 3, plantBlockConfig(primaryBlock, plantedOn), plantBlockConfig(secondaryBlock, plantedOn), plantBlockConfig(tertiaryBlock, plantedOn), null);
     }
 
     public static RandomPatchConfiguration shrubConfig(BlockState block, int tries, int xzSpread, int ySpread, BlockPredicate plantedOn) {
