@@ -36,6 +36,7 @@ public class ForgeTags {
     public static final TagKey<Item> FOODSTUFFS_OLIVE_OIL = forgeItemTag("foodstuffs/olive_oil");
     public static final TagKey<Item> FOODSTUFFS_CREAM = forgeItemTag("foodstuffs/cream");
     public static final TagKey<Item> FOODSTUFFS_BUTTER = forgeItemTag("foodstuffs/butter");
+    public static final TagKey<Item> FOODSTUFFS_AIOLI = forgeItemTag("foodstuffs/aioli");
 
     public static final TagKey<Item> VEGETABLES = forgeItemTag("vegetables");
     public static final TagKey<Item> VEGETABLES_GARLIC = forgeItemTag("vegetables/garlic");

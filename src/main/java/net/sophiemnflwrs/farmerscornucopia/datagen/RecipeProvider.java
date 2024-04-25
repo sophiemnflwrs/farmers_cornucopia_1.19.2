@@ -41,6 +41,10 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
                 .define('#', FCItems.GARLIC.get())
                 .unlockedBy("has_garlic", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.GARLIC.get()))
                 .save(consumer);
+        ShapelessRecipeBuilder.shapeless(FCItems.GARLIC.get(), 9)
+                .requires(FCItems.GARLIC_CRATE.get())
+                .unlockedBy("has_garlic_crate", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.GARLIC_CRATE.get()))
+                .save(consumer, new ResourceLocation(FarmersCornucopia.MOD_ID, "garlic_from_crate"));
         ShapedRecipeBuilder.shaped(FCItems.GINGER_CRATE.get(), 1)
                 .pattern("###")
                 .pattern("###")
@@ -48,6 +52,10 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
                 .define('#', FCItems.GINGER.get())
                 .unlockedBy("has_ginger", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.GINGER.get()))
                 .save(consumer);
+        ShapelessRecipeBuilder.shapeless(FCItems.GINGER.get(), 9)
+                .requires(FCItems.GINGER_CRATE.get())
+                .unlockedBy("has_ginger_crate", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.GINGER_CRATE.get()))
+                .save(consumer, new ResourceLocation(FarmersCornucopia.MOD_ID, "ginger_from_crate"));
         ShapedRecipeBuilder.shaped(FCItems.OLIVE_CRATE.get(), 1)
                 .pattern("###")
                 .pattern("###")
@@ -55,6 +63,10 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
                 .define('#', FCItems.OLIVE.get())
                 .unlockedBy("has_olive", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.OLIVE.get()))
                 .save(consumer);
+        ShapelessRecipeBuilder.shapeless(FCItems.OLIVE.get(), 9)
+                .requires(FCItems.OLIVE_CRATE.get())
+                .unlockedBy("has_olive_crate", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.OLIVE_CRATE.get()))
+                .save(consumer, new ResourceLocation(FarmersCornucopia.MOD_ID, "olive_from_crate"));
 
         // ingredients
         ShapelessRecipeBuilder.shapeless(FCItems.CREAM.get(), 2)
@@ -83,6 +95,14 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
                 .requires(FCItems.OLIVE.get())
                 .requires(Items.GLASS_BOTTLE)
                 .unlockedBy("has_olive", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.OLIVE.get()))
+                .save(consumer);
+        ShapelessRecipeBuilder.shapeless(FCItems.AIOLI.get(), 1)
+                .requires(Items.EGG)
+                .requires(FCItems.OLIVE_OIL.get())
+                .requires(FCItems.GARLIC.get())
+                .requires(FCItems.LEMON.get())
+                .requires(FCItems.SALT.get())
+                .unlockedBy("has_olive_oil", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.OLIVE_OIL.get()))
                 .save(consumer);
 
         // drinks

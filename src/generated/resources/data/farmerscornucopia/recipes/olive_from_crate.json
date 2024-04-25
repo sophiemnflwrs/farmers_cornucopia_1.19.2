@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "farmerscornucopia:olive_crate"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "farmerscornucopia:olive"
+  }
+}

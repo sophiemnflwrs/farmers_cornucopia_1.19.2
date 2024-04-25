@@ -86,6 +86,8 @@ public class FCItems {
             () -> new Item(foodItem(FoodValues.BUTTER)));
     public static final RegistryObject<Item> OLIVE_OIL = ITEMS.register("olive_oil",
             () -> new DrinkableItem(drinkItem(FoodValues.OLIVE_OIL)));
+    public static final RegistryObject<Item> AIOLI = ITEMS.register("aioli",
+            () -> new Item(foodItem(FoodValues.AIOLI)));
 
     // seeds
     public static final RegistryObject<Item> GARLIC_CLOVE = ITEMS.register("garlic_clove",

@@ -48,6 +48,9 @@ public class FoodValues {
     public static final FoodProperties OLIVE_OIL = (new FoodProperties.Builder())
             .nutrition(2).saturationMod(0.3f)
             .build();
+    public static final FoodProperties AIOLI = (new FoodProperties.Builder())
+            .nutrition(2).saturationMod(0.6f)
+            .build();
 
     // drinks
     public static final FoodProperties LEMONADE = (new FoodProperties.Builder())
