@@ -76,7 +76,7 @@ public class BlockStatesProvider extends BlockStateProvider {
         this.upperLowerStageBlock(FCBlocks.LEMON_SHRUB.get(), LemonShrub.AGE, LemonShrub.HALF, LemonShrub.STUNTED);
 
         // bushes
-        this.customStageBlock(FCBlocks.BLUEBERRY_BUSH.get(), mcLoc("crop"), "bush", BlueberryBush.AGE, Arrays.asList(0, 1, 2, 3, 4, 5));
+        this.stageBlock(FCBlocks.BLUEBERRY_BUSH.get(), BlueberryBush.AGE);
 
         // wild crops
         this.wildCropBlock(FCBlocks.WILD_GARLIC.get());
@@ -141,6 +141,16 @@ public class BlockStatesProvider extends BlockStateProvider {
             return ConfiguredModel.builder()
                     .modelFile(models().cubeAll(stageName, resourceBlock(stageName))).build();
         }, ignored);
+    }
+
+    public void stageBlock(Block block, IntegerProperty ageProperty, Property<?>... ignored) {
+        getVariantBuilder(block)
+                .forAllStatesExcept(state -> {
+                    int ageSuffix = state.getValue(ageProperty);
+                    String stageName = blockName(block) + "_stage" + ageSuffix;
+                    return ConfiguredModel.builder()
+                            .modelFile(models().cross(stageName, resourceBlock(stageName)).renderType("cutout")).build();
+                }, ignored);
     }
 
     public void customStageBlock(Block block, @Nullable ResourceLocation parent, String textureKey, IntegerProperty ageProperty, List<Integer> suffixes, Property<?>... ignored) {

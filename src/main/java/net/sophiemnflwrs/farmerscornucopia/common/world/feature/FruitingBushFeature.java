@@ -39,26 +39,26 @@ public class FruitingBushFeature extends Feature<FruitingBushConfiguration> {
         }
     }
 
-            for (int k = 0; k < tries; ++k) {
-        int shorterXZ = xzSpread - 1;
-        mutablePos.setWithOffset(origin, random.nextInt(shorterXZ) - random.nextInt(shorterXZ), random.nextInt(ySpread) - random.nextInt(ySpread), random.nextInt(shorterXZ) - random.nextInt(shorterXZ));
-        if (config.primaryFeature().value().place(level, context.chunkGenerator(), random, mutablePos)) {
-            ++i;
-        }
-    }
-
-        for (int l = 0; l < tries; ++l) {
-            int shortestXZ = xzSpread - 2;
+        for (int k = 0; k < tries; ++k) {
+            int shortestXZ = xzSpread - 1;
             mutablePos.setWithOffset(origin, random.nextInt(shortestXZ) - random.nextInt(shortestXZ), random.nextInt(ySpread) - random.nextInt(ySpread), random.nextInt(shortestXZ) - random.nextInt(shortestXZ));
             if (config.primaryFeature().value().place(level, context.chunkGenerator(), random, mutablePos)) {
                 ++i;
         }
     }
 
-            for (int m = 0; m < tries; ++m) {
-        mutablePos.setWithOffset(origin, random.nextInt(xzSpread) - random.nextInt(xzSpread), random.nextInt(ySpread) - random.nextInt(ySpread), random.nextInt(xzSpread) - random.nextInt(xzSpread));
-        if (config.secondaryFeature().value().place(level, context.chunkGenerator(), random, mutablePos)) {
-            ++i;
+        for (int l = 0; l < tries; ++l) {
+            int shorterXZ = xzSpread - 2;
+            mutablePos.setWithOffset(origin, random.nextInt(shorterXZ) - random.nextInt(shorterXZ), random.nextInt(ySpread) - random.nextInt(ySpread), random.nextInt(shorterXZ) - random.nextInt(shorterXZ));
+            if (config.secondaryFeature().value().place(level, context.chunkGenerator(), random, mutablePos)) {
+                ++i;
+        }
+    }
+
+        for (int m = 0; m < tries; ++m) {
+            mutablePos.setWithOffset(origin, random.nextInt(xzSpread) - random.nextInt(xzSpread), random.nextInt(ySpread) - random.nextInt(ySpread), random.nextInt(xzSpread) - random.nextInt(xzSpread));
+            if (config.tertiaryFeature().value().place(level, context.chunkGenerator(), random, mutablePos)) {
+                ++i;
         }
     }
 

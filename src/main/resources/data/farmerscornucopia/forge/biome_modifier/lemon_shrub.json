@@ -2,10 +2,10 @@
   "type": "farmerscornucopia:add_features_by_filter",
   "allowed_biomes": "#minecraft:is_overworld",
   "denied_biomes": ["minecraft:lush_caves", "minecraft:mushroom_fields"],
-  "min_temperature": 0.2,
-  "max_temperature": 0.7,
-  "min_humidity": 0.6,
+  "min_temperature": 0.5,
+  "max_temperature": 1.1,
+  "min_humidity": 0.5,
   "max_humidity": 1.0,
-  "features": "farmerscornucopia:patch_blueberry_bush",
+  "features": "farmerscornucopia:patch_lemon_shrub",
   "step": "vegetal_decoration"
 }
