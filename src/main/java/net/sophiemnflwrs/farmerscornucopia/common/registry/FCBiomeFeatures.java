@@ -8,7 +8,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
+import net.sophiemnflwrs.farmerscornucopia.common.world.configuration.FruitingBushConfiguration;
 import net.sophiemnflwrs.farmerscornucopia.common.world.configuration.WildCropConfiguration;
+import net.sophiemnflwrs.farmerscornucopia.common.world.feature.FruitingBushFeature;
 import net.sophiemnflwrs.farmerscornucopia.common.world.feature.FruitingShrubFeature;
 import net.sophiemnflwrs.farmerscornucopia.common.world.feature.WildCropFeature;
 
@@ -18,6 +20,9 @@ public class FCBiomeFeatures {
 
     public static final RegistryObject<Feature<WildCropConfiguration>> WILD_CROP = FEATURES.register("wild_crop",
             () -> new WildCropFeature(WildCropConfiguration.CODEC));
+
+    public static final RegistryObject<Feature<FruitingBushConfiguration>> FRUITING_BUSH = FEATURES.register("fruiting_bush",
+            () -> new FruitingBushFeature(FruitingBushConfiguration.CODEC));
 
     public static final RegistryObject<Feature<SimpleBlockConfiguration>> FRUITING_SHRUBS = FEATURES.register("fruiting_shrubs",
             () -> new FruitingShrubFeature(SimpleBlockConfiguration.CODEC));
