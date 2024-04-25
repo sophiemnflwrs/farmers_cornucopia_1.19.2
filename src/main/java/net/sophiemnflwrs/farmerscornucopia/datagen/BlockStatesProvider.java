@@ -14,6 +14,7 @@ import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
+import net.sophiemnflwrs.farmerscornucopia.common.block.bush.BlueberryBush;
 import net.sophiemnflwrs.farmerscornucopia.common.block.crop.GarlicCrop;
 import net.sophiemnflwrs.farmerscornucopia.common.block.crop.GingerCrop;
 import net.sophiemnflwrs.farmerscornucopia.common.block.shrub.LemonSeedling;
@@ -55,6 +56,7 @@ public class BlockStatesProvider extends BlockStateProvider {
         this.crateBlock(FCBlocks.GARLIC_CRATE.get(), "garlic");
         this.crateBlock(FCBlocks.GINGER_CRATE.get(), "ginger");
         this.crateBlock(FCBlocks.OLIVE_CRATE.get(), "olive");
+        this.crateBlock(FCBlocks.LEMON_CRATE.get(), "lemon");
 
         // salt ores + block
         this.simpleBlock(FCBlocks.SALT_ORE.get(), models().cubeAll("salt_ore", resourceBlock("salt_ore")));
@@ -72,6 +74,9 @@ public class BlockStatesProvider extends BlockStateProvider {
         // shrubs
         this.shrubSeedlingBlock(FCBlocks.LEMON_SEEDLING.get(), LemonSeedling.AGE);
         this.upperLowerStageBlock(FCBlocks.LEMON_SHRUB.get(), LemonShrub.AGE, LemonShrub.HALF, LemonShrub.STUNTED);
+
+        // bushes
+        this.customStageBlock(FCBlocks.BLUEBERRY_BUSH.get(), mcLoc("crop"), "bush", BlueberryBush.AGE, Arrays.asList(0, 1, 2, 3, 4, 5));
 
         // wild crops
         this.wildCropBlock(FCBlocks.WILD_GARLIC.get());

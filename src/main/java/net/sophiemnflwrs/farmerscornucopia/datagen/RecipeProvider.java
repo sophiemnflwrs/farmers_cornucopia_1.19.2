@@ -67,6 +67,17 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
                 .requires(FCItems.OLIVE_CRATE.get())
                 .unlockedBy("has_olive_crate", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.OLIVE_CRATE.get()))
                 .save(consumer, new ResourceLocation(FarmersCornucopia.MOD_ID, "olive_from_crate"));
+        ShapedRecipeBuilder.shaped(FCItems.LEMON_CRATE.get(), 1)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', FCItems.LEMON.get())
+                .unlockedBy("has_lemon", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.LEMON.get()))
+                .save(consumer);
+        ShapelessRecipeBuilder.shapeless(FCItems.LEMON.get(), 9)
+                .requires(FCItems.LEMON.get())
+                .unlockedBy("has_lemon_crate", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.LEMON_CRATE.get()))
+                .save(consumer, new ResourceLocation(FarmersCornucopia.MOD_ID, "lemon_from_crate"));
 
         // ingredients
         ShapelessRecipeBuilder.shapeless(FCItems.CREAM.get(), 2)

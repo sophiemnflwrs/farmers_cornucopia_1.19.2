@@ -148,11 +148,6 @@ public class LemonShrub extends CropBlock implements FruitingShrub {
     }
 
     @Override
-    protected int getBonemealAgeIncrease(@NotNull Level pLevel) {
-        return 1;
-    }
-
-    @Override
     public void performBonemeal(ServerLevel pLevel, @NotNull RandomSource pRandom, @NotNull BlockPos pPos, BlockState pState) {
         pLevel.setBlockAndUpdate(pPos, pState.setValue(AGE, Math.min(this.getMaxAge(), pState.getValue(AGE) + 1)));
     }

@@ -10,19 +10,17 @@ import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
 
 public class FCTags {
 
-    // wild crops
+
     public static final TagKey<Block> WILD_CROPS = modBlockTag("wild_crops");
     public static final TagKey<Item> WILD_CROPS_ITEM = modItemTag("wild_crops");
 
-    // fruiting shrubs
     public static final TagKey<Block> FRUITING_SHRUB = modBlockTag("fruiting_shrub");
-    public static final TagKey<Item> FRUITING_SHRUB_ITEM = modItemTag("fruiting_shrub");
 
-    // fruiting leaves
+    public static final TagKey<Block> FRUITING_BUSH = modBlockTag("fruiting_bush");
+
     public static final TagKey<Block> FRUITING_LEAVES = modBlockTag("fruiting_leaves");
     public static final TagKey<Item> FRUITING_LEAVES_ITEM = modItemTag("fruiting_leaves");
 
-    // effect-immune entities
     public static final TagKey<EntityType<?>> CORROSION_IMMUNE = modEntityType("corrosion_immune");
 
 

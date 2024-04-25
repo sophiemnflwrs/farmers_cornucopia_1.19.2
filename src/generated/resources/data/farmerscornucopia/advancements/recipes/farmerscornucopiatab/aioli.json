@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_garlic": {
+    "has_olive_oil": {
       "conditions": {
         "items": [
           {
             "items": [
-              "farmerscornucopia:garlic"
+              "farmerscornucopia:olive_oil"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_garlic",
+      "has_olive_oil",
       "has_the_recipe"
     ]
   ],

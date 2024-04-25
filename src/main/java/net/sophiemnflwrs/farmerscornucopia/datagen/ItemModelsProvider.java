@@ -39,7 +39,8 @@ public class ItemModelsProvider extends ItemModelProvider {
         Set<Item> spriteBlockItems = Sets.newHashSet(
                 FCItems.GARLIC_CLOVE.get(),
                 FCItems.GINGER_SEEDS.get(),
-                FCItems.LEMON_SEEDS.get()
+                FCItems.LEMON_SEEDS.get(),
+                FCItems.BLUEBERRY_SEEDS.get()
         );
         takeAll(items, spriteBlockItems.toArray(new Item[0])).forEach(item -> withExistingParent(itemName(item), GENERATED).texture("layer0", resourceItem(itemName(item))));
 
@@ -51,8 +52,14 @@ public class ItemModelsProvider extends ItemModelProvider {
         );
         takeAll(items, flatBlockItems.toArray(new Item[0])).forEach(item -> itemGeneratedModel(item, resourceBlock(itemName(item))));
 
+        // items that should be held like a mug
+        Set<Item> mugItems = Sets.newHashSet(
+                FCItems.LEMONADE.get()
+        );
+        takeAll(items, mugItems.toArray(new Item[0])).forEach(item -> itemMugModel(item, resourceItem(itemName(item))));
+
         // blocks whose items look alike
-      takeAll(items, i -> i instanceof BlockItem).forEach(item -> blockBasedModel(item, ""));
+        takeAll(items, i -> i instanceof BlockItem).forEach(item -> blockBasedModel(item, ""));
 
         // all other items; generated here
         items.forEach(item -> itemGeneratedModel(item, resourceItem(itemName(item))));

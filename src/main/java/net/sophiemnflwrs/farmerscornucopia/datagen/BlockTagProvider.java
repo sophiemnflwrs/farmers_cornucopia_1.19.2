@@ -35,12 +35,12 @@ public class BlockTagProvider extends BlockTagsProvider {
                 FCBlocks.OLIVE_PLANKS.get(),
                 FCBlocks.GARLIC_CRATE.get(),
                 FCBlocks.GINGER_CRATE.get(),
-                FCBlocks.OLIVE_CRATE.get()
+                FCBlocks.OLIVE_CRATE.get(),
+                FCBlocks.LEMON_CRATE.get()
         );
     }
 
     protected void registerForgeTags() {
-        
     }
 
     protected void registerMinecraftTags() {
@@ -57,6 +57,7 @@ public class BlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.SAPLINGS).add(FCBlocks.OLIVE_SAPLING.get());
 
         tag(BlockTags.FLOWERS).add(FCBlocks.LEMON_SHRUB.get());
+        tag(BlockTags.FLOWERS).add(FCBlocks.BLUEBERRY_BUSH.get());
 
         tag(BlockTags.SMALL_FLOWERS).add(FCBlocks.WILD_GARLIC.get());
         tag(BlockTags.SMALL_FLOWERS).add(FCBlocks.WILD_GINGER.get());
@@ -66,6 +67,8 @@ public class BlockTagProvider extends BlockTagsProvider {
     protected void registerModTags() {
         tag(FCTags.WILD_CROPS).add(FCBlocks.WILD_GARLIC.get());
         tag(FCTags.WILD_CROPS).add(FCBlocks.WILD_GINGER.get());
+
+        tag(FCTags.FRUITING_BUSH).add(FCBlocks.BLUEBERRY_BUSH.get());
 
         tag(FCTags.FRUITING_SHRUB).add(FCBlocks.LEMON_SEEDLING.get());
         tag(FCTags.FRUITING_SHRUB).add(FCBlocks.LEMON_SHRUB.get());

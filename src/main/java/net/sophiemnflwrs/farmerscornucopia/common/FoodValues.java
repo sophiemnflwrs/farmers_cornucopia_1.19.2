@@ -29,6 +29,9 @@ public class FoodValues {
             .nutrition(1).saturationMod(0.5f)
             .effect(() -> new MobEffectInstance(FCEffects.CORROSION.get(), 100, 0), 1.0F)
             .build();
+    public static final FoodProperties BLUEBERRY = (new FoodProperties.Builder())
+            .nutrition(1).saturationMod(0.2f)
+            .build();
 
     // edible seeds
     public static final FoodProperties GARLIC_CLOVE = (new FoodProperties.Builder())
