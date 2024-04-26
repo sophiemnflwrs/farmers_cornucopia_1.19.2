@@ -57,6 +57,7 @@ public class BlockStatesProvider extends BlockStateProvider {
         this.crateBlock(FCBlocks.GINGER_CRATE.get(), "ginger");
         this.crateBlock(FCBlocks.OLIVE_CRATE.get(), "olive");
         this.crateBlock(FCBlocks.LEMON_CRATE.get(), "lemon");
+        this.crateBlock(FCBlocks.BLUEBERRY_CRATE.get(), "blueberry");
 
         // salt ores + block
         this.simpleBlock(FCBlocks.SALT_ORE.get(), models().cubeAll("salt_ore", resourceBlock("salt_ore")));

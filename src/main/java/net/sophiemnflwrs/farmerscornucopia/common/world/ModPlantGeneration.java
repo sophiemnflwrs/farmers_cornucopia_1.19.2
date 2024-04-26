@@ -78,10 +78,10 @@ public class ModPlantGeneration {
                 FCBiomeFeatures.WILD_CROP.get(), wildCropConfig(FCBlocks.WILD_GINGER.get(), Blocks.FERN, BlockPredicate.matchesTag(BLOCK_BELOW, DIRT)));
 
         FEATURE_PATCH_BLUEBERRY_BUSH = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_blueberry_bush"),
-                    RandomPatchFeature.RANDOM_PATCH, bushConfig(FCBlocks.BLUEBERRY_BUSH.get().defaultBlockState().setValue(BlueberryBush.AGE, BlueberryBush.MAX_AGE), 256, 5, 3, BlockPredicate.matchesTag(BLOCK_BELOW, DIRT)));
+                RandomPatchFeature.RANDOM_PATCH, bushConfig(FCBlocks.BLUEBERRY_BUSH.get().defaultBlockState().setValue(BlueberryBush.AGE, BlueberryBush.MAX_AGE), 256, 4, 3, BlockPredicate.matchesTag(BLOCK_BELOW, DIRT)));
 
         FEATURE_PATCH_LEMON_SHRUB = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_lemon_shrub"),
-                RandomPatchFeature.RANDOM_PATCH, shrubConfig(FCBlocks.LEMON_SHRUB.get().defaultBlockState().setValue(LemonShrub.AGE, LemonShrub.MAX_AGE), 256, 5, 3, BlockPredicate.matchesTag(BLOCK_BELOW, DIRT)));
+                RandomPatchFeature.RANDOM_PATCH, shrubConfig(FCBlocks.LEMON_SHRUB.get().defaultBlockState().setValue(LemonShrub.AGE, LemonShrub.MAX_AGE), 256, 4, 3, BlockPredicate.matchesTag(BLOCK_BELOW, DIRT)));
 
         FEATURE_OLIVE_TREE = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "olive_tree"),
                 FCBiomeFeatures.FRUITING_TREES.get(), new TreeConfiguration.TreeConfigurationBuilder(

@@ -39,6 +39,8 @@ public class FCItems {
             () -> new BlockItem(FCBlocks.OLIVE_CRATE.get(), basicItem()));
     public static final RegistryObject<Item> LEMON_CRATE = ITEMS.register("lemon_crate",
                 () -> new BlockItem(FCBlocks.LEMON_CRATE.get(), basicItem()));
+    public static final RegistryObject<Item> BLUEBERRY_CRATE = ITEMS.register("blueberry_crate",
+            () -> new BlockItem(FCBlocks.BLUEBERRY_CRATE.get(), basicItem()));
 
     // salt blocks
     public static final RegistryObject<Item> SALT_BLOCK = ITEMS.register("salt_block",

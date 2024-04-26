@@ -36,7 +36,8 @@ public class BlockTagProvider extends BlockTagsProvider {
                 FCBlocks.GARLIC_CRATE.get(),
                 FCBlocks.GINGER_CRATE.get(),
                 FCBlocks.OLIVE_CRATE.get(),
-                FCBlocks.LEMON_CRATE.get()
+                FCBlocks.LEMON_CRATE.get(),
+                FCBlocks.BLUEBERRY_CRATE.get()
         );
     }
 

@@ -35,6 +35,8 @@ public class FCBlocks {
             () -> new Block(Block.Properties.of(Material.WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> LEMON_CRATE = BLOCKS.register("lemon_crate",
             () -> new Block(Block.Properties.of(Material.WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> BLUEBERRY_CRATE = BLOCKS.register("blueberry_crate",
+            () -> new Block(Block.Properties.of(Material.WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
 
     // salt
     public static final RegistryObject<Block> SALT_BLOCK = BLOCKS.register("salt_block",
