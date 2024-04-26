@@ -76,6 +76,12 @@ public class FCBlocks {
     public static final RegistryObject<Block> WILD_GINGER = BLOCKS.register("wild_ginger",
             () -> new WildCropBlock(MobEffects.FIRE_RESISTANCE, 10, BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
 
+    // flowers
+    public static final RegistryObject<Block> VIOLET = BLOCKS.register("violet",
+            () -> new FlowerBlock(MobEffects.REGENERATION, 4, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
+    public static final RegistryObject<Block> POTTED_VIOLET = BLOCKS.register("potted_violet",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock)Blocks.FLOWER_POT), FCBlocks.VIOLET, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
+
     // crops
     public static final RegistryObject<Block> GARLIC_CROP = BLOCKS.register("garlic_crop",
             () -> new GarlicCrop(Block.Properties.copy(Blocks.WHEAT)));

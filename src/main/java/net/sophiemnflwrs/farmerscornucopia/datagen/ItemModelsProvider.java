@@ -48,6 +48,9 @@ public class ItemModelsProvider extends ItemModelProvider {
         Set<Item> flatBlockItems = Sets.newHashSet(
                 FCItems.WILD_GARLIC.get(),
                 FCItems.WILD_GINGER.get(),
+
+                FCItems.VIOLET.get(),
+
                 FCItems.OLIVE_SAPLING.get()
         );
         takeAll(items, flatBlockItems.toArray(new Item[0])).forEach(item -> itemGeneratedModel(item, resourceBlock(itemName(item))));

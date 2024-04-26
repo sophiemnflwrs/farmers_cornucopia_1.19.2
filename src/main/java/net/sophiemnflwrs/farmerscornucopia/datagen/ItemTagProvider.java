@@ -53,6 +53,10 @@ public class ItemTagProvider extends ItemTagsProvider {
         tag(ForgeTags.CROPS_LEMON).add(FCItems.LEMON.get());
         tag(ForgeTags.CROPS_BLUEBERRY).add(FCItems.BLUEBERRY.get());
 
+        tag(ForgeTags.FLOWERS).addTags(
+                ForgeTags.FLOWERS_VIOLET);
+        tag(ForgeTags.FLOWERS_VIOLET).add(FCItems.VIOLET.get());
+
         tag(ForgeTags.FOODSTUFFS).addTags(
                 ForgeTags.FOODSTUFFS_SALT,
                 ForgeTags.FOODSTUFFS_OLIVE_OIL,

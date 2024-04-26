@@ -31,6 +31,10 @@ public class ForgeTags {
     public static final TagKey<Item> CROPS_LEMON = forgeItemTag("crops/lemon");
     public static final TagKey<Item> CROPS_BLUEBERRY = forgeItemTag("crops/blueberry");
 
+    // flowers
+    public static final TagKey<Item> FLOWERS = forgeItemTag("flowers");
+    public static final TagKey<Item> FLOWERS_VIOLET = forgeItemTag("flowers/violet");
+
     // foodstuffs
     public static final TagKey<Item> FOODSTUFFS = forgeItemTag("foodstuffs");
     public static final TagKey<Item> FOODSTUFFS_SALT = forgeItemTag("foodstuffs/salt");

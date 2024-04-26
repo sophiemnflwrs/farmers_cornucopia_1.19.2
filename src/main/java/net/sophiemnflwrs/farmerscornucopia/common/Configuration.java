@@ -10,19 +10,23 @@ public class Configuration {
     public static ForgeConfigSpec CLIENT_CONFIG;
 
     public static final String CATEGORY_WORLD = "world";
+
+    public static ForgeConfigSpec.BooleanValue GENERATE_OLIVE_TREE;
+    public static ForgeConfigSpec.IntValue CHANCE_OLIVE_TREE;
+
+    public static ForgeConfigSpec.BooleanValue GENERATE_LEMON_SHRUB;
+    public static ForgeConfigSpec.IntValue CHANCE_LEMON_SHRUB;
+
+    public static ForgeConfigSpec.BooleanValue GENERATE_BLUEBERRY_BUSH;
+    public static ForgeConfigSpec.IntValue CHANCE_BLUEBERRY_BUSH;
+
     public static ForgeConfigSpec.BooleanValue GENERATE_WILD_GARLIC;
     public static ForgeConfigSpec.IntValue CHANCE_WILD_GARLIC;
     public static ForgeConfigSpec.BooleanValue GENERATE_WILD_GINGER;
     public static ForgeConfigSpec.IntValue CHANCE_WILD_GINGER;
 
-    public static ForgeConfigSpec.BooleanValue GENERATE_BLUEBERRY_BUSH;
-    public static ForgeConfigSpec.IntValue CHANCE_BLUEBERRY_BUSH;
-
-    public static ForgeConfigSpec.BooleanValue GENERATE_LEMON_SHRUB;
-    public static ForgeConfigSpec.IntValue CHANCE_LEMON_SHRUB;
-
-    public static ForgeConfigSpec.BooleanValue GENERATE_OLIVE_TREE;
-    public static ForgeConfigSpec.IntValue CHANCE_OLIVE_TREE;
+    public static ForgeConfigSpec.BooleanValue GENERATE_VIOLET;
+    public static ForgeConfigSpec.IntValue CHANCE_VIOLET;
 
     public static final String CATEGORY_CLIENT = "client";
     public static ForgeConfigSpec.BooleanValue FOOD_EFFECT_TOOLTIP;
@@ -34,8 +38,25 @@ public class Configuration {
         ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
 
         COMMON_BUILDER.comment("World generation").push(CATEGORY_WORLD);
+        // trees
+                COMMON_BUILDER.comment("Olive Tree generation").push("olive_tree");
+                CHANCE_OLIVE_TREE = COMMON_BUILDER.comment("Chance of generating trees. Smaller values = more frequent.")
+                        .defineInRange("chance", 40, 0, Integer.MAX_VALUE);
+                COMMON_BUILDER.pop();
 
-            // wild crops
+        // shrubs
+        COMMON_BUILDER.comment("Lemon Shrub generation").push("lemon_shrub");
+        CHANCE_LEMON_SHRUB = COMMON_BUILDER.comment("Chance of generating clusters. Smaller value = more frequent.")
+                .defineInRange("chance", 20, 0, Integer.MAX_VALUE);
+        COMMON_BUILDER.pop();
+
+        // bushes
+                COMMON_BUILDER.comment("Blueberry Bush generation").push("blueberry_bush");
+                CHANCE_BLUEBERRY_BUSH = COMMON_BUILDER.comment("Chance of generating clusters. Smaller value = more frequent.")
+                        .defineInRange("chance", 20, 0, Integer.MAX_VALUE);
+                COMMON_BUILDER.pop();
+
+        // wild crops
             COMMON_BUILDER.comment("Wild Garlic generation").push("wild_garlic");
                 CHANCE_WILD_GARLIC = COMMON_BUILDER.comment("Chance of generating clusters. Smaller value = more frequent.")
                         .defineInRange("chance", 30, 0, Integer.MAX_VALUE);
@@ -45,23 +66,11 @@ public class Configuration {
                         .defineInRange("chance", 30, 0, Integer.MAX_VALUE);
                 COMMON_BUILDER.pop();
 
-            // bushes
-            COMMON_BUILDER.comment("Blueberry Bush generation").push("blueberry_bush");
-                CHANCE_BLUEBERRY_BUSH = COMMON_BUILDER.comment("Chance of generating clusters. Smaller value = more frequent.")
-                    .defineInRange("chance", 20, 0, Integer.MAX_VALUE);
-                COMMON_BUILDER.pop();
-
-            // shrubs
-            COMMON_BUILDER.comment("Lemon Shrub generation").push("lemon_shrub");
-                CHANCE_LEMON_SHRUB = COMMON_BUILDER.comment("Chance of generating clusters. Smaller value = more frequent.")
-                        .defineInRange("chance", 20, 0, Integer.MAX_VALUE);
-                COMMON_BUILDER.pop();
-
-            // trees
-            COMMON_BUILDER.comment("Olive Tree generation").push("olive_tree");
-                CHANCE_OLIVE_TREE = COMMON_BUILDER.comment("Chance of generating trees. Smaller values = more frequent.")
-                        .defineInRange("chance", 40, 0, Integer.MAX_VALUE);
-                COMMON_BUILDER.pop();
+        // flowers
+            COMMON_BUILDER.comment("Violet generation").push("violet");
+                CHANCE_VIOLET = COMMON_BUILDER.comment("Chance of generating clusters. Smaller value = more frequent.")
+                        .defineInRange("chance", 30, 0, Integer.MAX_VALUE);
+        COMMON_BUILDER.pop();
 
         COMMON_CONFIG = COMMON_BUILDER.build();
 

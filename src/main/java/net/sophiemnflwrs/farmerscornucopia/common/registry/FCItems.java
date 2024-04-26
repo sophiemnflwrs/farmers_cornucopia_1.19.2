@@ -70,6 +70,10 @@ public class FCItems {
     public static final RegistryObject<Item> WILD_GINGER = ITEMS.register("wild_ginger",
             () -> new BlockItem(FCBlocks.WILD_GINGER.get(), basicItem()));
 
+    // flowers
+    public static final RegistryObject<Item> VIOLET = ITEMS.register("violet",
+            () -> new BlockItem(FCBlocks.VIOLET.get(), basicItem()));
+
     // foodstuffs
     public static final RegistryObject<Item> SALT = ITEMS.register("salt",
             () -> new Item(foodItem(FoodValues.SALT)));

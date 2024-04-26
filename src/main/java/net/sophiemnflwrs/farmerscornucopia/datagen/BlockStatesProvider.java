@@ -83,10 +83,13 @@ public class BlockStatesProvider extends BlockStateProvider {
         this.wildCropBlock(FCBlocks.WILD_GARLIC.get());
         this.wildCropBlock(FCBlocks.WILD_GINGER.get());
 
-        // crops
-        this.customStageBlock(FCBlocks.GARLIC_CROP.get(), mcLoc("crop"), "crop", GarlicCrop.AGE, Arrays.asList(0, 0, 1, 1, 2, 2, 2, 3));
-        this.customStageBlock(FCBlocks.GINGER_CROP.get(), mcLoc("crop"), "crop", GingerCrop.AGE, Arrays.asList(0, 0, 1, 1, 2, 2, 2, 3));
+        // flowers
+        this.flowerBlock(FCBlocks.VIOLET.get());
+        this.flowerBlockWithPot(FCBlocks.VIOLET.get(), FCBlocks.POTTED_VIOLET.get());
 
+        // crops
+        this.cropBlock(FCBlocks.GARLIC_CROP.get(), mcLoc("crop"), "crop", GarlicCrop.AGE, Arrays.asList(0, 0, 1, 1, 2, 2, 2, 3));
+        this.cropBlock(FCBlocks.GINGER_CROP.get(), mcLoc("crop"), "crop", GingerCrop.AGE, Arrays.asList(0, 0, 1, 1, 2, 2, 2, 3));
     }
 
     // main methods
@@ -118,22 +121,21 @@ public class BlockStatesProvider extends BlockStateProvider {
                 ConfiguredModel.builder().modelFile(mod).build();
 
                 return ConfiguredModel.builder().modelFile(mod).build();
-        });
+            }
+        );
     }
 
-    public void upperLowerStageBlock(Block block, IntegerProperty ageProperty, EnumProperty<DoubleBlockHalf> halfProperty, Property<?> ignored) {
-        getVariantBuilder(block).forAllStatesExcept(state -> {
-            String name = FCMiscUtility.name(block) + "_" + state.getValue(halfProperty).getSerializedName();
-            var mod = models()
-                    .withExistingParent("block/" + name + "_stage" + state.getValue(ageProperty), FCMiscUtility.cr(name))
-                    .texture("side", resourceBlock(FCMiscUtility.name(block) + "_side_stage" + state.getValue(ageProperty)))
-                    .texture("plant", resourceBlock(FCMiscUtility.name(block) + "_" + state.getValue(halfProperty).getSerializedName() + "_stage" + state.getValue(ageProperty)))
-                    .texture("particle", resourceBlock(FCMiscUtility.name(block) + "_" + state.getValue(halfProperty).getSerializedName() + "_stage" + state.getValue(ageProperty)));
-            if (state.getValue(halfProperty) == DoubleBlockHalf.UPPER) {
-                mod.texture("top", resourceBlock(FCMiscUtility.name(block) + "_top_stage" + state.getValue(ageProperty)));
-            }
-            return ConfiguredModel.builder().modelFile(mod).build();
-        }, ignored);
+    public void flowerBlock(Block flower) {
+        this.simpleBlock(flower, models().cross(blockName(flower), blockTexture(flower)).renderType("cutout"));
+    }
+    public void flowerBlockWithPot(Block flower, Block flowerPot) {
+        this.flowerBlock(flower);
+        this.simpleBlock(flowerPot, models().singleTexture(blockName(flowerPot), new ResourceLocation("block/flower_pot_cross"), "plant", blockTexture(flower)));
+    }
+
+    public void crateBlock(Block block, String cropName) {
+        this.simpleBlock(block,
+                models().cubeBottomTop(blockName(block), resourceBlock(cropName + "_crate_side"), resourceBlock("crate_bottom"), resourceBlock(cropName + "_crate_top")));
     }
 
     public void fruitingLeavesBlock(Block block, IntegerProperty ageProperty, Property<?>... ignored) {
@@ -154,7 +156,7 @@ public class BlockStatesProvider extends BlockStateProvider {
                 }, ignored);
     }
 
-    public void customStageBlock(Block block, @Nullable ResourceLocation parent, String textureKey, IntegerProperty ageProperty, List<Integer> suffixes, Property<?>... ignored) {
+    public void cropBlock(Block block, @Nullable ResourceLocation parent, String textureKey, IntegerProperty ageProperty, List<Integer> suffixes, Property<?>... ignored) {
         getVariantBuilder(block)
                 .forAllStatesExcept(state -> {
                     int ageSuffix = state.getValue(ageProperty);
@@ -169,8 +171,18 @@ public class BlockStatesProvider extends BlockStateProvider {
                 }, ignored);
     }
 
-    public void crateBlock(Block block, String cropName) {
-        this.simpleBlock(block,
-                models().cubeBottomTop(blockName(block), resourceBlock(cropName + "_crate_side"), resourceBlock("crate_bottom"), resourceBlock(cropName + "_crate_top")));
+    public void upperLowerStageBlock(Block block, IntegerProperty ageProperty, EnumProperty<DoubleBlockHalf> halfProperty, Property<?> ignored) {
+        getVariantBuilder(block).forAllStatesExcept(state -> {
+            String name = FCMiscUtility.name(block) + "_" + state.getValue(halfProperty).getSerializedName();
+            var mod = models()
+                    .withExistingParent("block/" + name + "_stage" + state.getValue(ageProperty), FCMiscUtility.cr(name))
+                    .texture("side", resourceBlock(FCMiscUtility.name(block) + "_side_stage" + state.getValue(ageProperty)))
+                    .texture("plant", resourceBlock(FCMiscUtility.name(block) + "_" + state.getValue(halfProperty).getSerializedName() + "_stage" + state.getValue(ageProperty)))
+                    .texture("particle", resourceBlock(FCMiscUtility.name(block) + "_" + state.getValue(halfProperty).getSerializedName() + "_stage" + state.getValue(ageProperty)));
+            if (state.getValue(halfProperty) == DoubleBlockHalf.UPPER) {
+                mod.texture("top", resourceBlock(FCMiscUtility.name(block) + "_top_stage" + state.getValue(ageProperty)));
+            }
+            return ConfiguredModel.builder().modelFile(mod).build();
+        }, ignored);
     }
 }
