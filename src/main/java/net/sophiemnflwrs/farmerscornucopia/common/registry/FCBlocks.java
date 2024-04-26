@@ -80,7 +80,7 @@ public class FCBlocks {
     public static final RegistryObject<Block> VIOLET = BLOCKS.register("violet",
             () -> new FlowerBlock(MobEffects.REGENERATION, 4, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
     public static final RegistryObject<Block> POTTED_VIOLET = BLOCKS.register("potted_violet",
-            () -> new FlowerPotBlock(() -> ((FlowerPotBlock)Blocks.FLOWER_POT), FCBlocks.VIOLET, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock)Blocks.FLOWER_POT), FCBlocks.VIOLET, BlockBehaviour.Properties.copy(Blocks.FLOWER_POT)));
 
     // crops
     public static final RegistryObject<Block> GARLIC_CROP = BLOCKS.register("garlic_crop",

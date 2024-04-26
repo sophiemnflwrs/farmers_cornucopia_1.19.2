@@ -93,16 +93,12 @@ public class BlockStatesProvider extends BlockStateProvider {
     }
 
     // main methods
-    public void wildCropBlock(Block block) {
-        this.wildCropBlock(block, false);
-    }
-
-    public void wildCropBlock(Block block, boolean isBushCrop) {
-        if (isBushCrop) {
-            this.simpleBlock(block, models().singleTexture(blockName(block), resourceBlock("bush_crop"), "crop", resourceBlock(blockName(block))).renderType("cutout"));
-        } else {
-            this.simpleBlock(block, models().cross(blockName(block), resourceBlock(blockName(block))).renderType("cutout"));
-        }
+    public void fruitingLeavesBlock(Block block, IntegerProperty ageProperty, Property<?>... ignored) {
+        getVariantBuilder(block).forAllStatesExcept(state -> {
+            String stageName = FCMiscUtility.name(block) + "_stage" + state.getValue(ageProperty);
+            return ConfiguredModel.builder()
+                    .modelFile(models().cubeAll(stageName, resourceBlock(stageName))).build();
+        }, ignored);
     }
 
     public void shrubSeedlingBlock (Block block, IntegerProperty ageProperty) {
@@ -125,25 +121,28 @@ public class BlockStatesProvider extends BlockStateProvider {
         );
     }
 
+    public void wildCropBlock(Block block) {
+        this.wildCropBlock(block, false);
+    }
+
+    public void wildCropBlock(Block block, boolean isBushCrop) {
+        if (isBushCrop) {
+            this.simpleBlock(block, models().singleTexture(blockName(block), resourceBlock("bush_crop"), "crop", resourceBlock(blockName(block))).renderType("cutout"));
+        } else {
+            this.simpleBlock(block, models().cross(blockName(block), resourceBlock(blockName(block))).renderType("cutout"));
+        }
+    }
+
     public void flowerBlock(Block flower) {
-        this.simpleBlock(flower, models().cross(blockName(flower), blockTexture(flower)).renderType("cutout"));
+        this.simpleBlock(flower, models().cross(blockName(flower), resourceBlock(blockName(flower))).renderType("cutout"));
     }
     public void flowerBlockWithPot(Block flower, Block flowerPot) {
-        this.flowerBlock(flower);
-        this.simpleBlock(flowerPot, models().singleTexture(blockName(flowerPot), new ResourceLocation("block/flower_pot_cross"), "plant", blockTexture(flower)));
+        this.simpleBlock(flowerPot, models().singleTexture(blockName(flowerPot), new ResourceLocation("block/flower_pot_cross"), "plant", resourceBlock(blockName(flower))));
     }
 
     public void crateBlock(Block block, String cropName) {
         this.simpleBlock(block,
                 models().cubeBottomTop(blockName(block), resourceBlock(cropName + "_crate_side"), resourceBlock("crate_bottom"), resourceBlock(cropName + "_crate_top")));
-    }
-
-    public void fruitingLeavesBlock(Block block, IntegerProperty ageProperty, Property<?>... ignored) {
-        getVariantBuilder(block).forAllStatesExcept(state -> {
-            String stageName = FCMiscUtility.name(block) + "_stage" + state.getValue(ageProperty);
-            return ConfiguredModel.builder()
-                    .modelFile(models().cubeAll(stageName, resourceBlock(stageName))).build();
-        }, ignored);
     }
 
     public void stageBlock(Block block, IntegerProperty ageProperty, Property<?>... ignored) {

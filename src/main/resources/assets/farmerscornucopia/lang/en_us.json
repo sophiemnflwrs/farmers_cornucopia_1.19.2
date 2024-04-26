@@ -11,14 +11,6 @@
   "block.farmerscornucopia.salt_block": "Block of Salt",
   "item.farmerscornucopia.salt": "Salt",
 
-  "block.farmerscornucopia.wild_garlic": "Wild Garlic",
-  "block.farmerscornucopia.wild_ginger": "Wild Ginger",
-
-  "block.farmerscornucopia.blueberry_bush": "Blueberry Bush",
-
-  "block.farmerscornucopia.lemon_seedling": "Lemon Seedling",
-  "block.farmerscornucopia.lemon_shrub": "Lemon Shrub",
-
   "block.farmerscornucopia.olive_log": "Olive Log",
   "block.farmerscornucopia.olive_wood": "Olive Wood",
   "block.farmerscornucopia.stripped_olive_log": "Stripped Olive Log",
@@ -27,6 +19,17 @@
   "block.farmerscornucopia.fruiting_olive_leaves": "Fruiting Olive Leaves",
   "block.farmerscornucopia.olive_sapling": "Olive Sapling",
   "block.farmerscornucopia.olive_planks": "Olive Planks",
+
+  "block.farmerscornucopia.lemon_seedling": "Lemon Seedling",
+  "block.farmerscornucopia.lemon_shrub": "Lemon Shrub",
+
+  "block.farmerscornucopia.blueberry_bush": "Blueberry Bush",
+
+  "block.farmerscornucopia.wild_garlic": "Wild Garlic",
+  "block.farmerscornucopia.wild_ginger": "Wild Ginger",
+
+  "block.farmerscornucopia.violet": "Violet",
+  "block.farmerscornucopia.potted_violet": "Potted Violet",
 
   "item.farmerscornucopia.garlic_clove": "Garlic Clove",
   "item.farmerscornucopia.ginger_seeds": "Ginger Seeds",
