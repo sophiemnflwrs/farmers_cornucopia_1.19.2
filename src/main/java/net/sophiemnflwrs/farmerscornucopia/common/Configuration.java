@@ -48,7 +48,7 @@ public class Configuration {
             // bushes
             COMMON_BUILDER.comment("Blueberry Bush generation").push("blueberry_bush");
                 CHANCE_BLUEBERRY_BUSH = COMMON_BUILDER.comment("Chance of generating clusters. Smaller value = more frequent.")
-                    .defineInRange("chance", 30, 0, Integer.MAX_VALUE);
+                    .defineInRange("chance", 20, 0, Integer.MAX_VALUE);
                 COMMON_BUILDER.pop();
 
             // shrubs

@@ -16,6 +16,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.BushBlock;
@@ -47,7 +48,7 @@ public class BlueberryBush extends BushBlock implements IPlantable, Bonemealable
 
     public BlueberryBush(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(AGE, 5));
+        this.registerDefaultState(this.stateDefinition.any().setValue(AGE, 0));
     }
 
     // helper methods
@@ -58,7 +59,7 @@ public class BlueberryBush extends BushBlock implements IPlantable, Bonemealable
     public IntegerProperty getAgeProperty() {
         return AGE;
     }
-    protected int getAge(BlockState state) {
+    public int getAge(BlockState state) {
         return state.getValue(this.getAgeProperty());
     }
     public BlockState withAge(int age) {
@@ -74,6 +75,10 @@ public class BlueberryBush extends BushBlock implements IPlantable, Bonemealable
     @Override
     protected boolean mayPlaceOn(BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos) {
         return state.is(BlockTags.DIRT);
+    }
+
+    public static void placeAt(LevelAccessor level, BlockState state, BlockPos pos, int flags) {
+        level.setBlock(pos, state.setValue(AGE, MAX_AGE), flags);
     }
 
     @Override
@@ -108,7 +113,7 @@ public class BlueberryBush extends BushBlock implements IPlantable, Bonemealable
         boolean flag = i == MAX_AGE;
         if (!flag && player.getItemInHand(hand).is(Items.BONE_MEAL)) {
             return InteractionResult.PASS;
-        } else if (i > 1) {
+        } else if (flag) {
             int j = 1 + level.random.nextInt(2);
             popResource(level, pos, new ItemStack(FCItems.BLUEBERRY.get(), j + (flag ? 1 : 0)));
             level.playSound((Player)null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);

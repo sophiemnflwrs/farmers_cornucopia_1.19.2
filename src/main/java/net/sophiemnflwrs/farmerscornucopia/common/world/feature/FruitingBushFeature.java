@@ -2,67 +2,32 @@ package net.sophiemnflwrs.farmerscornucopia.common.world.feature;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Holder;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.sophiemnflwrs.farmerscornucopia.common.world.configuration.FruitingBushConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
+import net.sophiemnflwrs.farmerscornucopia.common.block.bush.BlueberryBush;
 
-public class FruitingBushFeature extends Feature<FruitingBushConfiguration> {
-    public FruitingBushFeature(Codec<FruitingBushConfiguration> codec) {
+
+public class FruitingBushFeature extends Feature<SimpleBlockConfiguration> {
+    public FruitingBushFeature(Codec<SimpleBlockConfiguration> codec) {
         super(codec);
     }
 
+    // places the given feature at the given location. features are placed within a 3x3 region of chunks, centering on the chunk being generated.
+
     @Override
-    public boolean place(FeaturePlaceContext<FruitingBushConfiguration> context) {
-    FruitingBushConfiguration config = context.config();
-    BlockPos origin = context.origin();
-    WorldGenLevel level = context.level();
-    RandomSource random = context.random();
-
-    int i = 0;
-    int tries = config.tries();
-    int xzSpread = config.xzSpread() + 1;
-    int ySpread = config.ySpread() + 1;
-
-    BlockPos.MutableBlockPos mutablePos = new BlockPos.MutableBlockPos();
-
-    Holder<PlacedFeature> floorFeature = config.floorFeature();
-        if (floorFeature != null) {
-        for (int j = 0; j < tries; ++j) {
-            mutablePos.setWithOffset(origin, random.nextInt(xzSpread) - random.nextInt(xzSpread), random.nextInt(ySpread) - random.nextInt(ySpread), random.nextInt(xzSpread) - random.nextInt(xzSpread));
-            if (config.floorFeature().value().place(level, context.chunkGenerator(), random, mutablePos)) {
-                ++i;
+    public boolean place(FeaturePlaceContext<SimpleBlockConfiguration> pContext) {
+        WorldGenLevel worldgenlevel = pContext.level();
+        BlockPos blockpos = pContext.origin();
+        BlockState blockstate = pContext.config().toPlace().getState(pContext.random(), blockpos);
+        if (blockstate.canSurvive(worldgenlevel, blockpos) && worldgenlevel.isEmptyBlock(blockpos.above())) {
+            if (blockstate.getBlock() instanceof BlueberryBush) {
+                BlueberryBush.placeAt(worldgenlevel, blockstate, blockpos, 2);
+                return true;
             }
         }
-    }
-
-        for (int k = 0; k < tries; ++k) {
-            int shortestXZ = xzSpread - 1;
-            mutablePos.setWithOffset(origin, random.nextInt(shortestXZ) - random.nextInt(shortestXZ), random.nextInt(ySpread) - random.nextInt(ySpread), random.nextInt(shortestXZ) - random.nextInt(shortestXZ));
-            if (config.primaryFeature().value().place(level, context.chunkGenerator(), random, mutablePos)) {
-                ++i;
-        }
-    }
-
-        for (int l = 0; l < tries; ++l) {
-            int shorterXZ = xzSpread - 2;
-            mutablePos.setWithOffset(origin, random.nextInt(shorterXZ) - random.nextInt(shorterXZ), random.nextInt(ySpread) - random.nextInt(ySpread), random.nextInt(shorterXZ) - random.nextInt(shorterXZ));
-            if (config.secondaryFeature().value().place(level, context.chunkGenerator(), random, mutablePos)) {
-                ++i;
-        }
-    }
-
-        for (int m = 0; m < tries; ++m) {
-            mutablePos.setWithOffset(origin, random.nextInt(xzSpread) - random.nextInt(xzSpread), random.nextInt(ySpread) - random.nextInt(ySpread), random.nextInt(xzSpread) - random.nextInt(xzSpread));
-            if (config.tertiaryFeature().value().place(level, context.chunkGenerator(), random, mutablePos)) {
-                ++i;
-        }
-    }
-
-        return i > 0;
-
+        return false;
     }
 }

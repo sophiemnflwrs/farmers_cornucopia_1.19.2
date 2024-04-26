@@ -28,17 +28,18 @@ import net.minecraft.world.level.levelgen.feature.trunkplacers.DarkOakTrunkPlace
 import net.minecraft.world.level.levelgen.placement.*;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
 import net.sophiemnflwrs.farmerscornucopia.common.Configuration;
+import net.sophiemnflwrs.farmerscornucopia.common.block.bush.BlueberryBush;
 import net.sophiemnflwrs.farmerscornucopia.common.block.shrub.LemonShrub;
 import net.sophiemnflwrs.farmerscornucopia.common.block.tree.FruitingLeavesBlock;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCBiomeFeatures;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCBlocks;
-import net.sophiemnflwrs.farmerscornucopia.common.world.configuration.FruitingBushConfiguration;
 import net.sophiemnflwrs.farmerscornucopia.common.world.configuration.WildCropConfiguration;
 
 import java.util.List;
 import java.util.OptionalInt;
 
 import static net.minecraft.tags.BlockTags.DIRT;
+import static net.minecraft.world.level.levelgen.feature.Feature.SIMPLE_BLOCK;
 
 public class ModPlantGeneration {
 
@@ -46,7 +47,7 @@ public class ModPlantGeneration {
     public static Holder<ConfiguredFeature<WildCropConfiguration, ?>> FEATURE_PATCH_WILD_GARLIC;
     public static Holder<ConfiguredFeature<WildCropConfiguration, ?>> FEATURE_PATCH_WILD_GINGER;
 
-    public static Holder<ConfiguredFeature<FruitingBushConfiguration, ?>> FEATURE_PATCH_BLUEBERRY_BUSH;
+    public static Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FEATURE_PATCH_BLUEBERRY_BUSH;
 
     public static Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FEATURE_PATCH_LEMON_SHRUB;
 
@@ -77,17 +78,17 @@ public class ModPlantGeneration {
                 FCBiomeFeatures.WILD_CROP.get(), wildCropConfig(FCBlocks.WILD_GINGER.get(), Blocks.FERN, BlockPredicate.matchesTag(BLOCK_BELOW, DIRT)));
 
         FEATURE_PATCH_BLUEBERRY_BUSH = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_blueberry_bush"),
-                FCBiomeFeatures.FRUITING_BUSH.get(), fruitingBushConfig(FCBlocks.BLUEBERRY_BUSH.get(), Blocks.LILAC, Blocks.GRASS, BlockPredicate.matchesTag(BLOCK_BELOW, DIRT)));
+                    RandomPatchFeature.RANDOM_PATCH, bushConfig(FCBlocks.BLUEBERRY_BUSH.get().defaultBlockState().setValue(BlueberryBush.AGE, BlueberryBush.MAX_AGE), 256, 5, 3, BlockPredicate.matchesTag(BLOCK_BELOW, DIRT)));
 
         FEATURE_PATCH_LEMON_SHRUB = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_lemon_shrub"),
-                RandomPatchFeature.RANDOM_PATCH, shrubConfig(FCBlocks.LEMON_SHRUB.get().defaultBlockState().setValue(LemonShrub.AGE,LemonShrub.MAX_AGE), 256, 5, 3, BlockPredicate.matchesTag(BLOCK_BELOW, DIRT)));
+                RandomPatchFeature.RANDOM_PATCH, shrubConfig(FCBlocks.LEMON_SHRUB.get().defaultBlockState().setValue(LemonShrub.AGE, LemonShrub.MAX_AGE), 256, 5, 3, BlockPredicate.matchesTag(BLOCK_BELOW, DIRT)));
 
         FEATURE_OLIVE_TREE = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "olive_tree"),
                 FCBiomeFeatures.FRUITING_TREES.get(), new TreeConfiguration.TreeConfigurationBuilder(
                         BlockStateProvider.simple(FCBlocks.OLIVE_LOG.get()),
                         new DarkOakTrunkPlacer(6, 3, 1),
                         new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(FCBlocks.OLIVE_LEAVES.get().defaultBlockState(), 4)
-                            .add(FCBlocks.FRUITING_OLIVE_LEAVES.get().defaultBlockState().setValue(FruitingLeavesBlock.AGE, 4), 1)),
+                                .add(FCBlocks.FRUITING_OLIVE_LEAVES.get().defaultBlockState().setValue(FruitingLeavesBlock.AGE, 4), 1)),
                         new DarkOakFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0)),
                         new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty())).build());
 
@@ -110,19 +111,21 @@ public class ModPlantGeneration {
     // helper methods
     public static Holder<PlacedFeature> plantBlockConfig(Block block, BlockPredicate plantedOn) {
         return PlacementUtils.filtered(
-                Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(block)),
+                SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(block)),
                 BlockPredicate.allOf(BlockPredicate.ONLY_IN_AIR_PREDICATE, plantedOn));
     }
+
     public static WildCropConfiguration wildCropConfig(Block primaryBlock, Block secondaryBlock, BlockPredicate plantedOn) {
         return new WildCropConfiguration(256, 6, 3, plantBlockConfig(primaryBlock, plantedOn), plantBlockConfig(secondaryBlock, plantedOn), null);
     }
 
-    public static FruitingBushConfiguration fruitingBushConfig(Block primaryBlock, Block secondaryBlock, Block tertiaryBlock, BlockPredicate plantedOn) {
-        return new FruitingBushConfiguration(256, 6, 3, plantBlockConfig(primaryBlock, plantedOn), plantBlockConfig(secondaryBlock, plantedOn), plantBlockConfig(tertiaryBlock, plantedOn), null);
-    }
-
     public static RandomPatchConfiguration shrubConfig(BlockState block, int tries, int xzSpread, int ySpread, BlockPredicate plantedOn) {
         return new RandomPatchConfiguration(tries, xzSpread, ySpread, PlacementUtils.filtered(FCBiomeFeatures.FRUITING_SHRUBS.get(),
+                new SimpleBlockConfiguration(BlockStateProvider.simple(block)), BlockPredicate.allOf(plantedOn, BlockPredicate.ONLY_IN_AIR_PREDICATE)));
+    }
+
+    public static RandomPatchConfiguration bushConfig(BlockState block, int tries, int xzSpread, int ySpread, BlockPredicate plantedOn) {
+        return new RandomPatchConfiguration(tries, xzSpread, ySpread, PlacementUtils.filtered(FCBiomeFeatures.FRUITING_BUSH.get(),
                 new SimpleBlockConfiguration(BlockStateProvider.simple(block)), BlockPredicate.allOf(plantedOn, BlockPredicate.ONLY_IN_AIR_PREDICATE)));
     }
 
