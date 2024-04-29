@@ -2,6 +2,7 @@
   "itemGroup.farmerscornucopiatab": "Farmer's Cornucopia",
 
   "block.farmerscornucopia.blueberry_crate": "Blueberry Crate",
+  "block.farmerscornucopia.chili_pepper_crate": "Chili Pepper Crate",
   "block.farmerscornucopia.garlic_crate": "Garlic Crate",
   "block.farmerscornucopia.ginger_crate": "Ginger Crate",
   "block.farmerscornucopia.lemon_crate": "Lemon Crate",
@@ -26,6 +27,8 @@
 
   "block.farmerscornucopia.blueberry_bush": "Blueberry Bush",
 
+  "block.farmerscornucopia.wild_chili_pepper": "Wild Chili Pepper",
+  "block.farmerscornucopia.potted_wild_chili_pepper": "Potted Wild Chili Pepper",
   "block.farmerscornucopia.wild_garlic": "Wild Garlic",
   "block.farmerscornucopia.potted_wild_garlic": "Potted Wild Garlic",
   "block.farmerscornucopia.wild_ginger": "Wild Ginger",
@@ -37,13 +40,17 @@
   "block.farmerscornucopia.potted_violet": "Potted Violet",
 
   "item.farmerscornucopia.blueberry_seeds": "Blueberry Seeds",
+  "item.farmerscornucopia.chili_pepper_seeds": "Chili Pepper Seeds",
   "item.farmerscornucopia.garlic_clove": "Garlic Clove",
   "item.farmerscornucopia.ginger_seeds": "Ginger Seeds",
   "item.farmerscornucopia.lemon_seeds": "Lemon Seeds",
 
+  "block.farmerscornucopia.budding_chili_pepper": "Budding Chili Pepper Crop",
+  "block.farmerscornucopia.chili_pepper_crop": "Chili Pepper Crop",
   "block.farmerscornucopia.garlic_crop": "Garlic Crop",
   "block.farmerscornucopia.ginger_crop": "Ginger Crop",
 
+  "item.farmerscornucopia.chili_pepper": "Chili Pepper",
   "item.farmerscornucopia.garlic": "Garlic",
   "item.farmerscornucopia.ginger": "Ginger",
 
