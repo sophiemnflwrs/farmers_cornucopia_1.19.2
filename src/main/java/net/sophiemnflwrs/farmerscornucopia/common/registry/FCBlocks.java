@@ -73,6 +73,10 @@ public class FCBlocks {
             () -> new BlueberryBush(BlockBehaviour.Properties.of(Material.PLANT).instabreak().sound(SoundType.GRASS).noOcclusion()));
 
     // wild crops
+    public static final RegistryObject<Block> WILD_CHILI_PEPPER = BLOCKS.register("wild_chili_pepper",
+            () -> new WildCropBlock(MobEffects.FIRE_RESISTANCE, 10, BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
+        public static final RegistryObject<Block> POTTED_WILD_CHILI_PEPPER = BLOCKS.register("potted_wild_chili_pepper",
+                () -> new FlowerPotBlock(() -> ((FlowerPotBlock)Blocks.FLOWER_POT), FCBlocks.WILD_CHILI_PEPPER, BlockBehaviour.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<Block> WILD_GARLIC = BLOCKS.register("wild_garlic",
             () -> new WildCropBlock(MobEffects.FIRE_RESISTANCE, 6, BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
         public static final RegistryObject<Block> POTTED_WILD_GARLIC = BLOCKS.register("potted_wild_garlic",

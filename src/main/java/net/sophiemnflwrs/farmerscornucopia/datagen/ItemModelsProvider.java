@@ -37,10 +37,12 @@ public class ItemModelsProvider extends ItemModelProvider {
 
         // blocks w/ special sprites
         Set<Item> spriteBlockItems = Sets.newHashSet(
+                FCItems.BLUEBERRY_SEEDS.get(),
+                FCItems.CHILI_PEPPER_SEEDS.get(),
                 FCItems.GARLIC_CLOVE.get(),
                 FCItems.GINGER_SEEDS.get(),
-                FCItems.LEMON_SEEDS.get(),
-                FCItems.BLUEBERRY_SEEDS.get()
+                FCItems.LEMON_SEEDS.get()
+
         );
         takeAll(items, spriteBlockItems.toArray(new Item[0])).forEach(item -> withExistingParent(itemName(item), GENERATED).texture("layer0", resourceItem(itemName(item))));
 
@@ -48,6 +50,7 @@ public class ItemModelsProvider extends ItemModelProvider {
         Set<Item> flatBlockItems = Sets.newHashSet(
                 FCItems.WILD_GARLIC.get(),
                 FCItems.WILD_GINGER.get(),
+                FCItems.WILD_CHILI_PEPPER.get(),
 
                 FCItems.GINGER_LILY.get(),
                 FCItems.VIOLET.get(),

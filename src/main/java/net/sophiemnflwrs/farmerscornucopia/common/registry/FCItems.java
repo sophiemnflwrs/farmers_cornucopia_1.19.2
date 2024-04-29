@@ -65,6 +65,8 @@ public class FCItems {
             () -> new BlockItem(FCBlocks.OLIVE_SAPLING.get(), basicItem()));
 
     // wild crops
+    public static final RegistryObject<Item> WILD_CHILI_PEPPER = ITEMS.register("wild_chili_pepper",
+            () -> new BlockItem(FCBlocks.WILD_CHILI_PEPPER.get(), basicItem()));
     public static final RegistryObject<Item> WILD_GARLIC = ITEMS.register("wild_garlic",
             () -> new BlockItem(FCBlocks.WILD_GARLIC.get(), basicItem()));
     public static final RegistryObject<Item> WILD_GINGER = ITEMS.register("wild_ginger",

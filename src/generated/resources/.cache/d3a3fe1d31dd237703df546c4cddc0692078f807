@@ -1,4 +1,4 @@
-// 1.19.2	2024-04-29T09:26:27.481671	Item Models: farmerscornucopia
+// 1.19.2	2024-04-29T13:37:21.4049923	Item Models: farmerscornucopia
 67e78d00ebbc7a4fe37dbbba87f89f3fd8f87e4a assets/farmerscornucopia/models/item/aioli.json
 15c79a188a9405c7d2f93b0d4e39283baea32b50 assets/farmerscornucopia/models/item/blueberry.json
 606772b4a71b896a695c4087ba096d78fdb98b51 assets/farmerscornucopia/models/item/blueberry_crate.json
@@ -6,6 +6,8 @@
 e805ee4a1eba5fd15f30d3fa49064f98e4d4258c assets/farmerscornucopia/models/item/blueberry_muffin.json
 04b3190c7cbbc7a2751ba7baec8e57b088a583a6 assets/farmerscornucopia/models/item/blueberry_seeds.json
 9ade40e89eccce87efcbff82568289eb7833c58b assets/farmerscornucopia/models/item/butter.json
+91bcc007144a7ddf8e45564916cd48d6fe5ff51b assets/farmerscornucopia/models/item/chili_pepper.json
+94464cfe408710f3a91d21ef5d16108304b2434a assets/farmerscornucopia/models/item/chili_pepper_seeds.json
 d67ed8af2eda1a6a364ed3ef62fc7ddaa0ef63e1 assets/farmerscornucopia/models/item/cream.json
 e3e6c0a83fd7d0992a48a2a03e0278f2a70f25e4 assets/farmerscornucopia/models/item/deepslate_salt_ore.json
 b8bdaf9e8ca9de60a29f5845237048817413a44f assets/farmerscornucopia/models/item/fruiting_olive_leaves.json
@@ -35,5 +37,6 @@ f8a8ab2a873cd9354623f0f7484bf6c689a4a81c assets/farmerscornucopia/models/item/sa
 376d83e832c6755fe16840bef4c2d6a8463c3569 assets/farmerscornucopia/models/item/stripped_olive_log.json
 842f94e8a1a55327264f740c9a29016b9a2c98a6 assets/farmerscornucopia/models/item/violet.json
 5c275956488a74f3e14ae0798b5a7e38c6fad489 assets/farmerscornucopia/models/item/violet_jelly.json
+b2360b49555401e031da2d0d86a8ee6a56086578 assets/farmerscornucopia/models/item/wild_chili_pepper.json
 77e7762e43afa53806b5ed3c8669542d118d865b assets/farmerscornucopia/models/item/wild_garlic.json
 f2dfd34739e497e608c6d5145c2638174260ae42 assets/farmerscornucopia/models/item/wild_ginger.json

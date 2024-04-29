@@ -15,6 +15,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
 import net.sophiemnflwrs.farmerscornucopia.common.block.bush.BlueberryBush;
+import net.sophiemnflwrs.farmerscornucopia.common.block.crop.BuddingChiliPepperCrop;
+import net.sophiemnflwrs.farmerscornucopia.common.block.crop.ChiliPepperCrop;
 import net.sophiemnflwrs.farmerscornucopia.common.block.crop.GarlicCrop;
 import net.sophiemnflwrs.farmerscornucopia.common.block.crop.GingerCrop;
 import net.sophiemnflwrs.farmerscornucopia.common.block.shrub.LemonSeedling;
@@ -66,11 +68,11 @@ public class BlockStatesProvider extends BlockStateProvider {
 
         // trees
         this.logBlock((RotatedPillarBlock) FCBlocks.OLIVE_LOG.get());
-        this.logBlock((RotatedPillarBlock) FCBlocks.STRIPPED_OLIVE_LOG.get());
-        this.simpleBlock(FCBlocks.OLIVE_LEAVES.get(), models().cubeAll("olive_leaves", resourceBlock("olive_leaves")));
-        this.fruitingLeavesBlock(FCBlocks.FRUITING_OLIVE_LEAVES.get(), FruitingLeavesBlock.AGE);
-        this.simpleBlock(FCBlocks.OLIVE_PLANKS.get(), models().cubeAll("olive_planks", resourceBlock("olive_planks")));
-        this.simpleBlock(FCBlocks.OLIVE_SAPLING.get(), models().cross("olive_sapling", resourceBlock("olive_sapling")).renderType("cutout"));
+            this.logBlock((RotatedPillarBlock) FCBlocks.STRIPPED_OLIVE_LOG.get());
+            this.simpleBlock(FCBlocks.OLIVE_LEAVES.get(), models().cubeAll("olive_leaves", resourceBlock("olive_leaves")));
+            this.fruitingLeavesBlock(FCBlocks.FRUITING_OLIVE_LEAVES.get(), FruitingLeavesBlock.AGE);
+            this.simpleBlock(FCBlocks.OLIVE_PLANKS.get(), models().cubeAll("olive_planks", resourceBlock("olive_planks")));
+            this.simpleBlock(FCBlocks.OLIVE_SAPLING.get(), models().cross("olive_sapling", resourceBlock("olive_sapling")).renderType("cutout"));
 
         // shrubs
         this.shrubSeedlingBlock(FCBlocks.LEMON_SEEDLING.get(), LemonSeedling.AGE);
@@ -81,15 +83,23 @@ public class BlockStatesProvider extends BlockStateProvider {
 
         // wild crops
         this.wildCropBlock(FCBlocks.WILD_GARLIC.get());
+            this.flowerBlockWithPot(FCBlocks.WILD_GARLIC.get(), FCBlocks.POTTED_WILD_GARLIC.get());
         this.wildCropBlock(FCBlocks.WILD_GINGER.get());
+            this.flowerBlockWithPot(FCBlocks.WILD_GINGER.get(), FCBlocks.POTTED_WILD_GINGER.get());
+        this.wildCropBlock(FCBlocks.WILD_CHILI_PEPPER.get());
+            this.flowerBlockWithPot(FCBlocks.WILD_CHILI_PEPPER.get(), FCBlocks.POTTED_WILD_CHILI_PEPPER.get());
 
         // flowers
+        this.flowerBlock(FCBlocks.GINGER_LILY.get());
+            this.flowerBlockWithPot(FCBlocks.GINGER_LILY.get(), FCBlocks.POTTED_GINGER_LILY.get());
         this.flowerBlock(FCBlocks.VIOLET.get());
-        this.flowerBlockWithPot(FCBlocks.VIOLET.get(), FCBlocks.POTTED_VIOLET.get());
+            this.flowerBlockWithPot(FCBlocks.VIOLET.get(), FCBlocks.POTTED_VIOLET.get());
 
         // crops
         this.cropBlock(FCBlocks.GARLIC_CROP.get(), mcLoc("crop"), "crop", GarlicCrop.AGE, Arrays.asList(0, 0, 1, 1, 2, 2, 2, 3));
         this.cropBlock(FCBlocks.GINGER_CROP.get(), mcLoc("crop"), "crop", GingerCrop.AGE, Arrays.asList(0, 0, 1, 1, 2, 2, 2, 3));
+        this.cropBlock(FCBlocks.BUDDING_CHILI_PEPPER_CROP.get(), resourceBlock("crop_cross"), "cross", BuddingChiliPepperCrop.AGE, Arrays.asList(0, 1, 2, 3, 3));
+        this.cropBlock(FCBlocks.CHILI_PEPPER_CROP.get(), resourceBlock("crop_cross"), "cross", ChiliPepperCrop.AGE, Arrays.asList(0, 1, 2, 3));
     }
 
     // main methods

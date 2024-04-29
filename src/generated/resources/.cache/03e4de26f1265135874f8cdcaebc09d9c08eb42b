@@ -1,10 +1,11 @@
-// 1.19.2	2024-04-29T09:26:27.4826923	Tags for minecraft:item
+// 1.19.2	2024-04-29T13:37:21.4079905	Tags for minecraft:item
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/farmerscornucopia/tags/items/fruiting_leaves.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/farmerscornucopia/tags/items/wild_crops.json
 3c97b80407cb369d06f88b8b31da41587486fa84 data/forge/tags/items/bread.json
 0bdc999a7f653eecbb3c513a0baf1b963a2587ab data/forge/tags/items/bread/wheat.json
-986e94356c3e6a57b180c0e82bb61faa1b10cbcc data/forge/tags/items/crops.json
+6f78c482af7ff1fdeea808205297c8df215b289b data/forge/tags/items/crops.json
 7414b41d84bccb9ba6859fed9e778bcd30c3d403 data/forge/tags/items/crops/blueberry.json
+e716fd234dd3a900671162837322322987e1c185 data/forge/tags/items/crops/chili_pepper.json
 be28e79a6e6c2b7ebd9aae76742666c69afc7fda data/forge/tags/items/crops/garlic.json
 bd69f5c71c7c2aef880f70c88c74efe9d223f606 data/forge/tags/items/crops/ginger.json
 36d186b2d37ae28fa49f219523b6cde474f1431d data/forge/tags/items/crops/lemon.json
@@ -31,12 +32,14 @@ a5220f14ec52cfdee32af8731f2afc97dc91a616 data/forge/tags/items/fruits/olive.json
 178f1f29b39ae8c4ca99d54ec8fcaffcf30fec79 data/forge/tags/items/preserves/blueberry_jam.json
 3320d2add2f3bfe7959f6fb5decaffe1cf2bf384 data/forge/tags/items/preserves/lemon_marmalade.json
 802719fbc1f95f34e6e31ca472e2a515dfad28b4 data/forge/tags/items/preserves/violet_jelly.json
-ef5b60ac1a5980e22b8a33ca76e7427437c6632f data/forge/tags/items/seeds.json
+02f11f50d9c0590bc895d0317547ff62cdb88fbe data/forge/tags/items/seeds.json
 ecbb9905df342fd68acd30dc5a43096847515730 data/forge/tags/items/seeds/blueberry.json
+f4692238468eebcd64a5e05f71060ebc781da2a9 data/forge/tags/items/seeds/chili_pepper.json
 6378c26e6c9731530046209e8d12bdaf75d7b694 data/forge/tags/items/seeds/garlic.json
 26b4f5376030522c25740a5f16dafaff5af7929b data/forge/tags/items/seeds/ginger.json
 8357b866b11bf849b7fddeaac75d318766cbea28 data/forge/tags/items/seeds/lemon.json
-8c0dde009318387f5474594a099f51a01e350600 data/forge/tags/items/vegetables.json
+cd27bf1c7737e66a8530c1f0296df43b32b8e634 data/forge/tags/items/vegetables.json
+e716fd234dd3a900671162837322322987e1c185 data/forge/tags/items/vegetables/chili_pepper.json
 be28e79a6e6c2b7ebd9aae76742666c69afc7fda data/forge/tags/items/vegetables/garlic.json
 bd69f5c71c7c2aef880f70c88c74efe9d223f606 data/forge/tags/items/vegetables/ginger.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/items/leaves.json

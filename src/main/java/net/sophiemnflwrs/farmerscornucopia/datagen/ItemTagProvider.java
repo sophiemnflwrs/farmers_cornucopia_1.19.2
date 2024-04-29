@@ -36,21 +36,25 @@ public class ItemTagProvider extends ItemTagsProvider {
 
         tag(ForgeTags.SEEDS).addTags(
                 ForgeTags.SEEDS_BLUEBERRY,
+                ForgeTags.SEEDS_CHILI_PEPPER,
                 ForgeTags.SEEDS_GARLIC,
                 ForgeTags.SEEDS_GINGER,
                 ForgeTags.SEEDS_LEMON);
             tag(ForgeTags.SEEDS_BLUEBERRY).add(FCItems.BLUEBERRY_SEEDS.get());
+            tag(ForgeTags.SEEDS_CHILI_PEPPER).add(FCItems.CHILI_PEPPER_SEEDS.get());
             tag(ForgeTags.SEEDS_LEMON).add(FCItems.LEMON_SEEDS.get());
             tag(ForgeTags.SEEDS_GARLIC).add(FCItems.GARLIC_CLOVE.get());
             tag(ForgeTags.SEEDS_GINGER).add(FCItems.GINGER_SEEDS.get());
 
         tag(ForgeTags.CROPS).addTags(
                 ForgeTags.CROPS_BLUEBERRY,
+                ForgeTags.CROPS_CHILI_PEPPER,
                 ForgeTags.CROPS_GARLIC,
                 ForgeTags.CROPS_GINGER,
                 ForgeTags.CROPS_LEMON,
                 ForgeTags.CROPS_OLIVE);
             tag(ForgeTags.CROPS_BLUEBERRY).add(FCItems.BLUEBERRY.get());
+            tag(ForgeTags.CROPS_CHILI_PEPPER).add(FCItems.CHILI_PEPPER.get());
             tag(ForgeTags.CROPS_GARLIC).add(FCItems.GARLIC.get());
             tag(ForgeTags.CROPS_GINGER).add(FCItems.GINGER.get());
             tag(ForgeTags.CROPS_LEMON).add(FCItems.LEMON.get());
@@ -83,8 +87,10 @@ public class ItemTagProvider extends ItemTagsProvider {
             tag(ForgeTags.PRESERVES_VIOLET_JELLY).add(FCItems.VIOLET_JELLY.get());
 
         tag(ForgeTags.VEGETABLES).addTags(
+                ForgeTags.VEGETABLES_CHILI_PEPPER,
                 ForgeTags.VEGETABLES_GARLIC,
                 ForgeTags.VEGETABLES_GINGER);
+            tag(ForgeTags.VEGETABLES_CHILI_PEPPER).add(FCItems.CHILI_PEPPER.get());
             tag(ForgeTags.VEGETABLES_GARLIC).add(FCItems.GARLIC.get());
             tag(ForgeTags.VEGETABLES_GINGER).add(FCItems.GINGER.get());
 
