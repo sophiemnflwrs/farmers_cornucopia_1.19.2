@@ -97,6 +97,8 @@ public class FCItems {
             () -> new Item(foodItem(FoodValues.VIOLET_JELLY)));
 
     // crops
+    public static final RegistryObject<Item> CHILI_PEPPER = ITEMS.register("chili_pepper",
+            () -> new Item(foodItem(FoodValues.CHILI_PEPPER)));
     public static final RegistryObject<Item> GARLIC = ITEMS.register("garlic",
             () -> new Item(foodItem(FoodValues.GARLIC)));
     public static final RegistryObject<Item> GINGER = ITEMS.register("ginger",
@@ -112,6 +114,8 @@ public class FCItems {
     // seeds
     public static final RegistryObject<Item> BLUEBERRY_SEEDS = ITEMS.register("blueberry_seeds",
             () -> new ItemNameBlockItem(FCBlocks.BLUEBERRY_BUSH.get(), basicItem()));
+    public static final RegistryObject<Item> CHILI_PEPPER_SEEDS = ITEMS.register("chili_pepper_seeds",
+            () -> new ItemNameBlockItem(FCBlocks.CHILI_PEPPER_CROP.get(), basicItem()));
     public static final RegistryObject<Item> LEMON_SEEDS = ITEMS.register("lemon_seeds",
             () -> new ItemNameBlockItem(FCBlocks.LEMON_SEEDLING.get(), basicItem()));
     public static final RegistryObject<Item> GARLIC_CLOVE = ITEMS.register("garlic_clove",

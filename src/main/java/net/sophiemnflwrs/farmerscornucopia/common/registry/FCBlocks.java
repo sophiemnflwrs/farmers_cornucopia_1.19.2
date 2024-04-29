@@ -11,6 +11,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
 import net.sophiemnflwrs.farmerscornucopia.common.block.bush.BlueberryBush;
+import net.sophiemnflwrs.farmerscornucopia.common.block.crop.BuddingChiliPepperCrop;
+import net.sophiemnflwrs.farmerscornucopia.common.block.crop.ChiliPepperCrop;
 import net.sophiemnflwrs.farmerscornucopia.common.block.crop.GarlicCrop;
 import net.sophiemnflwrs.farmerscornucopia.common.block.crop.GingerCrop;
 import net.sophiemnflwrs.farmerscornucopia.common.block.shrub.LemonSeedling;
@@ -91,6 +93,10 @@ public class FCBlocks {
                 () -> new FlowerPotBlock(() -> ((FlowerPotBlock)Blocks.FLOWER_POT), FCBlocks.VIOLET, BlockBehaviour.Properties.copy(Blocks.FLOWER_POT)));
 
     // crops
+    public static final RegistryObject<Block> BUDDING_CHILI_PEPPER_CROP = BLOCKS.register("budding_chili_pepper",
+            () -> new BuddingChiliPepperCrop(Block.Properties.copy(Blocks.WHEAT)));
+    public static final RegistryObject<Block> CHILI_PEPPER_CROP = BLOCKS.register("chili_pepper_crop",
+            () -> new ChiliPepperCrop(Block.Properties.copy(Blocks.WHEAT)));
     public static final RegistryObject<Block> GARLIC_CROP = BLOCKS.register("garlic_crop",
             () -> new GarlicCrop(Block.Properties.copy(Blocks.WHEAT)));
     public static final RegistryObject<Block> GINGER_CROP = BLOCKS.register("ginger_crop",

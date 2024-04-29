@@ -14,6 +14,9 @@ public class FoodValues {
     public static final int LONG_DURATION = 6000;    // 5 minutes
 
     // raw veg
+    public static final FoodProperties CHILI_PEPPER = (new FoodProperties.Builder())
+            .nutrition(1).saturationMod(0.5f)
+            .build();
     public static final FoodProperties GARLIC = (new FoodProperties.Builder())
             .nutrition(1).saturationMod(0.4f)
             .build();
@@ -22,15 +25,15 @@ public class FoodValues {
             .build();
 
     // raw fruits
-    public static final FoodProperties OLIVE = (new FoodProperties.Builder())
-            .nutrition(1).saturationMod(0.3f)
+    public static final FoodProperties BLUEBERRY = (new FoodProperties.Builder())
+            .nutrition(1).saturationMod(0.2f)
             .build();
     public static final FoodProperties LEMON = (new FoodProperties.Builder())
             .nutrition(1).saturationMod(0.5f)
             .effect(() -> new MobEffectInstance(FCEffects.CORROSION.get(), 100, 0), 1.0F)
             .build();
-    public static final FoodProperties BLUEBERRY = (new FoodProperties.Builder())
-            .nutrition(1).saturationMod(0.2f)
+    public static final FoodProperties OLIVE = (new FoodProperties.Builder())
+            .nutrition(1).saturationMod(0.3f)
             .build();
 
     // edible seeds
