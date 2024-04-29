@@ -34,6 +34,7 @@ import net.sophiemnflwrs.farmerscornucopia.common.block.tree.FruitingLeavesBlock
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCBiomeFeatures;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCBlocks;
 import net.sophiemnflwrs.farmerscornucopia.common.world.configuration.WildCropConfiguration;
+import vectorwing.farmersdelight.common.tag.ModTags;
 
 import java.util.List;
 import java.util.OptionalInt;
@@ -50,6 +51,7 @@ public class ModPlantGeneration {
 
     public static Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FEATURE_PATCH_BLUEBERRY_BUSH;
 
+    public static Holder<ConfiguredFeature<WildCropConfiguration, ?>> FEATURE_PATCH_WILD_CHILI_PEPPER;
     public static Holder<ConfiguredFeature<WildCropConfiguration, ?>> FEATURE_PATCH_WILD_GARLIC;
     public static Holder<ConfiguredFeature<WildCropConfiguration, ?>> FEATURE_PATCH_WILD_GINGER;
 
@@ -62,6 +64,7 @@ public class ModPlantGeneration {
 
     public static Holder<PlacedFeature> PATCH_BLUEBERRY_BUSH;
 
+    public static Holder<PlacedFeature> PATCH_WILD_CHILI_PEPPER;
     public static Holder<PlacedFeature> PATCH_WILD_GARLIC;
     public static Holder<PlacedFeature> PATCH_WILD_GINGER;
 
@@ -76,7 +79,6 @@ public class ModPlantGeneration {
     public static void registerModPlantGeneration() {
 
         // feature config
-
         FEATURE_OLIVE_TREE = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "olive_tree"),
                 FCBiomeFeatures.FRUITING_TREES.get(), new TreeConfiguration.TreeConfigurationBuilder(
                         BlockStateProvider.simple(FCBlocks.OLIVE_LOG.get()),
@@ -92,6 +94,8 @@ public class ModPlantGeneration {
         FEATURE_PATCH_BLUEBERRY_BUSH = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_blueberry_bush"),
                 RandomPatchFeature.RANDOM_PATCH, bushConfig(FCBlocks.BLUEBERRY_BUSH.get().defaultBlockState().setValue(BlueberryBush.AGE, BlueberryBush.MAX_AGE), BlockPredicate.matchesTag(BLOCK_BELOW, DIRT)));
 
+        FEATURE_PATCH_WILD_CHILI_PEPPER = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_chili_pepper"),
+                FCBiomeFeatures.WILD_CROP.get(), wildCropConfig(FCBlocks.WILD_CHILI_PEPPER.get(), Blocks.GRASS, BlockPredicate.matchesTag(BLOCK_BELOW, ModTags.TERRAIN)));
         FEATURE_PATCH_WILD_GARLIC = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_garlic"),
                 FCBiomeFeatures.WILD_CROP.get(), wildCropConfig(FCBlocks.WILD_GARLIC.get(), Blocks.GRASS, BlockPredicate.matchesTag(BLOCK_BELOW, DIRT)));
         FEATURE_PATCH_WILD_GINGER = register(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_ginger"),
@@ -110,6 +114,8 @@ public class ModPlantGeneration {
         PATCH_BLUEBERRY_BUSH = registerPlacement(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_blueberry_bush"),
                 FEATURE_PATCH_BLUEBERRY_BUSH, RarityFilter.onAverageOnceEvery(Configuration.CHANCE_BLUEBERRY_BUSH.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 
+        PATCH_WILD_CHILI_PEPPER = registerPlacement(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_chili_pepper"),
+                FEATURE_PATCH_WILD_GARLIC, RarityFilter.onAverageOnceEvery(Configuration.CHANCE_WILD_CHILI_PEPPER.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
         PATCH_WILD_GARLIC = registerPlacement(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_garlic"),
                 FEATURE_PATCH_WILD_GARLIC, RarityFilter.onAverageOnceEvery(Configuration.CHANCE_WILD_GARLIC.get()), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
         PATCH_WILD_GINGER = registerPlacement(new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_ginger"),
