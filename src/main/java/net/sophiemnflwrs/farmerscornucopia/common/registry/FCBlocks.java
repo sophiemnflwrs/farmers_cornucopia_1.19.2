@@ -73,18 +73,22 @@ public class FCBlocks {
     // wild crops
     public static final RegistryObject<Block> WILD_GARLIC = BLOCKS.register("wild_garlic",
             () -> new WildCropBlock(MobEffects.FIRE_RESISTANCE, 6, BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
+        public static final RegistryObject<Block> POTTED_WILD_GARLIC = BLOCKS.register("potted_wild_garlic",
+                () -> new FlowerPotBlock(() -> ((FlowerPotBlock)Blocks.FLOWER_POT), FCBlocks.WILD_GARLIC, BlockBehaviour.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<Block> WILD_GINGER = BLOCKS.register("wild_ginger",
             () -> new WildCropBlock(MobEffects.FIRE_RESISTANCE, 10, BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
+        public static final RegistryObject<Block> POTTED_WILD_GINGER = BLOCKS.register("potted_wild_ginger",
+                () -> new FlowerPotBlock(() -> ((FlowerPotBlock)Blocks.FLOWER_POT), FCBlocks.WILD_GINGER, BlockBehaviour.Properties.copy(Blocks.FLOWER_POT)));
 
     // flowers
     public static final RegistryObject<Block> GINGER_LILY = BLOCKS.register("ginger_lily",
             () -> new FlowerBlock(MobEffects.MOVEMENT_SPEED, 2, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
-    public static final RegistryObject<Block> POTTED_GINGER_LILY = BLOCKS.register("potted_ginger_lily",
-            () -> new FlowerPotBlock(() -> ((FlowerPotBlock)Blocks.FLOWER_POT), FCBlocks.GINGER_LILY, BlockBehaviour.Properties.copy(Blocks.FLOWER_POT)));
+        public static final RegistryObject<Block> POTTED_GINGER_LILY = BLOCKS.register("potted_ginger_lily",
+                () -> new FlowerPotBlock(() -> ((FlowerPotBlock)Blocks.FLOWER_POT), FCBlocks.GINGER_LILY, BlockBehaviour.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<Block> VIOLET = BLOCKS.register("violet",
             () -> new FlowerBlock(MobEffects.REGENERATION, 4, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
         public static final RegistryObject<Block> POTTED_VIOLET = BLOCKS.register("potted_violet",
-            () -> new FlowerPotBlock(() -> ((FlowerPotBlock)Blocks.FLOWER_POT), FCBlocks.VIOLET, BlockBehaviour.Properties.copy(Blocks.FLOWER_POT)));
+                () -> new FlowerPotBlock(() -> ((FlowerPotBlock)Blocks.FLOWER_POT), FCBlocks.VIOLET, BlockBehaviour.Properties.copy(Blocks.FLOWER_POT)));
 
     // crops
     public static final RegistryObject<Block> GARLIC_CROP = BLOCKS.register("garlic_crop",

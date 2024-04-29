@@ -23,7 +23,7 @@ public class ItemTagProvider extends ItemTagsProvider {
     @Override
         protected void addTags() {
             copy(FCTags.WILD_CROPS, FCTags.WILD_CROPS_ITEM);
-            copy(BlockTags.SMALL_FLOWERS, net.minecraft.tags.ItemTags.SMALL_FLOWERS);
+            copy(BlockTags.SMALL_FLOWERS, ItemTags.SMALL_FLOWERS);
 
             copy(FCTags.FRUITING_LEAVES, FCTags.FRUITING_LEAVES_ITEM);
             copy(BlockTags.LEAVES, ItemTags.LEAVES);

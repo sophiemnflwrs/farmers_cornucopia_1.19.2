@@ -27,7 +27,9 @@
   "block.farmerscornucopia.blueberry_bush": "Blueberry Bush",
 
   "block.farmerscornucopia.wild_garlic": "Wild Garlic",
+  "block.farmerscornucopia.potted_wild_garlic": "Potted Wild Garlic",
   "block.farmerscornucopia.wild_ginger": "Wild Ginger",
+  "block.farmerscornucopia.potted_wild_ginger": "Potted Wild Ginger",
 
   "block.farmerscornucopia.ginger_lily": "Ginger Lily",
   "block.farmerscornucopia.potted_ginger_lily": "Potted Ginger Lily",
@@ -61,6 +63,7 @@
   "item.farmerscornucopia.lemonade": "Lemonade",
 
   "item.farmerscornucopia.garlic_bread": "Garlic Bread",
+  "item.farmerscornucopia.blueberry_muffin": "Blueberry Muffin",
 
   "effect.farmerscornucopia.corrosion": "Corrosion",
 

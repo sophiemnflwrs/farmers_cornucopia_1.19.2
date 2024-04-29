@@ -49,8 +49,8 @@ public class ItemModelsProvider extends ItemModelProvider {
                 FCItems.WILD_GARLIC.get(),
                 FCItems.WILD_GINGER.get(),
 
-                FCItems.VIOLET.get(),
                 FCItems.GINGER_LILY.get(),
+                FCItems.VIOLET.get(),
 
                 FCItems.OLIVE_SAPLING.get()
         );
