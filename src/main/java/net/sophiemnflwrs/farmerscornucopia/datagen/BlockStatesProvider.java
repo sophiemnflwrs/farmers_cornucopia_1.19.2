@@ -55,11 +55,12 @@ public class BlockStatesProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
 
         // crop crates
+        this.crateBlock(FCBlocks.BLUEBERRY_CRATE.get(), "blueberry");
+        this.crateBlock(FCBlocks.CHILI_PEPPER_CRATE.get(), "chili_pepper");
         this.crateBlock(FCBlocks.GARLIC_CRATE.get(), "garlic");
         this.crateBlock(FCBlocks.GINGER_CRATE.get(), "ginger");
-        this.crateBlock(FCBlocks.OLIVE_CRATE.get(), "olive");
         this.crateBlock(FCBlocks.LEMON_CRATE.get(), "lemon");
-        this.crateBlock(FCBlocks.BLUEBERRY_CRATE.get(), "blueberry");
+        this.crateBlock(FCBlocks.OLIVE_CRATE.get(), "olive");
 
         // salt ores + block
         this.simpleBlock(FCBlocks.SALT_ORE.get(), models().cubeAll("salt_ore", resourceBlock("salt_ore")));

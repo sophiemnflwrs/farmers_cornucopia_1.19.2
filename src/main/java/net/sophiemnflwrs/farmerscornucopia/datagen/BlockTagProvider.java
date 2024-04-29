@@ -37,7 +37,8 @@ public class BlockTagProvider extends BlockTagsProvider {
                 FCBlocks.GINGER_CRATE.get(),
                 FCBlocks.OLIVE_CRATE.get(),
                 FCBlocks.LEMON_CRATE.get(),
-                FCBlocks.BLUEBERRY_CRATE.get()
+                FCBlocks.BLUEBERRY_CRATE.get(),
+                FCBlocks.CHILI_PEPPER_CRATE.get()
         );
     }
 
@@ -45,6 +46,8 @@ public class BlockTagProvider extends BlockTagsProvider {
     }
 
     protected void registerMinecraftTags() {
+        tag(BlockTags.CROPS).add(FCBlocks.BUDDING_CHILI_PEPPER_CROP.get());
+        tag(BlockTags.CROPS).add(FCBlocks.CHILI_PEPPER_CROP.get());
         tag(BlockTags.CROPS).add(FCBlocks.GARLIC_CROP.get());
         tag(BlockTags.CROPS).add(FCBlocks.GINGER_CROP.get());
 
@@ -61,12 +64,16 @@ public class BlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.FLOWERS).add(FCBlocks.LEMON_SHRUB.get());
         tag(BlockTags.FLOWERS).add(FCBlocks.BLUEBERRY_BUSH.get());
 
+        tag(BlockTags.SMALL_FLOWERS).add(FCBlocks.WILD_CHILI_PEPPER.get());
         tag(BlockTags.SMALL_FLOWERS).add(FCBlocks.WILD_GARLIC.get());
         tag(BlockTags.SMALL_FLOWERS).add(FCBlocks.WILD_GINGER.get());
+
+        tag(BlockTags.SMALL_FLOWERS).add(FCBlocks.GINGER_LILY.get());
         tag(BlockTags.SMALL_FLOWERS).add(FCBlocks.VIOLET.get());
     }
 
     protected void registerModTags() {
+        tag(FCTags.WILD_CROPS).add(FCBlocks.WILD_CHILI_PEPPER.get());
         tag(FCTags.WILD_CROPS).add(FCBlocks.WILD_GARLIC.get());
         tag(FCTags.WILD_CROPS).add(FCBlocks.WILD_GINGER.get());
 

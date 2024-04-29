@@ -33,6 +33,8 @@ public class FCItems {
     // crop crates
     public static final RegistryObject<Item> BLUEBERRY_CRATE = ITEMS.register("blueberry_crate",
             () -> new BlockItem(FCBlocks.BLUEBERRY_CRATE.get(), basicItem()));
+    public static final RegistryObject<Item> CHILI_PEPPER_CRATE = ITEMS.register("chili_pepper_crate",
+            () -> new BlockItem(FCBlocks.CHILI_PEPPER_CRATE.get(), basicItem()));
     public static final RegistryObject<Item> GARLIC_CRATE = ITEMS.register("garlic_crate",
             () -> new BlockItem(FCBlocks.GARLIC_CRATE.get(), basicItem()));
     public static final RegistryObject<Item> GINGER_CRATE = ITEMS.register("ginger_crate",

@@ -89,6 +89,17 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
                 .requires(FCItems.BLUEBERRY_CRATE.get())
                 .unlockedBy("has_blueberry_crate", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.BLUEBERRY_CRATE.get()))
                 .save(consumer, new ResourceLocation(FarmersCornucopia.MOD_ID, "blueberry_from_crate"));
+        ShapedRecipeBuilder.shaped(FCItems.CHILI_PEPPER_CRATE.get(), 1)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', FCItems.CHILI_PEPPER.get())
+                .unlockedBy("has_chili_pepper", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.CHILI_PEPPER.get()))
+                .save(consumer);
+        ShapelessRecipeBuilder.shapeless(FCItems.CHILI_PEPPER.get(), 9)
+                .requires(FCItems.CHILI_PEPPER_CRATE.get())
+                .unlockedBy("has_chili_pepper_crate", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.CHILI_PEPPER_CRATE.get()))
+                .save(consumer, new ResourceLocation(FarmersCornucopia.MOD_ID, "chili_pepper_from_crate"));
 
         // ingredients
         ShapelessRecipeBuilder.shapeless(FCItems.CREAM.get(), 2)

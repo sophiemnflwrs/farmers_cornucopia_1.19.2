@@ -31,6 +31,8 @@ public class FCBlocks {
     // crop crates
     public static final RegistryObject<Block> BLUEBERRY_CRATE = BLOCKS.register("blueberry_crate",
             () -> new Block(Block.Properties.of(Material.WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> CHILI_PEPPER_CRATE = BLOCKS.register("chili_pepper_crate",
+            () -> new Block(Block.Properties.of(Material.WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> GARLIC_CRATE = BLOCKS.register("garlic_crate",
             () -> new Block(Block.Properties.of(Material.WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> GINGER_CRATE = BLOCKS.register("ginger_crate",
