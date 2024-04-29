@@ -1,10 +1,11 @@
 {
   "itemGroup.farmerscornucopiatab": "Farmer's Cornucopia",
 
+  "block.farmerscornucopia.blueberry_crate": "Blueberry Crate",
   "block.farmerscornucopia.garlic_crate": "Garlic Crate",
   "block.farmerscornucopia.ginger_crate": "Ginger Crate",
-  "block.farmerscornucopia.olive_crate": "Olive Crate",
   "block.farmerscornucopia.lemon_crate": "Lemon Crate",
+  "block.farmerscornucopia.olive_crate": "Olive Crate",
 
   "block.farmerscornucopia.salt_ore": "Salt Ore",
   "block.farmerscornucopia.deepslate_salt_ore": "Deepslate Salt Ore",
@@ -33,10 +34,10 @@
   "block.farmerscornucopia.violet": "Violet",
   "block.farmerscornucopia.potted_violet": "Potted Violet",
 
+  "item.farmerscornucopia.blueberry_seeds": "Blueberry Seeds",
   "item.farmerscornucopia.garlic_clove": "Garlic Clove",
   "item.farmerscornucopia.ginger_seeds": "Ginger Seeds",
   "item.farmerscornucopia.lemon_seeds": "Lemon Seeds",
-  "item.farmerscornucopia.blueberry_seeds": "Blueberry Seeds",
 
   "block.farmerscornucopia.garlic_crop": "Garlic Crop",
   "block.farmerscornucopia.ginger_crop": "Ginger Crop",
@@ -44,9 +45,9 @@
   "item.farmerscornucopia.garlic": "Garlic",
   "item.farmerscornucopia.ginger": "Ginger",
 
-  "item.farmerscornucopia.olive": "Olive",
-  "item.farmerscornucopia.lemon": "Lemon",
   "item.farmerscornucopia.blueberry": "Blueberry",
+  "item.farmerscornucopia.lemon": "Lemon",
+  "item.farmerscornucopia.olive": "Olive",
 
   "item.farmerscornucopia.cream": "Cream",
   "item.farmerscornucopia.butter": "Butter",
