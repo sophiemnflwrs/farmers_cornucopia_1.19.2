@@ -28,6 +28,8 @@
   "block.farmerscornucopia.wild_garlic": "Wild Garlic",
   "block.farmerscornucopia.wild_ginger": "Wild Ginger",
 
+  "block.farmerscornucopia.ginger_lily": "Ginger Lily",
+  "block.farmerscornucopia.potted_ginger_lily": "Potted Ginger Lily",
   "block.farmerscornucopia.violet": "Violet",
   "block.farmerscornucopia.potted_violet": "Potted Violet",
 
@@ -50,6 +52,10 @@
   "item.farmerscornucopia.butter": "Butter",
   "item.farmerscornucopia.olive_oil": "Olive Oil",
   "item.farmerscornucopia.aioli": "Aioli",
+
+  "item.farmerscornucopia.blueberry_jam": "Blueberry Jam",
+  "item.farmerscornucopia.lemon_marmalade": "Lemon Marmalade",
+  "item.farmerscornucopia.violet_jelly": "Violet Jelly",
 
   "item.farmerscornucopia.lemonade": "Lemonade",
 

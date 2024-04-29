@@ -38,7 +38,7 @@ public class FoodValues {
             .nutrition(1).saturationMod(0.2f)
             .build();
 
-    // ingredients
+    // foodstuffs
     public static final FoodProperties SALT = (new FoodProperties.Builder())
             .nutrition(1).saturationMod(0.1f)
             .build();
@@ -55,6 +55,18 @@ public class FoodValues {
             .nutrition(2).saturationMod(0.6f)
             .build();
 
+    // preserves
+    public static final FoodProperties VIOLET_JELLY = (new FoodProperties.Builder())
+            .nutrition(2).saturationMod(0.3f)
+            .build();
+    public static final FoodProperties BLUEBERRY_JAM = (new FoodProperties.Builder())
+            .nutrition(2).saturationMod(0.3f)
+            .build();
+    public static final FoodProperties LEMON_MARMALADE = (new FoodProperties.Builder())
+            .nutrition(2).saturationMod(0.3f)
+            .effect(() -> new MobEffectInstance(FCEffects.CORROSION.get(), 200, 0), 1.0F)
+            .build();
+
     // drinks
     public static final FoodProperties LEMONADE = (new FoodProperties.Builder())
             .nutrition(3).saturationMod(0.5f)
@@ -66,6 +78,8 @@ public class FoodValues {
             .nutrition(5).saturationMod(0.6f)
             .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 600, 0), 0.2f)
             .build();
-
+    public  static final FoodProperties BLUEBERRY_MUFFIN = (new FoodProperties.Builder())
+            .nutrition(4).saturationMod(0.4f)
+            .build();
 
 }

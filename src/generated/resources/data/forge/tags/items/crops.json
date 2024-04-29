@@ -1,8 +1,9 @@
 {
   "values": [
+    "#forge:crops/blueberry",
     "#forge:crops/garlic",
     "#forge:crops/ginger",
-    "#forge:crops/olive",
-    "#forge:crops/blueberry"
+    "#forge:crops/lemon",
+    "#forge:crops/olive"
   ]
 }

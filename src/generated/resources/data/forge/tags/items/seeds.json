@@ -1,5 +1,6 @@
 {
   "values": [
+    "#forge:seeds/blueberry",
     "#forge:seeds/garlic",
     "#forge:seeds/ginger",
     "#forge:seeds/lemon"

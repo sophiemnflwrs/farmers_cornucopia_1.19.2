@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "farmerscornucopia:lemon_crate"
+      "item": "farmerscornucopia:blueberry_crate"
     }
   ],
   "result": {
     "count": 9,
-    "item": "farmerscornucopia:lemon"
+    "item": "farmerscornucopia:blueberry"
   }
 }

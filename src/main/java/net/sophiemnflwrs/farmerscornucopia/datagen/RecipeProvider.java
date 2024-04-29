@@ -75,9 +75,20 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
                 .unlockedBy("has_lemon", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.LEMON.get()))
                 .save(consumer);
         ShapelessRecipeBuilder.shapeless(FCItems.LEMON.get(), 9)
-                .requires(FCItems.LEMON.get())
+                .requires(FCItems.LEMON_CRATE.get())
                 .unlockedBy("has_lemon_crate", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.LEMON_CRATE.get()))
                 .save(consumer, new ResourceLocation(FarmersCornucopia.MOD_ID, "lemon_from_crate"));
+        ShapedRecipeBuilder.shaped(FCItems.BLUEBERRY_CRATE.get(), 1)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', FCItems.BLUEBERRY.get())
+                .unlockedBy("has_blueberry", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.BLUEBERRY.get()))
+                .save(consumer);
+        ShapelessRecipeBuilder.shapeless(FCItems.BLUEBERRY.get(), 9)
+                .requires(FCItems.BLUEBERRY_CRATE.get())
+                .unlockedBy("has_blueberry_crate", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.BLUEBERRY_CRATE.get()))
+                .save(consumer, new ResourceLocation(FarmersCornucopia.MOD_ID, "blueberry_from_crate"));
 
         // ingredients
         ShapelessRecipeBuilder.shapeless(FCItems.CREAM.get(), 2)
@@ -116,6 +127,40 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
                 .unlockedBy("has_olive_oil", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.OLIVE_OIL.get()))
                 .save(consumer);
 
+        // preserves
+        ShapedRecipeBuilder.shaped(FCItems.VIOLET_JELLY.get(), 1)
+                .pattern(" g ")
+                .pattern("swl")
+                .pattern("vvv")
+                .define('v', FCItems.VIOLET.get())
+                .define('s', Items.SUGAR)
+                .define('w', Items.WATER_BUCKET)
+                .define('l', FCItems.LEMON.get())
+                .define('g', Items.GLASS_BOTTLE)
+                .unlockedBy("has_violet", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.VIOLET.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(FCItems.BLUEBERRY_JAM.get(), 1)
+                .pattern(" g ")
+                .pattern("swl")
+                .pattern("bbb")
+                .define('b', FCItems.BLUEBERRY.get())
+                .define('s', Items.SUGAR)
+                .define('w', Items.WATER_BUCKET)
+                .define('l', FCItems.LEMON.get())
+                .define('g', Items.GLASS_BOTTLE)
+                .unlockedBy("has_blueberry", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.BLUEBERRY_JAM.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(FCItems.LEMON_MARMALADE.get(), 1)
+                .pattern(" g ")
+                .pattern("swl")
+                .pattern("lll")
+                .define('l', FCItems.LEMON.get())
+                .define('s', Items.SUGAR)
+                .define('w', Items.WATER_BUCKET)
+                .define('g', Items.GLASS_BOTTLE)
+                .unlockedBy("has_lemon", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.LEMON.get()))
+                .save(consumer);
+
         // drinks
         ShapelessRecipeBuilder.shapeless(FCItems.LEMONADE.get(), 3)
                 .requires(Ingredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
@@ -133,6 +178,15 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
                 .requires(FCItems.BUTTER.get())
                 .unlockedBy("has_garlic", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.GARLIC.get()))
                 .save(consumer);
-
+        ShapedRecipeBuilder.shaped(FCItems.BLUEBERRY_MUFFIN.get(), 1)
+                .pattern("b1b")
+                .pattern("esw")
+                .define('e', Items.EGG)
+                .define('s',Items.SUGAR)
+                .define('w', Items.WHEAT)
+                .define('b', FCItems.BLUEBERRY.get())
+                .define('1', FCItems.BUTTER.get())
+                .unlockedBy("has_blueberry", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.BLUEBERRY.get()))
+                .save(consumer);
     }
 }
