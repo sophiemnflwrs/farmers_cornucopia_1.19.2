@@ -9,7 +9,7 @@ import net.minecraft.world.item.Items;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCItems;
 import net.sophiemnflwrs.farmerscornucopia.common.tag.FCTags;
-import net.sophiemnflwrs.farmerscornucopia.common.tag.ForgeTags;
+import net.sophiemnflwrs.farmerscornucopia.common.tag.FCForgeTags;
 import vectorwing.farmersdelight.common.registry.ModItems;
 
 import javax.annotation.Nullable;
@@ -34,87 +34,87 @@ public class ItemTagProvider extends ItemTagsProvider {
     @SuppressWarnings("unchecked")
     private void registerForgeTags() {
 
-        tag(ForgeTags.SEEDS).addTags(
-                ForgeTags.SEEDS_BLUEBERRY,
-                ForgeTags.SEEDS_CHILI_PEPPER,
-                ForgeTags.SEEDS_GARLIC,
-                ForgeTags.SEEDS_GINGER,
-                ForgeTags.SEEDS_LEMON);
-            tag(ForgeTags.SEEDS_BLUEBERRY).add(FCItems.BLUEBERRY_SEEDS.get());
-            tag(ForgeTags.SEEDS_CHILI_PEPPER).add(FCItems.CHILI_PEPPER_SEEDS.get());
-            tag(ForgeTags.SEEDS_LEMON).add(FCItems.LEMON_SEEDS.get());
-            tag(ForgeTags.SEEDS_GARLIC).add(FCItems.GARLIC_CLOVE.get());
-            tag(ForgeTags.SEEDS_GINGER).add(FCItems.GINGER_SEEDS.get());
+        tag(FCForgeTags.SEEDS).addTags(
+                FCForgeTags.SEEDS_BLUEBERRY,
+                FCForgeTags.SEEDS_CHILI_PEPPER,
+                FCForgeTags.SEEDS_GARLIC,
+                FCForgeTags.SEEDS_GINGER,
+                FCForgeTags.SEEDS_LEMON);
+            tag(FCForgeTags.SEEDS_BLUEBERRY).add(FCItems.BLUEBERRY_SEEDS.get());
+            tag(FCForgeTags.SEEDS_CHILI_PEPPER).add(FCItems.CHILI_PEPPER_SEEDS.get());
+            tag(FCForgeTags.SEEDS_LEMON).add(FCItems.LEMON_SEEDS.get());
+            tag(FCForgeTags.SEEDS_GARLIC).add(FCItems.GARLIC_CLOVE.get());
+            tag(FCForgeTags.SEEDS_GINGER).add(FCItems.GINGER_SEEDS.get());
 
-        tag(ForgeTags.CROPS).addTags(
-                ForgeTags.CROPS_BLUEBERRY,
-                ForgeTags.CROPS_CHILI_PEPPER,
-                ForgeTags.CROPS_GARLIC,
-                ForgeTags.CROPS_GINGER,
-                ForgeTags.CROPS_LEMON,
-                ForgeTags.CROPS_OLIVE);
-            tag(ForgeTags.CROPS_BLUEBERRY).add(FCItems.BLUEBERRY.get());
-            tag(ForgeTags.CROPS_CHILI_PEPPER).add(FCItems.CHILI_PEPPER.get());
-            tag(ForgeTags.CROPS_GARLIC).add(FCItems.GARLIC.get());
-            tag(ForgeTags.CROPS_GINGER).add(FCItems.GINGER.get());
-            tag(ForgeTags.CROPS_LEMON).add(FCItems.LEMON.get());
-            tag(ForgeTags.CROPS_OLIVE).add(FCItems.OLIVE.get());
+        tag(FCForgeTags.CROPS).addTags(
+                FCForgeTags.CROPS_BLUEBERRY,
+                FCForgeTags.CROPS_CHILI_PEPPER,
+                FCForgeTags.CROPS_GARLIC,
+                FCForgeTags.CROPS_GINGER,
+                FCForgeTags.CROPS_LEMON,
+                FCForgeTags.CROPS_OLIVE);
+            tag(FCForgeTags.CROPS_BLUEBERRY).add(FCItems.BLUEBERRY.get());
+            tag(FCForgeTags.CROPS_CHILI_PEPPER).add(FCItems.CHILI_PEPPER.get());
+            tag(FCForgeTags.CROPS_GARLIC).add(FCItems.GARLIC.get());
+            tag(FCForgeTags.CROPS_GINGER).add(FCItems.GINGER.get());
+            tag(FCForgeTags.CROPS_LEMON).add(FCItems.LEMON.get());
+            tag(FCForgeTags.CROPS_OLIVE).add(FCItems.OLIVE.get());
 
-        tag(ForgeTags.FLOWERS).addTags(
-                ForgeTags.FLOWERS_GINGER_LILY,
-                ForgeTags.FLOWERS_VIOLET);
-            tag(ForgeTags.FLOWERS_GINGER_LILY).add(FCItems.GINGER_LILY.get());
-            tag(ForgeTags.FLOWERS_VIOLET).add(FCItems.VIOLET.get());
+        tag(FCForgeTags.FLOWERS).addTags(
+                FCForgeTags.FLOWERS_GINGER_LILY,
+                FCForgeTags.FLOWERS_VIOLET);
+            tag(FCForgeTags.FLOWERS_GINGER_LILY).add(FCItems.GINGER_LILY.get());
+            tag(FCForgeTags.FLOWERS_VIOLET).add(FCItems.VIOLET.get());
 
-        tag(ForgeTags.FOODSTUFFS).addTags(
-                ForgeTags.FOODSTUFFS_SALT,
-                ForgeTags.FOODSTUFFS_OLIVE_OIL,
-                ForgeTags.FOODSTUFFS_CREAM,
-                ForgeTags.FOODSTUFFS_BUTTER,
-                ForgeTags.FOODSTUFFS_AIOLI);
-            tag(ForgeTags.FOODSTUFFS_SALT).add(FCItems.SALT.get());
-            tag(ForgeTags.FOODSTUFFS_OLIVE_OIL).add(FCItems.OLIVE_OIL.get());
-            tag(ForgeTags.FOODSTUFFS_CREAM).add(FCItems.CREAM.get());
-            tag(ForgeTags.FOODSTUFFS_BUTTER).add(FCItems.BUTTER.get());
-            tag(ForgeTags.FOODSTUFFS_AIOLI).add(FCItems.AIOLI.get());
+        tag(FCForgeTags.FOODSTUFFS).addTags(
+                FCForgeTags.FOODSTUFFS_SALT,
+                FCForgeTags.FOODSTUFFS_OLIVE_OIL,
+                FCForgeTags.FOODSTUFFS_CREAM,
+                FCForgeTags.FOODSTUFFS_BUTTER,
+                FCForgeTags.FOODSTUFFS_AIOLI);
+            tag(FCForgeTags.FOODSTUFFS_SALT).add(FCItems.SALT.get());
+            tag(FCForgeTags.FOODSTUFFS_OLIVE_OIL).add(FCItems.OLIVE_OIL.get());
+            tag(FCForgeTags.FOODSTUFFS_CREAM).add(FCItems.CREAM.get());
+            tag(FCForgeTags.FOODSTUFFS_BUTTER).add(FCItems.BUTTER.get());
+            tag(FCForgeTags.FOODSTUFFS_AIOLI).add(FCItems.AIOLI.get());
 
-        tag(ForgeTags.PRESERVES).addTags(
-                ForgeTags.PRESERVES_BLUEBERRY_JAM,
-                ForgeTags.PRESERVES_LEMON_MARMALADE,
-                ForgeTags.PRESERVES_VIOLET_JELLY);
-            tag(ForgeTags.PRESERVES_BLUEBERRY_JAM).add(FCItems.BLUEBERRY_JAM.get());
-            tag(ForgeTags.PRESERVES_LEMON_MARMALADE).add(FCItems.LEMON_MARMALADE.get());
-            tag(ForgeTags.PRESERVES_VIOLET_JELLY).add(FCItems.VIOLET_JELLY.get());
+        tag(FCForgeTags.PRESERVES).addTags(
+                FCForgeTags.PRESERVES_BLUEBERRY_JAM,
+                FCForgeTags.PRESERVES_LEMON_MARMALADE,
+                FCForgeTags.PRESERVES_VIOLET_JELLY);
+            tag(FCForgeTags.PRESERVES_BLUEBERRY_JAM).add(FCItems.BLUEBERRY_JAM.get());
+            tag(FCForgeTags.PRESERVES_LEMON_MARMALADE).add(FCItems.LEMON_MARMALADE.get());
+            tag(FCForgeTags.PRESERVES_VIOLET_JELLY).add(FCItems.VIOLET_JELLY.get());
 
-        tag(ForgeTags.VEGETABLES).addTags(
-                ForgeTags.VEGETABLES_CHILI_PEPPER,
-                ForgeTags.VEGETABLES_GARLIC,
-                ForgeTags.VEGETABLES_GINGER);
-            tag(ForgeTags.VEGETABLES_CHILI_PEPPER).add(FCItems.CHILI_PEPPER.get());
-            tag(ForgeTags.VEGETABLES_GARLIC).add(FCItems.GARLIC.get());
-            tag(ForgeTags.VEGETABLES_GINGER).add(FCItems.GINGER.get());
+        tag(FCForgeTags.VEGETABLES).addTags(
+                FCForgeTags.VEGETABLES_CHILI_PEPPER,
+                FCForgeTags.VEGETABLES_GARLIC,
+                FCForgeTags.VEGETABLES_GINGER);
+            tag(FCForgeTags.VEGETABLES_CHILI_PEPPER).add(FCItems.CHILI_PEPPER.get());
+            tag(FCForgeTags.VEGETABLES_GARLIC).add(FCItems.GARLIC.get());
+            tag(FCForgeTags.VEGETABLES_GINGER).add(FCItems.GINGER.get());
 
-        tag(ForgeTags.FRUITS).addTags(
-                ForgeTags.FRUITS_BLUEBERRY,
-                ForgeTags.FRUITS_LEMON,
-                ForgeTags.FRUITS_OLIVE);
-            tag(ForgeTags.FRUITS_BLUEBERRY).add(FCItems.BLUEBERRY.get());
-            tag(ForgeTags.FRUITS_LEMON).add(FCItems.LEMON.get());
-            tag(ForgeTags.FRUITS_OLIVE).add(FCItems.OLIVE.get());
+        tag(FCForgeTags.FRUITS).addTags(
+                FCForgeTags.FRUITS_BLUEBERRY,
+                FCForgeTags.FRUITS_LEMON,
+                FCForgeTags.FRUITS_OLIVE);
+            tag(FCForgeTags.FRUITS_BLUEBERRY).add(FCItems.BLUEBERRY.get());
+            tag(FCForgeTags.FRUITS_LEMON).add(FCItems.LEMON.get());
+            tag(FCForgeTags.FRUITS_OLIVE).add(FCItems.OLIVE.get());
 
-        tag(ForgeTags.BREAD).addTag(
-                ForgeTags.BREAD_WHEAT);
-            tag(ForgeTags.BREAD_WHEAT).add(Items.BREAD);
+        tag(FCForgeTags.BREAD).addTag(
+                FCForgeTags.BREAD_WHEAT);
+            tag(FCForgeTags.BREAD_WHEAT).add(Items.BREAD);
 
-        tag(ForgeTags.DAIRY).addTags(
-                ForgeTags.MILK_BUCKET,
-                ForgeTags.MILK_BOTTLE,
-                ForgeTags.CREAM,
-                ForgeTags.BUTTER);
-            tag(ForgeTags.MILK_BUCKET).add(Items.MILK_BUCKET);
-            tag(ForgeTags.MILK_BOTTLE).add(ModItems.MILK_BOTTLE.get());
-            tag(ForgeTags.CREAM).add(FCItems.CREAM.get());
-            tag(ForgeTags.BUTTER).add(FCItems.BUTTER.get());
+        tag(FCForgeTags.DAIRY).addTags(
+                FCForgeTags.DAIRY_MILK_BUCKET,
+                FCForgeTags.DAIRY_MILK_BOTTLE,
+                FCForgeTags.DAIRY_CREAM,
+                FCForgeTags.DAIRY_BUTTER);
+            tag(FCForgeTags.DAIRY_MILK_BUCKET).add(Items.MILK_BUCKET);
+            tag(FCForgeTags.DAIRY_MILK_BOTTLE).add(ModItems.MILK_BOTTLE.get());
+            tag(FCForgeTags.DAIRY_CREAM).add(FCItems.CREAM.get());
+            tag(FCForgeTags.DAIRY_BUTTER).add(FCItems.BUTTER.get());
 
     }
 }

@@ -136,6 +136,12 @@ public class FCItems {
             () -> new Item(foodItem(FoodValues.GARLIC_BREAD)));
     public static final RegistryObject<Item> BLUEBERRY_MUFFIN = ITEMS.register("blueberry_muffin",
             () -> new Item(foodItem(FoodValues.BLUEBERRY_MUFFIN)));
+    public static final RegistryObject<Item> MASHED_POTATOES = ITEMS.register("mashed_potatoes",
+            () -> new Item(foodItem(FoodValues.MASHED_POTATOES)));
+    public static final RegistryObject<Item> PATATAS_BRAVAS = ITEMS.register("patatas_bravas",
+            () -> new Item(foodItem(FoodValues.PATATAS_BRAVAS)));
+    public static final RegistryObject<Item> GARLIC_SALMON_PASTA = ITEMS.register("garlic_salmon_pasta",
+            () -> new Item(foodItem(FoodValues.GARLIC_SALMON_PASTA)));
 
     // register
     public static void register(IEventBus eventBus){

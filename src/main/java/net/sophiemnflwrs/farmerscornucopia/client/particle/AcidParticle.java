@@ -36,7 +36,7 @@ public class AcidParticle extends TextureSheetParticle {
         }
     }
 
-    public @NotNull ParticleRenderType getRenderType() {
+    public @NotNull ParticleRenderType getRenderType(){
         return ParticleRenderType.PARTICLE_SHEET_OPAQUE;
     }
 

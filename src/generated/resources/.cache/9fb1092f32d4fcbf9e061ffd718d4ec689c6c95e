@@ -1,4 +1,4 @@
-// 1.19.2	2024-04-29T14:08:43.4830483	Recipes
+// 1.19.2	2024-05-01T10:15:24.7334288	Recipes
 1a2defe3976a63b00b2349cdcf37f01ed6d6111e data/farmerscornucopia/advancements/recipes/farmerscornucopiatab/aioli.json
 a63a6d0e19be40f2ed4ede07733954d2f025480e data/farmerscornucopia/advancements/recipes/farmerscornucopiatab/blueberry_crate.json
 d674c616b17a700d79218edb2f8c3fb0a3a3d5bb data/farmerscornucopia/advancements/recipes/farmerscornucopiatab/blueberry_from_crate.json
@@ -45,3 +45,10 @@ e8c024404b2c91a35d509fa7034f40f38b062797 data/farmerscornucopia/recipes/lemon_fr
 c5675708715110191ef8e3d3d47c25911b278751 data/farmerscornucopia/recipes/olive_from_crate.json
 6310f813192b2d31a3caa85969e7601f85c02a68 data/farmerscornucopia/recipes/olive_oil.json
 0d0c5fd1821bf2b240f1b0d1d69018d4c897f139 data/farmerscornucopia/recipes/violet_jelly.json
+8b8fdf1ff43a2b66d72179cbc1a6dc3e9cfcea5a data/farmersdelight/advancements/recipes/farmerscornucopiatab/cooking/garlic_salmon_pasta.json
+d255a04fb00d063cac17f18c4577a460cbc5212e data/farmersdelight/advancements/recipes/farmerscornucopiatab/cooking/mashed_potatoes.json
+635b965ce1f5e1f2b79fd6b37f957527f20784af data/farmersdelight/advancements/recipes/farmerscornucopiatab/cooking/patatas_bravas.json
+cf45b3f01d6e5ba179f5bae2118ec5af6f104018 data/farmersdelight/recipes/cooking/garlic_salmon_pasta.json
+f742bf8628bf8701fd3b7cabdc1610a568cc9130 data/farmersdelight/recipes/cooking/mashed_potatoes.json
+0f33b4ba4ef9e66c6bfc69020c109924b285f207 data/farmersdelight/recipes/cooking/patatas_bravas.json
+c03d01c4b31e736cc1434bfdcbe66a3fa61e0438 data/minecraft/recipes/food_serving.json

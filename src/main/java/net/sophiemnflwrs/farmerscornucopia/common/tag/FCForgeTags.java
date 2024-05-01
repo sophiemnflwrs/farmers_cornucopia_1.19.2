@@ -6,7 +6,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
-public class ForgeTags {
+public class FCForgeTags {
 
     // registry
     private static TagKey<Block> forgeBlockTag(String path) {
@@ -69,9 +69,9 @@ public class ForgeTags {
         public static final TagKey<Item> BREAD_WHEAT = forgeItemTag("bread/wheat");
 
     public static final TagKey<Item> DAIRY = forgeItemTag("dairy");
-        public static final TagKey<Item> MILK_BUCKET = forgeItemTag("dairy/milk");
-        public static final TagKey<Item> MILK_BOTTLE = forgeItemTag("dairy/milk_bottle");
-        public static final TagKey<Item> CREAM = forgeItemTag("dairy/cream");
-        public static final TagKey<Item> BUTTER = forgeItemTag("dairy/butter");
+        public static final TagKey<Item> DAIRY_MILK_BUCKET = forgeItemTag("dairy/milk");
+        public static final TagKey<Item> DAIRY_MILK_BOTTLE = forgeItemTag("dairy/milk_bottle");
+        public static final TagKey<Item> DAIRY_CREAM = forgeItemTag("dairy/cream");
+        public static final TagKey<Item> DAIRY_BUTTER = forgeItemTag("dairy/butter");
 
 }
