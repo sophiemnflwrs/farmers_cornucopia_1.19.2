@@ -29,7 +29,7 @@ displayName="Farmer's Cornucopia" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
-credits="Thanks for this example mod goes to Java" #optional
+credits="sophiemnflwrs, vectorwing" #optional
 # A text field displayed in the mod UI
 authors="sophiemnflwrs" #optional
 # Display Test controls the display for your mod in the server connection screen
@@ -68,3 +68,22 @@ description="A Farmer's Delight add-on mod that greatly expands the variety of c
     versionRange = "[1.2.4,)"
     ordering = "AFTER"
     side = "BOTH"
+[[dependencies.farmerscornucopia]]
+    modId = "farmersrespite"
+    mandatory = false
+    versionRange = "[2.0,)"
+    ordering = "AFTER"
+    side = "BOTH"
+[[dependencies.farmerscornucopia]]
+    modId = "collectorsreap"
+    mandatory = false
+    versionRange = "[1.0,)"
+    ordering = "AFTER"
+    side = "BOTH"
+[[dependencies.farmerscornucopia]]
+    modId = "neapolitan"
+    mandatory = false
+    versionRange = "[0,)"
+    ordering = "AFTER"
+    side = "BOTH"
+
