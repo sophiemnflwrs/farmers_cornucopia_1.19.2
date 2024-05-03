@@ -10,7 +10,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
-import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraftforge.common.crafting.StrictNBTIngredient;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCItems;
 import vectorwing.farmersdelight.common.registry.ModItems;
@@ -184,9 +184,9 @@ public class CraftingRecipe {
 
     private static void craftDrinks(Consumer<FinishedRecipe> consumer) {
         ShapelessRecipeBuilder.shapeless(FCItems.LEMONADE.get(), 3)
-                .requires(Ingredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
-                .requires(Ingredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
-                .requires(Ingredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
+                .requires(StrictNBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
+                .requires(StrictNBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
+                .requires(StrictNBTIngredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
                 .requires(Items.SUGAR)
                 .requires(FCItems.LEMON.get())
                 .unlockedBy("has_lemon", InventoryChangeTrigger.TriggerInstance.hasItems(FCItems.LEMON.get()))

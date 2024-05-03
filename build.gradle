@@ -1,3 +1,14 @@
+buildscript {
+    repositories {
+        maven { url = "https://files.minecraftforge.net/maven" }
+        maven { url = "https://repo.spongepowered.org/repository/maven-public/" }
+    }
+    dependencies {
+        classpath group: "net.minecraftforge.gradle", name: "ForgeGradle", version: "5.1.+", changing: true
+        classpath group: "org.spongepowered", name: "mixingradle", version: "0.7-SNAPSHOT"
+    }
+}
+
 plugins {
     id 'eclipse'
     id 'maven-publish'
@@ -133,7 +144,23 @@ repositories {
     // }
 
     maven {
+        name = "Curse Maven"
         url = "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+    maven {
+        name "Jared's maven"
+        url "https://maven.blamejared.com/"
+    }
+    maven {
+        name = "Abnormals Maven"
+        url = "https://maven.jaackson.me"
+    }
+    maven {
+        name = "Registrate Maven"
+        url = "https://maven.tterrag.com/"
     }
 }
 
@@ -147,12 +174,14 @@ dependencies {
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
     // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}") // Adds the full JEI mod as a runtime dependency
-    // implementation fg.deobf("com.tterrag.registrate:Registrate:MC${mc_version}-${registrate_version}") // Adds registrate as a dependency
+
+    compileOnly fg.deobf("com.tterrag.registrate:Registrate:MC1.19-1.1.5") // Adds registrate as a dependency
 
     implementation fg.deobf("curse.maven:farmersdelight-398521:5051241")
     implementation fg.deobf("curse.maven:farmersrespite-551453:4081312")
     implementation fg.deobf("curse.maven:collectorsreap-807101:4485855")
-    implementation fg.deobf("curse.maven:neapolitan-382016:4023083")
+    implementation fg.deobf("curse.maven:blueprint-382216:4749000")
+    implementation fg.deobf("curse.maven:neapolitan-382016:4783978")
 
     // Examples using mod jars from ./libs
     // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")

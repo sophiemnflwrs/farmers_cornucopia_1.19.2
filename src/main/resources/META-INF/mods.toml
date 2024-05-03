@@ -71,7 +71,7 @@ description="A Farmer's Delight add-on mod that greatly expands the variety of c
 [[dependencies.farmerscornucopia]]
     modId = "farmersrespite"
     mandatory = false
-    versionRange = "[2.0,)"
+    versionRange = "[1.19-2.0,)"
     ordering = "AFTER"
     side = "BOTH"
 [[dependencies.farmerscornucopia]]
@@ -81,9 +81,16 @@ description="A Farmer's Delight add-on mod that greatly expands the variety of c
     ordering = "AFTER"
     side = "BOTH"
 [[dependencies.farmerscornucopia]]
-    modId = "neapolitan"
+    modId = "blueprint"
     mandatory = false
-    versionRange = "[0,)"
+    versionRange = "[6.2.0,)"
     ordering = "AFTER"
     side = "BOTH"
+[[dependencies.farmerscornucopia]]
+    modId = "neapolitan"
+    mandatory = false
+    versionRange = "[4.1.0,)"
+    ordering = "AFTER"
+    side = "BOTH"
+
 
