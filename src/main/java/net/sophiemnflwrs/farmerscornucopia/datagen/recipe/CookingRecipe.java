@@ -35,7 +35,7 @@ public class CookingRecipe {
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
                 .build(consumer);
         CookingPotRecipeBuilder.cookingPotRecipe(FCItems.PATATAS_BRAVAS.get(), 1, NORMAL_COOKING, SMALL_EXP, Items.BOWL)
-                .addIngredient(Items.POTATO)
+                .addIngredient(Items.POTATO) 
                 .addIngredient(ForgeTags.CROPS_TOMATO)
                 .addIngredient(FCForgeTags.CROPS_CHILI_PEPPER)
                 .addIngredient(FCForgeTags.FOODSTUFFS_AIOLI)

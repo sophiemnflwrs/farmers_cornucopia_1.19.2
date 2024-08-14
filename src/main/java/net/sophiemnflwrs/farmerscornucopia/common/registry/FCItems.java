@@ -1,9 +1,9 @@
 package net.sophiemnflwrs.farmerscornucopia.common.registry;
 
+import com.google.common.collect.Sets;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -15,132 +15,143 @@ import net.sophiemnflwrs.farmerscornucopia.common.FoodValues;
 import net.sophiemnflwrs.farmerscornucopia.common.item.DrinkableItem;
 import net.sophiemnflwrs.farmerscornucopia.common.item.drinks.CreamItem;
 
+import java.util.LinkedHashSet;
+import java.util.function.Supplier;
+
 public class FCItems {
-    public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(ForgeRegistries.ITEMS, FarmersCornucopia.MOD_ID);
+
+    // creative tab sorter
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FarmersCornucopia.MOD_ID);
+    public static LinkedHashSet<RegistryObject<Item>> CREATIVE_TAB_ITEMS = Sets.newLinkedHashSet();
+
+    public static RegistryObject<Item> registerWithTab(final String name, final Supplier<Item> supplier) {
+        RegistryObject<Item> block = ITEMS.register(name, supplier);
+        CREATIVE_TAB_ITEMS.add(block);
+        return block;
+    }
 
     // helper methods
-    public static Properties basicItem() {
-        return new Properties().tab(FarmersCornucopia.CREATIVE_TAB);
+    public static Item.Properties basicItem() {
+        return new Item.Properties();
     }
-    public static Properties foodItem(FoodProperties food) {
-        return new Properties().food(food).tab(FarmersCornucopia.CREATIVE_TAB);
+    public static Item.Properties foodItem(FoodProperties food) {
+        return new Item.Properties().food(food);
     }
     public static Item.Properties drinkItem(FoodProperties food) {
-        return new Item.Properties().food(food).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab(FarmersCornucopia.CREATIVE_TAB);
+        return new Item.Properties().food(food).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16);
     }
 
     // crop crates
-    public static final RegistryObject<Item> BLUEBERRY_CRATE = ITEMS.register("blueberry_crate",
+    public static final RegistryObject<Item> BLUEBERRY_CRATE = registerWithTab("blueberry_crate",
             () -> new BlockItem(FCBlocks.BLUEBERRY_CRATE.get(), basicItem()));
-    public static final RegistryObject<Item> CHILI_PEPPER_CRATE = ITEMS.register("chili_pepper_crate",
+    public static final RegistryObject<Item> CHILI_PEPPER_CRATE = registerWithTab("chili_pepper_crate",
             () -> new BlockItem(FCBlocks.CHILI_PEPPER_CRATE.get(), basicItem()));
-    public static final RegistryObject<Item> GARLIC_CRATE = ITEMS.register("garlic_crate",
+    public static final RegistryObject<Item> GARLIC_CRATE = registerWithTab("garlic_crate",
             () -> new BlockItem(FCBlocks.GARLIC_CRATE.get(), basicItem()));
-    public static final RegistryObject<Item> GINGER_CRATE = ITEMS.register("ginger_crate",
+    public static final RegistryObject<Item> GINGER_CRATE = registerWithTab("ginger_crate",
             () -> new BlockItem(FCBlocks.GINGER_CRATE.get(), basicItem()));
-    public static final RegistryObject<Item> LEMON_CRATE = ITEMS.register("lemon_crate",
+    public static final RegistryObject<Item> LEMON_CRATE = registerWithTab("lemon_crate",
             () -> new BlockItem(FCBlocks.LEMON_CRATE.get(), basicItem()));
-    public static final RegistryObject<Item> OLIVE_CRATE = ITEMS.register("olive_crate",
+    public static final RegistryObject<Item> OLIVE_CRATE = registerWithTab("olive_crate",
             () -> new BlockItem(FCBlocks.OLIVE_CRATE.get(), basicItem()));
 
     // salt blocks
-    public static final RegistryObject<Item> SALT_BLOCK = ITEMS.register("salt_block",
+    public static final RegistryObject<Item> SALT_BLOCK = registerWithTab("salt_block",
             () -> new BlockItem(FCBlocks.SALT_BLOCK.get(), basicItem()));
-    public static final RegistryObject<Item> SALT_ORE = ITEMS.register("salt_ore",
+    public static final RegistryObject<Item> SALT_ORE = registerWithTab("salt_ore",
             () -> new BlockItem(FCBlocks.SALT_ORE.get(), basicItem()));
-    public static final RegistryObject<Item> DEEPSLATE_SALT_ORE = ITEMS.register("deepslate_salt_ore",
+    public static final RegistryObject<Item> DEEPSLATE_SALT_ORE = registerWithTab("deepslate_salt_ore",
             () -> new BlockItem(FCBlocks.DEEPSLATE_SALT_ORE.get(), basicItem()));
 
     // trees
-    public static final RegistryObject<Item> OLIVE_LOG = ITEMS.register("olive_log",
+    public static final RegistryObject<Item> OLIVE_LOG = registerWithTab("olive_log",
             () -> new BlockItem(FCBlocks.OLIVE_LOG.get(), basicItem()));
-    public static final RegistryObject<Item> STRIPPED_OLIVE_LOG = ITEMS.register("stripped_olive_log",
+    public static final RegistryObject<Item> STRIPPED_OLIVE_LOG = registerWithTab("stripped_olive_log",
             () -> new BlockItem(FCBlocks.STRIPPED_OLIVE_LOG.get(), basicItem()));
-    public static final RegistryObject<Item> OLIVE_LEAVES = ITEMS.register("olive_leaves",
+    public static final RegistryObject<Item> OLIVE_LEAVES = registerWithTab("olive_leaves",
             () -> new BlockItem(FCBlocks.OLIVE_LEAVES.get(), basicItem()));
-    public static final RegistryObject<Item> FRUITING_OLIVE_LEAVES = ITEMS.register("fruiting_olive_leaves",
+    public static final RegistryObject<Item> FRUITING_OLIVE_LEAVES = registerWithTab("fruiting_olive_leaves",
             () -> new BlockItem(FCBlocks.FRUITING_OLIVE_LEAVES.get(), basicItem()));
-    public static final RegistryObject<Item> OLIVE_PLANKS = ITEMS.register("olive_planks",
+    public static final RegistryObject<Item> OLIVE_PLANKS = registerWithTab("olive_planks",
             () -> new BlockItem(FCBlocks.OLIVE_PLANKS.get(), basicItem()));
-    public static final RegistryObject<Item> OLIVE_SAPLING = ITEMS.register("olive_sapling",
+    public static final RegistryObject<Item> OLIVE_SAPLING = registerWithTab("olive_sapling",
             () -> new BlockItem(FCBlocks.OLIVE_SAPLING.get(), basicItem()));
 
     // wild crops
-    public static final RegistryObject<Item> WILD_CHILI_PEPPER = ITEMS.register("wild_chili_pepper",
+    public static final RegistryObject<Item> WILD_CHILI_PEPPER = registerWithTab("wild_chili_pepper",
             () -> new BlockItem(FCBlocks.WILD_CHILI_PEPPER.get(), basicItem()));
-    public static final RegistryObject<Item> WILD_GARLIC = ITEMS.register("wild_garlic",
+    public static final RegistryObject<Item> WILD_GARLIC = registerWithTab("wild_garlic",
             () -> new BlockItem(FCBlocks.WILD_GARLIC.get(), basicItem()));
-    public static final RegistryObject<Item> WILD_GINGER = ITEMS.register("wild_ginger",
+    public static final RegistryObject<Item> WILD_GINGER = registerWithTab("wild_ginger",
             () -> new BlockItem(FCBlocks.WILD_GINGER.get(), basicItem()));
 
     // flowers
-    public static final RegistryObject<Item> GINGER_LILY = ITEMS.register("ginger_lily",
+    public static final RegistryObject<Item> GINGER_LILY = registerWithTab("ginger_lily",
             () -> new BlockItem(FCBlocks.GINGER_LILY.get(), basicItem()));
-    public static final RegistryObject<Item> VIOLET = ITEMS.register("violet",
+    public static final RegistryObject<Item> VIOLET = registerWithTab("violet",
             () -> new BlockItem(FCBlocks.VIOLET.get(), basicItem()));
 
     // foodstuffs
-    public static final RegistryObject<Item> SALT = ITEMS.register("salt",
+    public static final RegistryObject<Item> SALT = registerWithTab("salt",
             () -> new Item(foodItem(FoodValues.SALT)));
-    public static final RegistryObject<Item> CREAM = ITEMS.register("cream",
+    public static final RegistryObject<Item> CREAM = registerWithTab("cream",
             () -> new CreamItem(drinkItem(FoodValues.CREAM)));
-    public static final RegistryObject<Item> BUTTER = ITEMS.register("butter",
+    public static final RegistryObject<Item> BUTTER = registerWithTab("butter",
             () -> new Item(foodItem(FoodValues.BUTTER)));
-    public static final RegistryObject<Item> OLIVE_OIL = ITEMS.register("olive_oil",
+    public static final RegistryObject<Item> OLIVE_OIL = registerWithTab("olive_oil",
             () -> new DrinkableItem(drinkItem(FoodValues.OLIVE_OIL)));
-    public static final RegistryObject<Item> AIOLI = ITEMS.register("aioli",
+    public static final RegistryObject<Item> AIOLI = registerWithTab("aioli",
             () -> new Item(drinkItem(FoodValues.AIOLI)));
 
     // preserves
-    public static final RegistryObject<Item> BLUEBERRY_JAM = ITEMS.register("blueberry_jam",
+    public static final RegistryObject<Item> BLUEBERRY_JAM = registerWithTab("blueberry_jam",
             () -> new Item(foodItem(FoodValues.BLUEBERRY_JAM)));
-    public static final RegistryObject<Item> LEMON_MARMALADE = ITEMS.register("lemon_marmalade",
+    public static final RegistryObject<Item> LEMON_MARMALADE = registerWithTab("lemon_marmalade",
             () -> new Item(foodItem(FoodValues.LEMON_MARMALADE)));
-    public static final RegistryObject<Item> VIOLET_JELLY = ITEMS.register("violet_jelly",
+    public static final RegistryObject<Item> VIOLET_JELLY = registerWithTab("violet_jelly",
             () -> new Item(foodItem(FoodValues.VIOLET_JELLY)));
 
     // crops
-    public static final RegistryObject<Item> CHILI_PEPPER = ITEMS.register("chili_pepper",
+    public static final RegistryObject<Item> CHILI_PEPPER = registerWithTab("chili_pepper",
             () -> new Item(foodItem(FoodValues.CHILI_PEPPER)));
-    public static final RegistryObject<Item> GARLIC = ITEMS.register("garlic",
+    public static final RegistryObject<Item> GARLIC = registerWithTab("garlic",
             () -> new Item(foodItem(FoodValues.GARLIC)));
-    public static final RegistryObject<Item> GINGER = ITEMS.register("ginger",
+    public static final RegistryObject<Item> GINGER = registerWithTab("ginger",
             () -> new Item(foodItem(FoodValues.GINGER)));
 
-    public static final RegistryObject<Item> BLUEBERRY = ITEMS.register("blueberry",
+    public static final RegistryObject<Item> BLUEBERRY = registerWithTab("blueberry",
             () -> new Item(foodItem(FoodValues.BLUEBERRY)));
-    public static final RegistryObject<Item> LEMON = ITEMS.register("lemon",
+    public static final RegistryObject<Item> LEMON = registerWithTab("lemon",
             () -> new Item(foodItem(FoodValues.LEMON)));
-    public static final RegistryObject<Item> OLIVE = ITEMS.register("olive",
+    public static final RegistryObject<Item> OLIVE = registerWithTab("olive",
             () -> new Item(foodItem(FoodValues.OLIVE)));
 
     // seeds
-    public static final RegistryObject<Item> BLUEBERRY_SEEDS = ITEMS.register("blueberry_seeds",
+    public static final RegistryObject<Item> BLUEBERRY_SEEDS = registerWithTab("blueberry_seeds",
             () -> new ItemNameBlockItem(FCBlocks.BLUEBERRY_BUSH.get(), basicItem()));
-    public static final RegistryObject<Item> CHILI_PEPPER_SEEDS = ITEMS.register("chili_pepper_seeds",
+    public static final RegistryObject<Item> CHILI_PEPPER_SEEDS = registerWithTab("chili_pepper_seeds",
             () -> new ItemNameBlockItem(FCBlocks.CHILI_PEPPER_CROP.get(), basicItem()));
-    public static final RegistryObject<Item> LEMON_SEEDS = ITEMS.register("lemon_seeds",
+    public static final RegistryObject<Item> LEMON_SEEDS = registerWithTab("lemon_seeds",
             () -> new ItemNameBlockItem(FCBlocks.LEMON_SEEDLING.get(), basicItem()));
-    public static final RegistryObject<Item> GARLIC_CLOVE = ITEMS.register("garlic_clove",
+    public static final RegistryObject<Item> GARLIC_CLOVE = registerWithTab("garlic_clove",
             () -> new ItemNameBlockItem(FCBlocks.GARLIC_CROP.get(), foodItem(FoodValues.GARLIC_CLOVE)));
-    public static final RegistryObject<Item> GINGER_SEEDS = ITEMS.register("ginger_seeds",
+    public static final RegistryObject<Item> GINGER_SEEDS = registerWithTab("ginger_seeds",
             () -> new ItemNameBlockItem(FCBlocks.GINGER_CROP.get(), basicItem()));
 
     // drinks
-    public static final RegistryObject<Item> LEMONADE = ITEMS.register("lemonade",
+    public static final RegistryObject<Item> LEMONADE = registerWithTab("lemonade",
             () -> new DrinkableItem(drinkItem(FoodValues.LEMONADE)));
 
     // meals + food items
-    public static final RegistryObject<Item> GARLIC_BREAD = ITEMS.register("garlic_bread",
+    public static final RegistryObject<Item> GARLIC_BREAD = registerWithTab("garlic_bread",
             () -> new Item(foodItem(FoodValues.GARLIC_BREAD)));
-    public static final RegistryObject<Item> BLUEBERRY_MUFFIN = ITEMS.register("blueberry_muffin",
+    public static final RegistryObject<Item> BLUEBERRY_MUFFIN = registerWithTab("blueberry_muffin",
             () -> new Item(foodItem(FoodValues.BLUEBERRY_MUFFIN)));
-    public static final RegistryObject<Item> MASHED_POTATOES = ITEMS.register("mashed_potatoes",
+    public static final RegistryObject<Item> MASHED_POTATOES = registerWithTab("mashed_potatoes",
             () -> new Item(foodItem(FoodValues.MASHED_POTATOES)));
-    public static final RegistryObject<Item> PATATAS_BRAVAS = ITEMS.register("patatas_bravas",
+    public static final RegistryObject<Item> PATATAS_BRAVAS = registerWithTab("patatas_bravas",
             () -> new Item(foodItem(FoodValues.PATATAS_BRAVAS)));
-    public static final RegistryObject<Item> GARLIC_SALMON_PASTA = ITEMS.register("garlic_salmon_pasta",
+    public static final RegistryObject<Item> GARLIC_SALMON_PASTA = registerWithTab("garlic_salmon_pasta",
             () -> new Item(foodItem(FoodValues.GARLIC_SALMON_PASTA)));
 
     // register
