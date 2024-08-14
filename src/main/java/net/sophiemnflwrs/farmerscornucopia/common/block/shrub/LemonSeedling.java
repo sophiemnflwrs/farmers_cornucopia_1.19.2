@@ -95,7 +95,7 @@ public class LemonSeedling extends BushBlock implements BonemealableBlock {
 
     // bonemeal
     @Override
-    public boolean isValidBonemealTarget(@NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull BlockState state, boolean isClient) {
+    public boolean isValidBonemealTarget(@NotNull LevelReader level, @NotNull BlockPos pos, @NotNull BlockState state, boolean isClient) {
         return true;
     }
 

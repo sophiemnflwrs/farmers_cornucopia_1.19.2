@@ -1,7 +1,9 @@
 package net.sophiemnflwrs.farmerscornucopia.common.tag;
 
-import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
@@ -21,17 +23,17 @@ public class FCTags {
     public static final TagKey<Block> FRUITING_LEAVES = modBlockTag("fruiting_leaves");
     public static final TagKey<Item> FRUITING_LEAVES_ITEM = modItemTag("fruiting_leaves");
 
-    public static final TagKey<EntityType<?>> CORROSION_IMMUNE = modEntityType("corrosion_immune");
+    public static final TagKey<EntityType<?>> CORROSION_IMMUNE = modEntityTag("corrosion_immune");
 
 
     // register
     private static TagKey<Item> modItemTag(String path) {
-        return TagKey.create(Registry.ITEM_REGISTRY, new ResourceLocation(FarmersCornucopia.MOD_ID, path));
+        return ItemTags.create(new ResourceLocation(FarmersCornucopia.MOD_ID, path));
     }
     private static TagKey<Block> modBlockTag(String path) {
-        return TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation(FarmersCornucopia.MOD_ID, path));
+        return BlockTags.create(new ResourceLocation(FarmersCornucopia.MOD_ID, path));
     }
-    private static TagKey<EntityType<?>> modEntityType(String path) {
-        return TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation(FarmersCornucopia.MOD_ID, path));
+    private static TagKey<EntityType<?>> modEntityTag(String path) {
+        return TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation(FarmersCornucopia.MOD_ID, path));
     }
 }

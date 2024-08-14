@@ -1,7 +1,7 @@
 package net.sophiemnflwrs.farmerscornucopia.common.registry;
 
 import com.mojang.serialization.Codec;
-import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import net.minecraft.world.level.levelgen.placement.PlacementModifierType;
 import net.minecraftforge.registries.DeferredRegister;
@@ -11,7 +11,7 @@ import net.sophiemnflwrs.farmerscornucopia.common.world.filter.BiomeTagFilter;
 
 public class FCPlacementModifiers {
 
-    public static final DeferredRegister<PlacementModifierType<?>> PLACEMENT_MODIFIERS = DeferredRegister.create(Registry.PLACEMENT_MODIFIER_REGISTRY, FarmersCornucopia.MOD_ID);
+    public static final DeferredRegister<PlacementModifierType<?>> PLACEMENT_MODIFIERS = DeferredRegister.create(BuiltInRegistries.PLACEMENT_MODIFIER_TYPE.key(), FarmersCornucopia.MOD_ID);
 
     public static final RegistryObject<PlacementModifierType<BiomeTagFilter>> BIOME_TAG = PLACEMENT_MODIFIERS.register("biome_tag", () -> typeConvert(BiomeTagFilter.CODEC));
 

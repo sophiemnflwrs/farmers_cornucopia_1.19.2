@@ -37,10 +37,10 @@ public record AddFeaturesByBiomeModifierFilter (
             if (maximumTemperature.isPresent() && biome.get().getBaseTemperature() >= maximumTemperature.get()) {
                 return;
             }
-            if (minimumHumidity.isPresent() && biome.get().getDownfall() <= minimumHumidity.get()) {
+            if (minimumHumidity.isPresent() && biome.get().getModifiedClimateSettings().downfall() <= minimumHumidity.get()) {
                 return;
             }
-            if (maximumHumidity.isPresent() && biome.get().getDownfall() >= maximumHumidity.get()) {
+            if (maximumHumidity.isPresent() && biome.get().getModifiedClimateSettings().downfall() >= maximumHumidity.get()) {
                 return;
             }
             BiomeGenerationSettingsBuilder generationSettings = builder.getGenerationSettings();

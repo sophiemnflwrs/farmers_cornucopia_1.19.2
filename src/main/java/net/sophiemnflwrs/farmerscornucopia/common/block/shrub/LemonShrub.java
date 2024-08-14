@@ -138,7 +138,7 @@ public class LemonShrub extends CropBlock implements FruitingShrub {
     }
 
     @Override
-    public boolean isValidBonemealTarget(@NotNull BlockGetter pLevel, @NotNull BlockPos pPos, BlockState pState, boolean pIsClient) {
+    public boolean isValidBonemealTarget(@NotNull LevelReader level, @NotNull BlockPos pPos, BlockState pState, boolean pIsClient) {
         return true;
     }
 
