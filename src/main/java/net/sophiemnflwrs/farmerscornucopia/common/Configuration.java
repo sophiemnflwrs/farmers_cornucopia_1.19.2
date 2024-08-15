@@ -40,6 +40,7 @@ public class Configuration {
         ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
 
         COMMON_BUILDER.comment("World generation").push(CATEGORY_WORLD);
+
         // trees
         COMMON_BUILDER.comment("Olive Tree generation").push("olive_tree");
             CHANCE_OLIVE_TREE = COMMON_BUILDER.comment("Chance of generating trees. Smaller values = more frequent.")

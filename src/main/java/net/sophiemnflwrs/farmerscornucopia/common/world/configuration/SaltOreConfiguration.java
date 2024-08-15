@@ -29,16 +29,17 @@ public class SaltOreConfiguration {
                 OreConfiguration.target(deepslateReplaceables, FCBlocks.DEEPSLATE_SALT_ORE.get().defaultBlockState()));
 
         register(context, SALT_ORE_KEY, Feature.ORE, new OreConfiguration(saltOres, 8));
-
-        // register
-        public static ResourceKey<ConfiguredFeature<?, ?>> registerKey (String name){
-            return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(FarmersCornucopia.MOD_ID, name));
         }
 
-        private static <FC extends FeatureConfiguration, F extends Feature<FC>>void register
-        (BootstapContext < ConfiguredFeature < ?, ?>>context,
-                ResourceKey < ConfiguredFeature < ?, ?>>key, F feature, FC configuration){
-            context.register(key, new ConfiguredFeature<>(feature, configuration));
-        }
+    // register
+    public static ResourceKey<ConfiguredFeature<?, ?>> registerKey (String name){
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(FarmersCornucopia.MOD_ID, "salt_ore"));
     }
+
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>>void register
+    (BootstapContext < ConfiguredFeature < ?, ?>>context,
+            ResourceKey < ConfiguredFeature < ?, ?>>key, F feature, FC configuration){
+        context.register(key, new ConfiguredFeature<>(feature, configuration));
+    }
+
 }
