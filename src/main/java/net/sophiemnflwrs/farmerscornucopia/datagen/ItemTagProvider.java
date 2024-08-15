@@ -1,34 +1,38 @@
 package net.sophiemnflwrs.farmerscornucopia.datagen;
 
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCItems;
-import net.sophiemnflwrs.farmerscornucopia.common.tag.FCTags;
 import net.sophiemnflwrs.farmerscornucopia.common.tag.FCForgeTags;
+import net.sophiemnflwrs.farmerscornucopia.common.tag.FCTags;
 import vectorwing.farmersdelight.common.registry.ModItems;
 
 import javax.annotation.Nullable;
+import java.util.concurrent.CompletableFuture;
 
 public class ItemTagProvider extends ItemTagsProvider {
 
-    public ItemTagProvider(DataGenerator generatorIn, BlockTagsProvider blockTagProvider, String modId, @Nullable ExistingFileHelper existingFileHelper) {
-        super(generatorIn, blockTagProvider, modId, existingFileHelper);
+    public ItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> provider, CompletableFuture<TagsProvider.TagLookup<Block>> blockTagProvider, @Nullable ExistingFileHelper existingFileHelper) {
+        super(output, provider, blockTagProvider, FarmersCornucopia.MOD_ID, existingFileHelper);
     }
 
     @Override
-        protected void addTags() {
-            copy(FCTags.WILD_CROPS, FCTags.WILD_CROPS_ITEM);
-            copy(BlockTags.SMALL_FLOWERS, ItemTags.SMALL_FLOWERS);
+    protected void addTags(HolderLookup.Provider provider) {
+        copy(FCTags.WILD_CROPS, FCTags.WILD_CROPS_ITEM);
+        copy(BlockTags.SMALL_FLOWERS, ItemTags.SMALL_FLOWERS);
 
-            copy(FCTags.FRUITING_LEAVES, FCTags.FRUITING_LEAVES_ITEM);
-            copy(BlockTags.LEAVES, ItemTags.LEAVES);
+        copy(FCTags.FRUITING_LEAVES, FCTags.FRUITING_LEAVES_ITEM);
+        copy(BlockTags.LEAVES, ItemTags.LEAVES);
 
-            this.registerForgeTags();
+        this.registerForgeTags();
     }
 
     @SuppressWarnings("unchecked")

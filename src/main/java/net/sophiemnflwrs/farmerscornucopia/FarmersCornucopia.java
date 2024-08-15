@@ -16,8 +16,6 @@ import net.sophiemnflwrs.farmerscornucopia.common.Configuration;
 import net.sophiemnflwrs.farmerscornucopia.common.effect.FCEffects;
 import net.sophiemnflwrs.farmerscornucopia.common.effect.FCParticles;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.*;
-import net.sophiemnflwrs.farmerscornucopia.common.world.configuration.SaltOreConfiguration;
-import net.sophiemnflwrs.farmerscornucopia.common.world.feature.SaltOreFeature;
 import net.sophiemnflwrs.farmerscornucopia.datagen.DataGenerators;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -51,8 +49,6 @@ public class FarmersCornucopia {
         FCBiomeModifiers.BIOME_MODIFIER_SERIALIZERS.register(modEventBus);
         FCEffects.EFFECTS.register(modEventBus);
         FCParticles.PARTICLES.register(modEventBus);
-        SaltOreConfiguration.register(modEventBus);
-        SaltOreFeature.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 

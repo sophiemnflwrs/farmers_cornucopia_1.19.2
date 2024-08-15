@@ -1,7 +1,7 @@
 package net.sophiemnflwrs.farmerscornucopia.datagen;
 
 import net.minecraft.MethodsReturnNonnullByDefault;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.sophiemnflwrs.farmerscornucopia.datagen.recipe.CookingRecipe;
 import net.sophiemnflwrs.farmerscornucopia.datagen.recipe.CraftingRecipe;
@@ -14,12 +14,12 @@ import java.util.function.Consumer;
 @MethodsReturnNonnullByDefault
 public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
 
-    public RecipeProvider(DataGenerator generator) {
-        super(generator);
+    public RecipeProvider(PackOutput output) {
+        super(output);
     }
 
     @Override
-    protected void buildCraftingRecipes(@NonNull Consumer<FinishedRecipe> consumer) {
+    protected void buildRecipes(@NonNull Consumer<FinishedRecipe> consumer) {
         CraftingRecipe.register(consumer);
         CookingRecipe.register(consumer);
     }

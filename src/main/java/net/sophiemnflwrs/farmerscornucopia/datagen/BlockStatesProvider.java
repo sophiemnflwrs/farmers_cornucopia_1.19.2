@@ -1,6 +1,6 @@
 package net.sophiemnflwrs.farmerscornucopia.datagen;
 
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
@@ -33,8 +33,8 @@ public class BlockStatesProvider extends BlockStateProvider {
 
     private static final int DEFAULT_ANGLE_OFFSET = 180;
 
-    public BlockStatesProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
-        super(gen, FarmersCornucopia.MOD_ID, exFileHelper);
+    public BlockStatesProvider(PackOutput output, ExistingFileHelper exFileHelper) {
+        super(output, FarmersCornucopia.MOD_ID, exFileHelper);
     }
 
     // helper methods

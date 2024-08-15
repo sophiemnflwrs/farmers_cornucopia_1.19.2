@@ -1,22 +1,25 @@
 package net.sophiemnflwrs.farmerscornucopia.datagen;
 
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
 import net.sophiemnflwrs.farmerscornucopia.common.registry.FCBlocks;
 import net.sophiemnflwrs.farmerscornucopia.common.tag.FCTags;
 
 import javax.annotation.Nullable;
+import java.util.concurrent.CompletableFuture;
 
 public class BlockTagProvider extends BlockTagsProvider {
 
-    public BlockTagProvider(DataGenerator generatorIn, String modId, @Nullable ExistingFileHelper existingFileHelper) {
-        super(generatorIn, modId, existingFileHelper);
+    public BlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
+        super(output, lookupProvider, FarmersCornucopia.MOD_ID, existingFileHelper);
     }
 
     @Override
-    protected void addTags() {
+    protected void addTags(HolderLookup.Provider provider) {
         this.registerModTags();
         this.registerMinecraftTags();
         this.registerForgeTags();
