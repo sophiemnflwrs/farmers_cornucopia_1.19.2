@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "b": {
       "item": "farmerscornucopia:blueberry"
@@ -24,5 +25,6 @@
   ],
   "result": {
     "item": "farmerscornucopia:blueberry_jam"
-  }
+  },
+  "show_notification": true
 }

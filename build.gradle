@@ -178,10 +178,6 @@ dependencies {
     compileOnly fg.deobf("com.tterrag.registrate:Registrate:MC1.20-1.3.0") // Adds registrate as a dependency
 
     implementation fg.deobf("curse.maven:farmersdelight-398521:5051242")
-    implementation fg.deobf("curse.maven:farmersrespite-551453:5543547")
-    implementation fg.deobf("curse.maven:collectorsreap-807101:5482850")
-    implementation fg.deobf("curse.maven:blueprint-382216:5292242")
-    implementation fg.deobf("curse.maven:neapolitan-382016:5296594")
 
     // Examples using mod jars from ./libs
     // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")

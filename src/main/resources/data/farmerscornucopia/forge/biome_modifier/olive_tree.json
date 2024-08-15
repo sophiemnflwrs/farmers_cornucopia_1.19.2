@@ -6,6 +6,6 @@
   "max_temperature": 1.0,
   "min_humidity": 0.3,
   "max_humidity": 0.8,
-  "features": "farmerscornucopia:olive_tree",
+  "features": "farmerscornucopia:patch_olive_tree",
   "step": "vegetal_decoration"
 }

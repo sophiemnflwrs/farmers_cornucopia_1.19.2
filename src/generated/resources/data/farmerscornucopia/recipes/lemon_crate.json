@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
     "#": {
       "item": "farmerscornucopia:lemon"
@@ -12,5 +13,6 @@
   ],
   "result": {
     "item": "farmerscornucopia:lemon_crate"
-  }
+  },
+  "show_notification": true
 }

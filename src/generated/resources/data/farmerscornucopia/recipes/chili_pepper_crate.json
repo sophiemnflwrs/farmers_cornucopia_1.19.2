@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
     "#": {
       "item": "farmerscornucopia:chili_pepper"
@@ -12,5 +13,6 @@
   ],
   "result": {
     "item": "farmerscornucopia:chili_pepper_crate"
-  }
+  },
+  "show_notification": true
 }
