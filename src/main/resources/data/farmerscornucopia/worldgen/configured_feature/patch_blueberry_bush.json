@@ -8,9 +8,9 @@
           "to_place": {
             "type": "minecraft:simple_state_provider",
             "state": {
-              "Name": "farmerscornucopia:lemon_shrub",
+              "Name": "farmerscornucopia:blueberry_bush",
               "Properties": {
-                "age": "4"
+                "age": "5"
               }
             }
           }
@@ -47,7 +47,7 @@
           "to_place": {
             "type": "minecraft:simple_state_provider",
             "state": {
-              "Name": "minecraft:grass"
+              "Name": "minecraft:fern"
             }
           }
         }
