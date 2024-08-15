@@ -42,10 +42,10 @@ public class Configuration {
         COMMON_BUILDER.comment("World generation").push(CATEGORY_WORLD);
 
         // trees
-        COMMON_BUILDER.comment("Olive Tree generation").push("olive_tree");
-            CHANCE_OLIVE_TREE = COMMON_BUILDER.comment("Chance of generating trees. Smaller values = more frequent.")
-                    .defineInRange("chance", 40, 0, Integer.MAX_VALUE);
-            COMMON_BUILDER.pop();
+        // COMMON_BUILDER.comment("Olive Tree generation").push("olive_tree");
+          //  CHANCE_OLIVE_TREE = COMMON_BUILDER.comment("Chance of generating trees. Smaller values = more frequent.")
+            //        .defineInRange("chance", 40, 0, Integer.MAX_VALUE);
+          //  COMMON_BUILDER.pop();
 
         // shrubs
         COMMON_BUILDER.comment("Lemon Shrub generation").push("lemon_shrub");
