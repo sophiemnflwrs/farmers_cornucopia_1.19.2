@@ -18,14 +18,14 @@ import net.sophiemnflwrs.farmerscornucopia.common.registry.FCPlacementModifiers;
 public class BiomeTagFilter extends PlacementFilter {
 
     public static final Codec<BiomeTagFilter> CODEC = RecordCodecBuilder.create((builder) ->
-            builder.group(TagKey.codec(ForgeRegistries.BIOMES.getRegistryKey()).fieldOf("biome_tag").forGetter((instance) -> instance.biomeTag)
+            builder.group(TagKey.codec(ForgeRegistries.BIOMES.getRegistryKey()).fieldOf("tag").forGetter((instance) -> instance.biomeTag)
             ).apply(builder, BiomeTagFilter::new));
     private final TagKey<Biome> biomeTag;
 
     private BiomeTagFilter(TagKey<Biome> biomeTag) {
-
         this.biomeTag = biomeTag;
     }
+
     public static BiomeTagFilter biomeIsInTag(TagKey<Biome> biomeTag) {
         return new BiomeTagFilter(biomeTag);
     }

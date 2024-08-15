@@ -25,6 +25,7 @@ public record AddFeaturesByBiomeModifierFilter (
         HolderSet<PlacedFeature> features,
         GenerationStep.Decoration step
 ) implements BiomeModifier {
+
     @Override
     public void modify(Holder<Biome> biome, Phase phase, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
         if (phase == Phase.ADD && this.allowedBiomes.contains(biome)) {
