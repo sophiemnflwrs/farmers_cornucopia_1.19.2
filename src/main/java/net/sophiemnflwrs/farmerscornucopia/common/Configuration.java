@@ -18,7 +18,7 @@ public class Configuration {
     public static ForgeConfigSpec.IntValue CHANCE_LEMON_SHRUB;
 
     public static ForgeConfigSpec.BooleanValue GENERATE_BLUEBERRY_BUSH;
-    public static ForgeConfigSpec.IntValue CHANCE_BLUEBERRY_BUSH;
+    public static ForgeConfigSpec.IntValue CHANCE_BLUEBERRY_BUSH;   
 
     public static ForgeConfigSpec.BooleanValue GENERATE_WILD_CHILI_PEPPER;
     public static ForgeConfigSpec.IntValue CHANCE_WILD_CHILI_PEPPER;
