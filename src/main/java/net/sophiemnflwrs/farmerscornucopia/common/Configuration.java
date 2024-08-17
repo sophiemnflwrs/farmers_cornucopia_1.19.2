@@ -41,12 +41,6 @@ public class Configuration {
 
         COMMON_BUILDER.comment("World generation").push(CATEGORY_WORLD);
 
-        // trees
-        // COMMON_BUILDER.comment("Olive Tree generation").push("olive_tree");
-          //  CHANCE_OLIVE_TREE = COMMON_BUILDER.comment("Chance of generating trees. Smaller values = more frequent.")
-            //        .defineInRange("chance", 40, 0, Integer.MAX_VALUE);
-          //  COMMON_BUILDER.pop();
-
         // shrubs
         COMMON_BUILDER.comment("Lemon Shrub generation").push("lemon_shrub");
             CHANCE_LEMON_SHRUB = COMMON_BUILDER.comment("Chance of generating clusters. Smaller value = more frequent.")
@@ -58,6 +52,12 @@ public class Configuration {
             CHANCE_BLUEBERRY_BUSH = COMMON_BUILDER.comment("Chance of generating clusters. Smaller value = more frequent.")
                     .defineInRange("chance", 20, 0, Integer.MAX_VALUE);
             COMMON_BUILDER.pop();
+
+        // tall wild crops
+        COMMON_BUILDER.comment("Wild Cassava generation").push("wild_cassava");
+        CHANCE_WILD_CHILI_PEPPER = COMMON_BUILDER.comment("Chance of generating clusters. Smaller value = more frequent.")
+                .defineInRange("chance", 30, 0, Integer.MAX_VALUE);
+        COMMON_BUILDER.pop();
 
         // wild crops
         COMMON_BUILDER.comment("Wild Chili Pepper generation").push("wild_chili_pepper");

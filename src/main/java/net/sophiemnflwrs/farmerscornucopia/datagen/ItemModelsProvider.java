@@ -35,6 +35,9 @@ public class ItemModelsProvider extends ItemModelProvider {
         blockBasedModel(FCItems.FRUITING_OLIVE_LEAVES.get(), "_stage1");
             items.remove(FCItems.FRUITING_OLIVE_LEAVES.get());
 
+        blockBasedModel(FCItems.WILD_CASSAVA.get(), "_top");
+            items.remove(FCItems.WILD_CASSAVA.get());
+
         // blocks w/ special sprites
         Set<Item> spriteBlockItems = Sets.newHashSet(
                 FCItems.BLUEBERRY_SEEDS.get(),
@@ -85,6 +88,7 @@ public class ItemModelsProvider extends ItemModelProvider {
     public void itemMugModel(Item item, ResourceLocation texture) {
         withExistingParent(itemName(item), MUG).texture("layer0", texture);
     }
+
     private String itemName(Item item) {
         return ForgeRegistries.ITEMS.getKey(item).getPath();
     }

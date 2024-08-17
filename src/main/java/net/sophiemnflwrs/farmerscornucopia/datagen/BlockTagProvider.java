@@ -67,6 +67,8 @@ public class BlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.FLOWERS).add(FCBlocks.LEMON_SHRUB.get());
         tag(BlockTags.FLOWERS).add(FCBlocks.BLUEBERRY_BUSH.get());
 
+        tag(BlockTags.TALL_FLOWERS).add(FCBlocks.WILD_CASSAVA.get());
+
         tag(BlockTags.SMALL_FLOWERS).add(FCBlocks.WILD_CHILI_PEPPER.get());
         tag(BlockTags.SMALL_FLOWERS).add(FCBlocks.WILD_GARLIC.get());
         tag(BlockTags.SMALL_FLOWERS).add(FCBlocks.WILD_GINGER.get());
@@ -79,6 +81,7 @@ public class BlockTagProvider extends BlockTagsProvider {
         tag(FCTags.WILD_CROPS).add(FCBlocks.WILD_CHILI_PEPPER.get());
         tag(FCTags.WILD_CROPS).add(FCBlocks.WILD_GARLIC.get());
         tag(FCTags.WILD_CROPS).add(FCBlocks.WILD_GINGER.get());
+        tag(FCTags.WILD_CROPS).add(FCBlocks.WILD_CASSAVA.get());
 
         tag(FCTags.FRUITING_BUSH).add(FCBlocks.BLUEBERRY_BUSH.get());
 

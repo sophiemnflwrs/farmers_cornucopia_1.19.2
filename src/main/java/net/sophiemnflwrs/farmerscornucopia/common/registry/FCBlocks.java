@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
+import net.sophiemnflwrs.farmerscornucopia.common.block.TallWildCropBlock;
 import net.sophiemnflwrs.farmerscornucopia.common.block.bush.BlueberryBush;
 import net.sophiemnflwrs.farmerscornucopia.common.block.crop.BuddingChiliPepperCrop;
 import net.sophiemnflwrs.farmerscornucopia.common.block.crop.ChiliPepperCrop;
@@ -73,6 +74,10 @@ public class FCBlocks {
     // bush
     public static final RegistryObject<Block> BLUEBERRY_BUSH = BLOCKS.register("blueberry_bush",
             () -> new BlueberryBush(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).forceSolidOff().instabreak().sound(SoundType.GRASS).noOcclusion()));
+
+    // tall wild crops
+    public static final RegistryObject<Block> WILD_CASSAVA = BLOCKS.register("wild_cassava",
+            () -> new TallWildCropBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).noOcclusion()));
 
     // wild crops
     public static final RegistryObject<Block> WILD_CHILI_PEPPER = BLOCKS.register("wild_chili_pepper",

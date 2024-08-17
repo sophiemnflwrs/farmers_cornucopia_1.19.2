@@ -14,6 +14,7 @@ import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.sophiemnflwrs.farmerscornucopia.FarmersCornucopia;
+import net.sophiemnflwrs.farmerscornucopia.common.block.TallWildCropBlock;
 import net.sophiemnflwrs.farmerscornucopia.common.block.bush.BlueberryBush;
 import net.sophiemnflwrs.farmerscornucopia.common.block.crop.BuddingChiliPepperCrop;
 import net.sophiemnflwrs.farmerscornucopia.common.block.crop.ChiliPepperCrop;
@@ -82,6 +83,9 @@ public class BlockStatesProvider extends BlockStateProvider {
         // bushes
         this.stageBlock(FCBlocks.BLUEBERRY_BUSH.get(), BlueberryBush.AGE);
 
+        // tall wild crops
+        this.tallWildCropBlock(FCBlocks.WILD_CASSAVA.get(), TallWildCropBlock.HALF);
+
         // wild crops
         this.wildCropBlock(FCBlocks.WILD_GARLIC.get());
             this.flowerBlockWithPot(FCBlocks.WILD_GARLIC.get(), FCBlocks.POTTED_WILD_GARLIC.get());
@@ -142,6 +146,15 @@ public class BlockStatesProvider extends BlockStateProvider {
         } else {
             this.simpleBlock(block, models().cross(blockName(block), resourceBlock(blockName(block))).renderType("cutout"));
         }
+    }
+
+    public void tallWildCropBlock(Block block, EnumProperty<DoubleBlockHalf> halfProperty, Property<?>... ignored) {
+        getVariantBuilder(block)
+                .forAllStatesExcept(state -> {
+                    String name = FCMiscUtility.name(block) + "_" + state.getValue(halfProperty).getSerializedName();
+                    return ConfiguredModel.builder()
+                            .modelFile(models().cross(name, resourceBlock(name)).renderType("cutout")).build();
+                }, ignored);
     }
 
     public void flowerBlock(Block flower) {

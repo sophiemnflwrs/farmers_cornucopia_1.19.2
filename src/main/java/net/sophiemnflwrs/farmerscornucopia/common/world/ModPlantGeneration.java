@@ -19,6 +19,8 @@ public class ModPlantGeneration {
 
     public static ResourceKey<ConfiguredFeature<?, ?>> FEATURE_PATCH_BLUEBERRY_BUSH = ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_blueberry_bush"));
 
+    public static ResourceKey<ConfiguredFeature<?, ?>> FEATURE_PATCH_WILD_CASSAVA = ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_cassava"));
+
     public static ResourceKey<ConfiguredFeature<?, ?>> FEATURE_PATCH_WILD_CHILI_PEPPER = ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_chili_pepper"));
     public static ResourceKey<ConfiguredFeature<?, ?>> FEATURE_PATCH_WILD_GARLIC = ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_garlic"));
     public static ResourceKey<ConfiguredFeature<?, ?>> FEATURE_PATCH_WILD_GINGER = ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_ginger"));
@@ -33,6 +35,8 @@ public class ModPlantGeneration {
 
     public static ResourceKey<PlacedFeature> PATCH_BLUEBERRY_BUSH = ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_blueberry_bush"));
 
+    public static ResourceKey<PlacedFeature> PATCH_WILD_CASSAVA = ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_cassava"));
+
     public static ResourceKey<PlacedFeature> PATCH_WILD_CHILI_PEPPER = ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_chili_pepper"));
     public static ResourceKey<PlacedFeature> PATCH_WILD_GARLIC = ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_garlic"));
     public static ResourceKey<PlacedFeature> PATCH_WILD_GINGER = ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(FarmersCornucopia.MOD_ID, "patch_wild_ginger"));
@@ -43,5 +47,4 @@ public class ModPlantGeneration {
 
     public static void load() {
     }
-
 }

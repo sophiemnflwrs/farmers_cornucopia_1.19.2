@@ -2,10 +2,7 @@ package net.sophiemnflwrs.farmerscornucopia.common.registry;
 
 import com.google.common.collect.Sets;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -84,6 +81,9 @@ public class FCItems {
             () -> new BlockItem(FCBlocks.WILD_GARLIC.get(), basicItem()));
     public static final RegistryObject<Item> WILD_GINGER = registerWithTab("wild_ginger",
             () -> new BlockItem(FCBlocks.WILD_GINGER.get(), basicItem()));
+
+    public static final RegistryObject<Item> WILD_CASSAVA = registerWithTab("wild_cassava",
+            () -> new DoubleHighBlockItem(FCBlocks.WILD_CASSAVA.get(), basicItem()));
 
     // flowers
     public static final RegistryObject<Item> GINGER_LILY = registerWithTab("ginger_lily",
