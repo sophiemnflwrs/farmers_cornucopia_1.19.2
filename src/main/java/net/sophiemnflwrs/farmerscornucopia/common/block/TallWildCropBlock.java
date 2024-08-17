@@ -19,15 +19,15 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import java.util.Iterator;
 
 public class TallWildCropBlock extends DoublePlantBlock implements BonemealableBlock {
-
-    public TallWildCropBlock(Properties properties) {
-        super(properties);
-        this.registerDefaultState((BlockState)((BlockState)this.stateDefinition.any()).setValue(HALF, DoubleBlockHalf.LOWER));
-    }
-
     public static final EnumProperty<DoubleBlockHalf> HALF;
     static {
         HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
+    }
+
+    public TallWildCropBlock(Properties properties) {
+        super(properties);
+        this.registerDefaultState(this.stateDefinition.any()
+                .setValue(HALF, DoubleBlockHalf.LOWER));
     }
 
     protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
