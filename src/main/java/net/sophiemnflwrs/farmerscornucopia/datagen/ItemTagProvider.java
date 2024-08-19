@@ -40,11 +40,13 @@ public class ItemTagProvider extends ItemTagsProvider {
 
         tag(FCForgeTags.SEEDS).addTags(
                 FCForgeTags.SEEDS_BLUEBERRY,
+                FCForgeTags.SEEDS_CASSAVA,
                 FCForgeTags.SEEDS_CHILI_PEPPER,
                 FCForgeTags.SEEDS_GARLIC,
                 FCForgeTags.SEEDS_GINGER,
                 FCForgeTags.SEEDS_LEMON);
             tag(FCForgeTags.SEEDS_BLUEBERRY).add(FCItems.BLUEBERRY_SEEDS.get());
+            tag(FCForgeTags.SEEDS_CASSAVA).add(FCItems.CASSAVA.get());
             tag(FCForgeTags.SEEDS_CHILI_PEPPER).add(FCItems.CHILI_PEPPER_SEEDS.get());
             tag(FCForgeTags.SEEDS_LEMON).add(FCItems.LEMON_SEEDS.get());
             tag(FCForgeTags.SEEDS_GARLIC).add(FCItems.GARLIC_CLOVE.get());
@@ -52,12 +54,14 @@ public class ItemTagProvider extends ItemTagsProvider {
 
         tag(FCForgeTags.CROPS).addTags(
                 FCForgeTags.CROPS_BLUEBERRY,
+                FCForgeTags.CROPS_CASSAVA,
                 FCForgeTags.CROPS_CHILI_PEPPER,
                 FCForgeTags.CROPS_GARLIC,
                 FCForgeTags.CROPS_GINGER,
                 FCForgeTags.CROPS_LEMON,
                 FCForgeTags.CROPS_OLIVE);
             tag(FCForgeTags.CROPS_BLUEBERRY).add(FCItems.BLUEBERRY.get());
+            tag(FCForgeTags.CROPS_CASSAVA).add(FCItems.CASSAVA.get());
             tag(FCForgeTags.CROPS_CHILI_PEPPER).add(FCItems.CHILI_PEPPER.get());
             tag(FCForgeTags.CROPS_GARLIC).add(FCItems.GARLIC.get());
             tag(FCForgeTags.CROPS_GINGER).add(FCItems.GINGER.get());
@@ -91,9 +95,11 @@ public class ItemTagProvider extends ItemTagsProvider {
             tag(FCForgeTags.PRESERVES_VIOLET_JELLY).add(FCItems.VIOLET_JELLY.get());
 
         tag(FCForgeTags.VEGETABLES).addTags(
+                FCForgeTags.VEGETABLES_CASSAVA,
                 FCForgeTags.VEGETABLES_CHILI_PEPPER,
                 FCForgeTags.VEGETABLES_GARLIC,
                 FCForgeTags.VEGETABLES_GINGER);
+            tag(FCForgeTags.VEGETABLES_CASSAVA).add(FCItems.CASSAVA.get());
             tag(FCForgeTags.VEGETABLES_CHILI_PEPPER).add(FCItems.CHILI_PEPPER.get());
             tag(FCForgeTags.VEGETABLES_GARLIC).add(FCItems.GARLIC.get());
             tag(FCForgeTags.VEGETABLES_GINGER).add(FCItems.GINGER.get());

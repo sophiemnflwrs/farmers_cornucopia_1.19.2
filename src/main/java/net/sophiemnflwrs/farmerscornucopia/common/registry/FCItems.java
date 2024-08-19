@@ -112,6 +112,8 @@ public class FCItems {
             () -> new Item(foodItem(FoodValues.VIOLET_JELLY)));
 
     // crops
+    public static final RegistryObject<Item> CASSAVA = registerWithTab("cassava",
+            () -> new Item(foodItem(FoodValues.CASSAVA)));
     public static final RegistryObject<Item> CHILI_PEPPER = registerWithTab("chili_pepper",
             () -> new Item(foodItem(FoodValues.CHILI_PEPPER)));
     public static final RegistryObject<Item> GARLIC = registerWithTab("garlic",

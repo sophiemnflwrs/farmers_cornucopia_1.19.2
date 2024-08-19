@@ -35,7 +35,7 @@ public class ItemModelsProvider extends ItemModelProvider {
         blockBasedModel(FCItems.FRUITING_OLIVE_LEAVES.get(), "_stage1");
             items.remove(FCItems.FRUITING_OLIVE_LEAVES.get());
 
-        blockBasedModel(FCItems.WILD_CASSAVA.get(), "_top");
+        blockBasedModel(FCItems.WILD_CASSAVA.get(), "_upper");
             items.remove(FCItems.WILD_CASSAVA.get());
 
         // blocks w/ special sprites

@@ -21,6 +21,7 @@ public class FCForgeTags {
     // seeds
     public static final TagKey<Item> SEEDS = forgeItemTag("seeds");
         public static final TagKey<Item> SEEDS_BLUEBERRY = forgeItemTag("seeds/blueberry");
+        public static final TagKey<Item> SEEDS_CASSAVA = forgeItemTag("seeds/cassava");
         public static final TagKey<Item> SEEDS_CHILI_PEPPER = forgeItemTag("seeds/chili_pepper");
         public static final TagKey<Item> SEEDS_GARLIC = forgeItemTag("seeds/garlic");
         public static final TagKey<Item> SEEDS_GINGER = forgeItemTag("seeds/ginger");
@@ -29,6 +30,7 @@ public class FCForgeTags {
     // crops
     public static final TagKey<Item> CROPS = forgeItemTag("crops");
         public static final TagKey<Item> CROPS_BLUEBERRY = forgeItemTag("crops/blueberry");
+        public static final TagKey<Item> CROPS_CASSAVA = forgeItemTag("crops/cassava");
         public static final TagKey<Item> CROPS_CHILI_PEPPER = forgeItemTag("crops/chili_pepper");
         public static final TagKey<Item> CROPS_GARLIC = forgeItemTag("crops/garlic");
         public static final TagKey<Item> CROPS_GINGER = forgeItemTag("crops/ginger");
@@ -56,6 +58,7 @@ public class FCForgeTags {
 
     // crop type
     public static final TagKey<Item> VEGETABLES = forgeItemTag("vegetables");
+        public static final TagKey<Item> VEGETABLES_CASSAVA = forgeItemTag("vegetables/cassava");
         public static final TagKey<Item> VEGETABLES_CHILI_PEPPER = forgeItemTag("vegetables/chili_pepper");
         public static final TagKey<Item> VEGETABLES_GARLIC = forgeItemTag("vegetables/garlic");
         public static final TagKey<Item> VEGETABLES_GINGER = forgeItemTag("vegetables/ginger");

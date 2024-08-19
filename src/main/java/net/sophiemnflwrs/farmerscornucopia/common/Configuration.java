@@ -18,7 +18,10 @@ public class Configuration {
     public static ForgeConfigSpec.IntValue CHANCE_LEMON_SHRUB;
 
     public static ForgeConfigSpec.BooleanValue GENERATE_BLUEBERRY_BUSH;
-    public static ForgeConfigSpec.IntValue CHANCE_BLUEBERRY_BUSH;   
+    public static ForgeConfigSpec.IntValue CHANCE_BLUEBERRY_BUSH;
+
+    public static ForgeConfigSpec.BooleanValue GENERATE_WILD_CASSAVA;
+    public static ForgeConfigSpec.IntValue CHANCE_WILD_CASSAVA;
 
     public static ForgeConfigSpec.BooleanValue GENERATE_WILD_CHILI_PEPPER;
     public static ForgeConfigSpec.IntValue CHANCE_WILD_CHILI_PEPPER;
@@ -55,7 +58,7 @@ public class Configuration {
 
         // tall wild crops
         COMMON_BUILDER.comment("Wild Cassava generation").push("wild_cassava");
-        CHANCE_WILD_CHILI_PEPPER = COMMON_BUILDER.comment("Chance of generating clusters. Smaller value = more frequent.")
+        CHANCE_WILD_CASSAVA = COMMON_BUILDER.comment("Chance of generating clusters. Smaller value = more frequent.")
                 .defineInRange("chance", 30, 0, Integer.MAX_VALUE);
         COMMON_BUILDER.pop();
 

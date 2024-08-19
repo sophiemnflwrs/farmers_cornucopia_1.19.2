@@ -1,4 +1,4 @@
-// 1.20.1	2024-08-15T13:49:45.7145124	Item Models: farmerscornucopia
+// 1.20.1	2024-08-19T11:24:03.9613872	Item Models: farmerscornucopia
 67e78d00ebbc7a4fe37dbbba87f89f3fd8f87e4a assets/farmerscornucopia/models/item/aioli.json
 15c79a188a9405c7d2f93b0d4e39283baea32b50 assets/farmerscornucopia/models/item/blueberry.json
 606772b4a71b896a695c4087ba096d78fdb98b51 assets/farmerscornucopia/models/item/blueberry_crate.json
@@ -41,6 +41,7 @@ f8a8ab2a873cd9354623f0f7484bf6c689a4a81c assets/farmerscornucopia/models/item/sa
 376d83e832c6755fe16840bef4c2d6a8463c3569 assets/farmerscornucopia/models/item/stripped_olive_log.json
 842f94e8a1a55327264f740c9a29016b9a2c98a6 assets/farmerscornucopia/models/item/violet.json
 5c275956488a74f3e14ae0798b5a7e38c6fad489 assets/farmerscornucopia/models/item/violet_jelly.json
+2788372db55ce20004ca646ac2eb8490e47a7333 assets/farmerscornucopia/models/item/wild_cassava.json
 b2360b49555401e031da2d0d86a8ee6a56086578 assets/farmerscornucopia/models/item/wild_chili_pepper.json
 77e7762e43afa53806b5ed3c8669542d118d865b assets/farmerscornucopia/models/item/wild_garlic.json
 f2dfd34739e497e608c6d5145c2638174260ae42 assets/farmerscornucopia/models/item/wild_ginger.json

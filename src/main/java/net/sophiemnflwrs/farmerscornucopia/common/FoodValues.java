@@ -14,6 +14,9 @@ public class FoodValues {
     public static final int LONG_DURATION = 6000;    // 5 minutes
 
     // raw veg
+    public static final FoodProperties CASSAVA = (new FoodProperties.Builder())
+            .nutrition(1).saturationMod(0.8f)
+            .build();
     public static final FoodProperties CHILI_PEPPER = (new FoodProperties.Builder())
             .nutrition(1).saturationMod(0.5f)
             .build();
