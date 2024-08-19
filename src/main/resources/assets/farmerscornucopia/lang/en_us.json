@@ -27,6 +27,8 @@
 
   "block.farmerscornucopia.blueberry_bush": "Blueberry Bush",
 
+  "block.farmerscornucopia.wild_cassava": "Wild Cassava",
+
   "block.farmerscornucopia.wild_chili_pepper": "Wild Chili Pepper",
   "block.farmerscornucopia.potted_wild_chili_pepper": "Potted Wild Chili Pepper",
   "block.farmerscornucopia.wild_garlic": "Wild Garlic",
@@ -50,6 +52,7 @@
   "block.farmerscornucopia.garlic_crop": "Garlic Crop",
   "block.farmerscornucopia.ginger_crop": "Ginger Crop",
 
+  "item.farmerscornucopia.cassava": "Cassava",
   "item.farmerscornucopia.chili_pepper": "Chili Pepper",
   "item.farmerscornucopia.garlic": "Garlic",
   "item.farmerscornucopia.ginger": "Ginger",

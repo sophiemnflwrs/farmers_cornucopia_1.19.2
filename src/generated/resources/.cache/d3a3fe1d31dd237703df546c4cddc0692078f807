@@ -1,4 +1,4 @@
-// 1.20.1	2024-08-19T11:24:03.9613872	Item Models: farmerscornucopia
+// 1.20.1	2024-08-19T12:34:22.6266343	Item Models: farmerscornucopia
 67e78d00ebbc7a4fe37dbbba87f89f3fd8f87e4a assets/farmerscornucopia/models/item/aioli.json
 15c79a188a9405c7d2f93b0d4e39283baea32b50 assets/farmerscornucopia/models/item/blueberry.json
 606772b4a71b896a695c4087ba096d78fdb98b51 assets/farmerscornucopia/models/item/blueberry_crate.json
@@ -6,6 +6,7 @@
 e805ee4a1eba5fd15f30d3fa49064f98e4d4258c assets/farmerscornucopia/models/item/blueberry_muffin.json
 04b3190c7cbbc7a2751ba7baec8e57b088a583a6 assets/farmerscornucopia/models/item/blueberry_seeds.json
 9ade40e89eccce87efcbff82568289eb7833c58b assets/farmerscornucopia/models/item/butter.json
+6ad5c1b20371971da1a56ba0a5c544b1b10edcd3 assets/farmerscornucopia/models/item/cassava.json
 91bcc007144a7ddf8e45564916cd48d6fe5ff51b assets/farmerscornucopia/models/item/chili_pepper.json
 3962d192a76084d16eb45fc290ef3a4f3ed49a67 assets/farmerscornucopia/models/item/chili_pepper_crate.json
 94464cfe408710f3a91d21ef5d16108304b2434a assets/farmerscornucopia/models/item/chili_pepper_seeds.json
